@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="RepositorioRemoto.Tests/RepositorioRemoto.Tests.csproj" />
+  <Project Path="RepositorioRemoto/RepositorioRemoto.csproj" />
+</Solution>
