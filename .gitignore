@@ -1,0 +1,31 @@
+﻿# Compilación
+bin/
+obj/
+out/
+
+# IDEs
+.idea/
+.vs/
+.vscode/
+*.sln.iml
+*.DotSettings.user
+
+# Archivos temporales
+*.user
+*.suo
+*.log
+*.tmp
+*.bak
+
+# Tests
+TestResults/
+
+# --- Propio de RepositorioRemoto ---
+# Base de datos SQLite (se regenera al arrancar)
+*.db
+*.db-shm
+*.db-wal
+# Logs de Serilog
+logs/
+# Ficheros exportados a JSON
+output/
