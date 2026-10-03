@@ -29,6 +29,7 @@ public class UserRepository(AppDbContext context) : IUserRepository
         var entity = await _context.Users.FindAsync(id);
         return entity?.ToUser();
     }
+    
     public async Task<User> CreateAsync(User user)
     {
         _context.Users.Add(user.ToEntity());
