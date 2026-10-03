@@ -8,6 +8,7 @@ namespace RepositorioRemoto.Api;
 /// Refit genera la implementación en tiempo de ejecución a partir de los atributos
 /// [Get], [Post], [Put] y [Delete]: no hay que escribir ni una línea de HttpClient.
 /// </summary>
+[Headers("Content-Type: application/json")]
 public interface IJsonPlaceholderApi
 {
     /// <summary>Obtiene todos los usuarios.</summary>
