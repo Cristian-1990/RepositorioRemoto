@@ -12,6 +12,7 @@ using RepositorioRemoto.Services;
 using RepositorioRemoto.Sync;
 using RepositorioRemoto.Validators;
 using Serilog;
+using StackExchange.Redis;
 
 namespace RepositorioRemoto.Infrastructure;
 
@@ -69,11 +70,14 @@ public static class DependenciesProvider
 
         if (cacheConfig.Provider.Equals("Redis", StringComparison.OrdinalIgnoreCase))
         {
-            throw new NotSupportedException(
-                "El proveedor de cache 'Redis' todavia no esta implementado. Usa 'Memory'.");
+            services.AddSingleton<IConnectionMultiplexer>(_ =>
+                ConnectionMultiplexer.Connect(cacheConfig.RedisConnectionString));
+            services.AddSingleton<ICacheService, RedisCacheService>();
         }
-
-        services.AddSingleton<ICacheService, MemoryCacheService>();
+        else
+        {
+            services.AddSingleton<ICacheService, MemoryCacheService>();
+        }
 
         services.AddSingleton<IUserValidator, UserValidator>();
         services.AddSingleton<INotificationService, ConsoleNotificationService>();
