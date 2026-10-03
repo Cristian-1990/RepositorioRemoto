@@ -342,6 +342,4 @@ estaría yendo al disco cada vez. Esa comprobación es la única que lo pilla.
 | Tests | NUnit + Moq + FluentAssertions + TestContainers |
 
 ---
-```
 
-Era opcional en el enunciado y se quedó fuera por tiempo.
