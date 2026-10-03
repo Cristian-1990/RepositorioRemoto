@@ -17,7 +17,7 @@ public interface IJsonPlaceholderApi
     /// <summary>Obtiene un usuario por su identificador.</summary>
     /// <param name="id">Identificador del usuario.</param>
     [Get("/users/{id}")]
-    Task<JsonPlaceholderUserDto> GetUserByIdAsync(int id);
+    Task<JsonPlaceholderUserDto?> GetUserByIdAsync(int id);
 
     /// <summary>Crea un usuario. La API devuelve el usuario con el id que le asigna.</summary>
     /// <param name="request">Datos del usuario a crear.</param>
