@@ -5,6 +5,8 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <LangVersion>14</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,7 +25,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+    <None Update="appsettings*.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
