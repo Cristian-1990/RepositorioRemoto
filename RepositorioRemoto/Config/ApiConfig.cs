@@ -2,7 +2,6 @@ namespace RepositorioRemoto.Config;
 
 /// <summary>
 /// Configuración de la API REST remota (JSONPlaceholder).
-
 /// </summary>
 public class ApiConfig
 {

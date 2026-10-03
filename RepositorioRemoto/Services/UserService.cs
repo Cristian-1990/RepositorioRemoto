@@ -138,7 +138,7 @@ public class UserService(
             logger.LogWarning("El usuario {Id} se actualizo en la API pero no estaba en local", id);
         }
 
-        await cache.SetAsync($"{CachePrefix}{id}", actualizado);
+        await cache.SetAsync($"{CachePrefix}{actualizado.Id}", actualizado);
         notificationService.NotifyUpdated(actualizado);
 
         return Result.Success<UserResponseDto, DomainError>(actualizado.ToResponse());
@@ -166,33 +166,33 @@ public class UserService(
     }
 
     /// <inheritdoc />
-        public async Task<Result<string, DomainError>> ExportToJsonAsync()
+    public async Task<Result<string, DomainError>> ExportToJsonAsync()
+    {
+        var usuarios = await GetAllAsync();
+        if (usuarios.IsFailure)
         {
-            var usuarios = await GetAllAsync();
-            if (usuarios.IsFailure)
-            {
-                return Result.Failure<string, DomainError>(usuarios.Error);
-            }
-
-            var config = exportOptions.Value;
-
-            try
-            {
-                Directory.CreateDirectory(config.OutputDirectory);
-                var ruta = Path.Combine(config.OutputDirectory, config.FileName);
-
-                var opciones = new JsonSerializerOptions { WriteIndented = true };
-                var json = JsonSerializer.Serialize(usuarios.Value, opciones);
-                await File.WriteAllTextAsync(ruta, json);
-
-                logger.LogInformation("Usuarios exportados a {Ruta}", ruta);
-
-                return Result.Success<string, DomainError>(ruta);
-            }
-            catch (IOException ex)
-            {
-                return Result.Failure<string, DomainError>(DomainErrors.Storage(ex));
-            }
+            return Result.Failure<string, DomainError>(usuarios.Error);
         }
+
+        var config = exportOptions.Value;
+
+        try
+        {
+            Directory.CreateDirectory(config.OutputDirectory);
+            var ruta = Path.Combine(config.OutputDirectory, config.FileName);
+
+            var opciones = new JsonSerializerOptions { WriteIndented = true };
+            var json = JsonSerializer.Serialize(usuarios.Value, opciones);
+            await File.WriteAllTextAsync(ruta, json);
+
+            logger.LogInformation("Usuarios exportados a {Ruta}", ruta);
+
+            return Result.Success<string, DomainError>(ruta);
+        }
+        catch (IOException ex)
+        {
+            return Result.Failure<string, DomainError>(DomainErrors.Storage(ex));
+        }
+    }
 }
 

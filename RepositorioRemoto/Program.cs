@@ -159,4 +159,8 @@ Console.ReadLine();
 
 await backgroundService.StopAsync(cts.Token);
 Console.WriteLine("Aplicacion detenida.");
+if (provider is IAsyncDisposable disposable)
+{
+    await disposable.DisposeAsync();
+}
 await Log.CloseAndFlushAsync();
