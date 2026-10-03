@@ -1,14 +1,18 @@
 # RepositorioRemoto
+
 ![.NET](https://img.shields.io/badge/.NET-10-512BD4?style=flat-square&logo=dotnet&logoColor=white)
 ![C#](https://img.shields.io/badge/C%23-14-239120?style=flat-square&logo=csharp&logoColor=white)
 ![Tests](https://img.shields.io/badge/tests-65%20passing-2ea44f?style=flat-square)
 ![SQLite](https://img.shields.io/badge/EF%20Core-SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-7-DC382D?style=flat-square&logo=redis&logoColor=white)
 ![Refit](https://img.shields.io/badge/Refit-15.2-FF6C37?style=flat-square)
 ![Rx.NET](https://img.shields.io/badge/Rx.NET-reactivo-B7178C?style=flat-square&logo=reactivex&logoColor=white)
+
 Práctica 6 de Desarrollo Web en Entorno Servidor (DWES), unidad 1.
 
 Es un servicio en .NET 10 que maneja usuarios guardándolos en tres sitios distintos:
-una caché en memoria, una base de datos local y la API REST de JSONPlaceholder.
+una caché, una base de datos local y la API REST de JSONPlaceholder.
 La gracia está en que el programa decide solo a cuál de los tres tiene que ir en
 cada momento.
 
@@ -28,6 +32,10 @@ completo sobre ella sin tener que salir a internet cada vez.
   y sale por consola.
 - Puede exportar todos los usuarios a un fichero JSON.
 
+Funciona con dos perfiles: **Development** (SQLite + caché en memoria) y
+**Production** (PostgreSQL + Redis). Se cambia de uno a otro con una variable de
+entorno, sin tocar código.
+
 ---
 
 ## 🏗️ Arquitectura
@@ -36,7 +44,7 @@ completo sobre ella sin tener que salir a internet cada vez.
 
 ```mermaid
 flowchart LR
-    A[Cache en memoria] --> B[BD local - SQLite] --> C[API REST - JSONPlaceholder]
+    A[Cache] --> B[BD local] --> C[API REST - JSONPlaceholder]
 ```
 
 Funciona como una cafetería: primero miras la vitrina, si no hay bajas al almacén, y
@@ -57,14 +65,15 @@ no la hemos metido en el "obtener todos" aunque se podría.
 
 ```
 Program.cs → UserService → Validator
-                         → CacheService          (caché en memoria)
-                         → UserRepository        (EF Core + SQLite)
+                         → CacheService          (memoria o Redis)
+                         → UserRepository        (EF Core: SQLite o PostgreSQL)
                          → UserRemoteRepository  (Refit + JSONPlaceholder)
                          → NotificationService   (Rx.NET)
 ```
 
 El `UserService` es el que manda: él decide el orden y las demás clases solo hacen
-su trabajo.
+su trabajo. Y le da igual qué caché o qué base de datos haya detrás, porque solo
+conoce las interfaces.
 
 Los errores no se lanzan como excepciones. Cada operación devuelve un
 `Result<T, DomainError>` de CSharpFunctionalExtensions, así que el que llama siempre
@@ -81,7 +90,7 @@ excepción.
 ```
 RepositorioRemoto/
 ├── Api/              Cliente Refit de JSONPlaceholder
-├── Cache/            Contrato de caché y la implementación en memoria
+├── Cache/            Contrato de caché y sus dos implementaciones
 ├── Config/           Clases de configuración, una por sección del appsettings
 ├── Dto/              DTOs de petición y de respuesta
 ├── Entity/           Entidad de EF Core y el DbContext
@@ -107,8 +116,9 @@ probablemente esté mal pensado.
 ## 📋 Requisitos
 
 - **.NET 10 SDK**
-- **Docker** solo para los tests del repositorio local, que levantan un PostgreSQL
-  de verdad con TestContainers. Para ejecutar la aplicación no hace falta.
+- **Docker** para dos cosas: los tests del repositorio local, que levantan un
+  PostgreSQL de verdad con TestContainers, y el perfil de producción, que necesita
+  PostgreSQL y Redis. Para ejecutar en desarrollo no hace falta.
 - Conexión a internet, porque la API es pública y está fuera.
 
 ---
@@ -122,7 +132,15 @@ dotnet run --project RepositorioRemoto
 Arranca en perfil **Development**, que usa SQLite y caché en memoria. No necesita
 levantar nada antes: la base de datos se crea sola la primera vez.
 
-Para cambiar de perfil se usa la variable de entorno `DOTNET_ENVIRONMENT`:
+### Perfil de producción
+
+Usa PostgreSQL y Redis, así que primero hay que levantarlos:
+
+```bash
+docker compose up -d
+```
+
+Y luego se cambia de perfil con la variable de entorno `DOTNET_ENVIRONMENT`:
 
 ```powershell
 # PowerShell
@@ -179,12 +197,16 @@ proveedor cambia según dónde estés.
 | `DatabaseSettings:Provider` | `PostgreSQL` |
 | `DatabaseSettings:ConnectionString` | Cadena de conexión a Postgres |
 | `CacheSettings:Provider` | `Redis` |
-| `CacheSettings:RedisConnectionString` | `localhost:6379` |
+| `CacheSettings:RedisConnectionString` | `localhost:6379,allowAdmin=true` |
+
+El `allowAdmin=true` hace falta porque `ClearAsync` usa `FLUSHDB`, que Redis trata
+como comando de administración y bloquea por defecto. Sin él, la sincronización
+fallaría al intentar vaciar la caché.
 
 Las dos claves `Provider` son las que deciden qué implementación se registra al
 arrancar. Eso pasa en `Infrastructure/DependenciesProvider.cs`: lee el valor y elige.
-Cambiar de SQLite a PostgreSQL es cambiar una palabra en un JSON, sin tocar una sola
-línea de código.
+Cambiar de SQLite a PostgreSQL, o de memoria a Redis, es cambiar una palabra en un
+JSON, sin tocar una sola línea de código.
 
 Cada sección tiene su propia clase en `Config/`, con su `SectionName` dentro, y se
 inyectan con `IOptions<T>`. Así nadie anda buscando claves sueltas por el código.
@@ -227,6 +249,17 @@ columna por campo (`street`, `city`, `lat`, `lng`, `company_name`...).
 Se podría haber hecho con tipos propiedad de EF Core, pero eso no entra en el temario
 de la unidad. Un mapper que aplana al guardar y reconstruye al leer hace el mismo
 trabajo con herramientas que sí hemos dado.
+
+### Las dos cachés se comportan igual
+
+`MemoryCacheService` guarda el objeto tal cual en la memoria del proceso. Redis es
+otro programa al otro lado de un socket y solo entiende texto, así que
+`RedisCacheService` serializa a JSON al guardar y deserializa al leer.
+
+Por dentro son muy distintas, pero hacia fuera tienen que ser idénticas: las dos
+aplican la misma caducidad de `CacheSettings:ExpirationSeconds` cuando no se les pasa
+una. Si no, la aplicación cambiaría de comportamiento solo por cambiar de perfil, y
+eso es justo lo que una interfaz tiene que evitar.
 
 ### Se valida al crear y al actualizar
 
@@ -281,9 +314,9 @@ dotnet test
 Dos cosas sobre cómo están hechos:
 
 > [!NOTE]
-**Los 11 del repositorio local necesitan Docker arrancado.** Levantan un PostgreSQL
-real con TestContainers en vez de simularlo. Si Docker Desktop no está en marcha,
-esos 11 fallan y los otros 54 pasan igual.
+> **Los 11 del repositorio local necesitan Docker arrancado.** Levantan un PostgreSQL
+> real con TestContainers en vez de simularlo. Si Docker Desktop no está en marcha,
+> esos 11 fallan y los otros 54 pasan igual.
 
 **Los del `UserService` no solo miran lo que devuelve, sino a quién llama.** Por
 ejemplo, cuando un usuario está en la caché se comprueba que la base de datos **no
@@ -297,13 +330,18 @@ estaría yendo al disco cada vez. Esa comprobación es la única que lo pilla.
 
 | Para qué | Qué se usa |
 |---|---|
-| Caché en memoria | `Microsoft.Extensions.Caching.Memory` |
-| Base de datos local | EF Core + SQLite (PostgreSQL en el perfil de producción) |
+| Caché en memoria (perfil Dev) | `Microsoft.Extensions.Caching.Memory` |
+| Caché distribuida (perfil Prod) | StackExchange.Redis |
+| Base de datos local | EF Core: SQLite en Dev, PostgreSQL en Prod |
 | Cliente HTTP tipado | Refit |
 | Errores sin excepciones | CSharpFunctionalExtensions (`Result<T, DomainError>`) |
 | Logging | Serilog, a consola y a fichero con rotación diaria |
 | Notificaciones | System.Reactive (Rx.NET) |
 | Inyección de dependencias | `Microsoft.Extensions.DependencyInjection` |
+| Infraestructura | Docker Compose (PostgreSQL + Redis) |
 | Tests | NUnit + Moq + FluentAssertions + TestContainers |
 
 ---
+```
+
+Era opcional en el enunciado y se quedó fuera por tiempo.
