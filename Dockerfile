@@ -24,7 +24,7 @@ RUN dotnet build --configuration Release --no-restore
 # EJECUTAR TESTS - si fallan, la imagen NO se crea.
 # Se excluyen los de TestContainers (PostgreSQL y Redis): necesitan Docker dentro de Docker.
 RUN dotnet test --configuration Release --no-restore --verbosity normal \
-    --filter "FullyQualifiedName!~UserRepositoryTests&FullyQualifiedName!~RedisCacheServiceTests"dv
+    --filter "FullyQualifiedName!~UserRepositoryTests&FullyQualifiedName!~RedisCacheServiceTests"
 
 # Publicar
 RUN dotnet publish RepositorioRemoto/RepositorioRemoto.csproj \
