@@ -73,6 +73,33 @@ public static class UserMapper
         user.Phone,
         user.Website,
         user.Company.ToDto());
+    
+    public static JsonPlaceholderUserDto ToDto(
+        this CreateUserRequest request,
+        int id = 0
+    ) => new(
+        id,
+        request.Name,
+        request.Username,
+        request.Email,
+        request.Address,
+        request.Phone,
+        request.Website,
+        request.Company
+    );
+    
+    public static JsonPlaceholderUserDto ToDto(
+        this UpdateUserRequest request
+    ) => new(
+        request.Id,
+        request.Name,
+        request.Username,
+        request.Email,
+        request.Address,
+        request.Phone,
+        request.Website,
+        request.Company
+    );
 
     /// <summary>Convierte el DTO de dirección en el modelo.</summary>
     public static Address ToModel(this AddressDto dto) => new(
