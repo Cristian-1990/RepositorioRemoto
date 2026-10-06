@@ -1,0 +1,55 @@
+Summary
+  Generated on: 06/10/2026 - 22:51:11
+  Coverage date: 06/10/2026 - 22:48:57
+  Parser: Cobertura
+  Assemblies: 1
+  Classes: 33
+  Files: 32
+  Line coverage: 87.1%
+  Covered lines: 581
+  Uncovered lines: 86
+  Coverable lines: 667
+  Total lines: 1423
+  Branch coverage: 88.5% (62 of 70)
+  Covered branches: 62
+  Total branches: 70
+  Method coverage: 94.2% (165 of 175)
+  Full method coverage: 93.7% (164 of 175)
+  Covered methods: 165
+  Fully covered methods: 164
+  Total methods: 175
+
+RepositorioRemoto                                              87.1%
+  RepositorioRemoto.Cache.MemoryCacheService                    100%
+  RepositorioRemoto.Cache.RedisCacheService                     100%
+  RepositorioRemoto.Config.ApiConfig                              0%
+  RepositorioRemoto.Config.CacheConfig                          100%
+  RepositorioRemoto.Config.DatabaseConfig                         0%
+  RepositorioRemoto.Config.ExportConfig                         100%
+  RepositorioRemoto.Config.SyncConfig                             0%
+  RepositorioRemoto.Dto.AddressDto                              100%
+  RepositorioRemoto.Dto.CompanyDto                              100%
+  RepositorioRemoto.Dto.CreateUserRequest                       100%
+  RepositorioRemoto.Dto.GeoDto                                  100%
+  RepositorioRemoto.Dto.JsonPlaceholderUserDto                  100%
+  RepositorioRemoto.Dto.UpdateUserRequest                       100%
+  RepositorioRemoto.Dto.UserResponseDto                         100%
+  RepositorioRemoto.Entity.AppDbContext                         100%
+  RepositorioRemoto.Entity.UserEntity                           100%
+  RepositorioRemoto.Errors.DomainError                         72.7%
+  RepositorioRemoto.Errors.DomainErrors                         100%
+  RepositorioRemoto.Infrastructure.DependenciesProvider           0%
+  RepositorioRemoto.Mappers.UserEntityMapper                    100%
+  RepositorioRemoto.Mappers.UserMapper                          100%
+  RepositorioRemoto.Models.Address                              100%
+  RepositorioRemoto.Models.Company                              100%
+  RepositorioRemoto.Models.Geo                                  100%
+  RepositorioRemoto.Models.User                                 100%
+  RepositorioRemoto.Notifications.ConsoleNotificationService    100%
+  RepositorioRemoto.Notifications.Notification                  100%
+  RepositorioRemoto.Repositories.UserRemoteRepository           100%
+  RepositorioRemoto.Repositories.UserRepository                 100%
+  RepositorioRemoto.Services.UserService                       97.3%
+  RepositorioRemoto.Sync.UserSyncBackgroundService                0%
+  RepositorioRemoto.Sync.UserSyncService                        100%
+  RepositorioRemoto.Validators.UserValidator                    100%

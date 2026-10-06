@@ -112,6 +112,44 @@ public class UserServiceTests
             resultado.Value.Should().HaveCount(1);
             _mockRemote.Verify(r => r.GetAllAsync(), Times.Never);
         }
+        
+        [Test]
+        public async Task UpdateAsync_NoEstabaEnLocal_DeberiaActualizarLaCacheYNotificar()
+        {
+            // Arrange
+            var request = CrearUpdateRequest(1);
+            var actualizado = CrearUser(1, "Cristian Alvarez");
+            _mockValidator.Setup(v => v.ValidateUpdate(request))
+                .Returns(Result.Success<UpdateUserRequest, DomainError>(request));
+            _mockRemote.Setup(r => r.UpdateAsync(1, request))
+                .ReturnsAsync(Result.Success<User, DomainError>(actualizado));
+            _mockLocal.Setup(r => r.UpdateAsync(actualizado)).ReturnsAsync((User?)null);
+
+            // Act
+            var resultado = await _service.UpdateAsync(1, request);
+
+            // Assert
+            resultado.IsSuccess.Should().BeTrue();
+            _mockCache.Verify(c => c.SetAsync("user:1", It.IsAny<User>(), null), Times.Once);
+            _mockNotifications.Verify(n => n.NotifyUpdated(It.IsAny<User>()), Times.Once);
+        }
+
+        [Test]
+        public async Task DeleteAsync_NoEstabaEnLocal_DeberiaBorrarDeCacheYNotificar()
+        {
+            // Arrange
+            _mockRemote.Setup(r => r.DeleteAsync(1))
+                .ReturnsAsync(Result.Success<bool, DomainError>(true));
+            _mockLocal.Setup(r => r.DeleteAsync(1)).ReturnsAsync(false);
+
+            // Act
+            var resultado = await _service.DeleteAsync(1);
+
+            // Assert
+            resultado.IsSuccess.Should().BeTrue();
+            _mockCache.Verify(c => c.RemoveAsync("user:1"), Times.Once);
+            _mockNotifications.Verify(n => n.NotifyDeleted(1), Times.Once);
+        }
 
         [Test]
         public async Task GetAllAsync_SinDatosEnLocal_DeberiaCargarDesdeLaApi()
@@ -259,6 +297,103 @@ public class UserServiceTests
     [TestFixture]
     public class CasosNegativos : UserServiceTests
     {
+        [Test]
+        public async Task CreateAsync_ApiFalla_NoDeberiaGuardarNiNotificar()
+        {
+            // Arrange
+            var request = CrearCreateRequest();
+            _mockValidator.Setup(v => v.ValidateCreate(request))
+                .Returns(Result.Success<CreateUserRequest, DomainError>(request));
+            _mockRemote.Setup(r => r.CreateAsync(request))
+                .ReturnsAsync(Result.Failure<User, DomainError>(
+                    DomainErrors.ApiError(500, "Error del servidor")));
+
+            // Act
+            var resultado = await _service.CreateAsync(request);
+
+            // Assert
+            resultado.IsFailure.Should().BeTrue();
+            resultado.Error.Should().BeOfType<DomainError.ApiError>();
+            _mockLocal.Verify(r => r.CreateAsync(It.IsAny<User>()), Times.Never);
+            _mockNotifications.Verify(n => n.NotifyCreated(It.IsAny<User>()), Times.Never);
+        }
+        
+                [Test]
+        public async Task GetAllAsync_SinDatosEnLocalYApiFalla_DeberiaDevolverElError()
+        {
+            // Arrange
+            _mockLocal.Setup(r => r.GetAllAsync()).ReturnsAsync(new List<User>());
+            _mockRemote.Setup(r => r.GetAllAsync())
+                .ReturnsAsync(Result.Failure<List<User>, DomainError>(
+                    DomainErrors.ApiError(500, "Error del servidor")));
+
+            // Act
+            var resultado = await _service.GetAllAsync();
+
+            // Assert
+            resultado.IsFailure.Should().BeTrue();
+            resultado.Error.Should().BeOfType<DomainError.ApiError>();
+            _mockLocal.Verify(r => r.CreateAllAsync(It.IsAny<IEnumerable<User>>()), Times.Never);
+        }
+
+        [Test]
+        public async Task UpdateAsync_DatosInvalidos_NoDeberiaLlamarALaApi()
+        {
+            // Arrange
+            var request = CrearUpdateRequest(1);
+            _mockValidator.Setup(v => v.ValidateUpdate(request))
+                .Returns(Result.Failure<UpdateUserRequest, DomainError>(
+                    DomainErrors.Validation(new List<string> { "El nombre es obligatorio" })));
+
+            // Act
+            var resultado = await _service.UpdateAsync(1, request);
+
+            // Assert
+            resultado.IsFailure.Should().BeTrue();
+            resultado.Error.Should().BeOfType<DomainError.Validation>();
+            _mockRemote.Verify(r => r.UpdateAsync(It.IsAny<int>(), It.IsAny<UpdateUserRequest>()), Times.Never);
+            _mockNotifications.Verify(n => n.NotifyUpdated(It.IsAny<User>()), Times.Never);
+        }
+
+        [Test]
+        public async Task UpdateAsync_ApiFalla_NoDeberiaNotificar()
+        {
+            // Arrange
+            var request = CrearUpdateRequest(1);
+            _mockValidator.Setup(v => v.ValidateUpdate(request))
+                .Returns(Result.Success<UpdateUserRequest, DomainError>(request));
+            _mockRemote.Setup(r => r.UpdateAsync(1, request))
+                .ReturnsAsync(Result.Failure<User, DomainError>(
+                    DomainErrors.ApiError(500, "Error del servidor")));
+
+            // Act
+            var resultado = await _service.UpdateAsync(1, request);
+
+            // Assert
+            resultado.IsFailure.Should().BeTrue();
+            resultado.Error.Should().BeOfType<DomainError.ApiError>();
+            _mockLocal.Verify(r => r.UpdateAsync(It.IsAny<User>()), Times.Never);
+            _mockNotifications.Verify(n => n.NotifyUpdated(It.IsAny<User>()), Times.Never);
+        }
+
+        [Test]
+        public async Task ExportToJsonAsync_SiFallaLaCarga_DeberiaDevolverElError()
+        {
+            // Arrange
+            _mockLocal.Setup(r => r.GetAllAsync()).ReturnsAsync(new List<User>());
+            _mockRemote.Setup(r => r.GetAllAsync())
+                .ReturnsAsync(Result.Failure<List<User>, DomainError>(
+                    DomainErrors.ApiError(500, "Error del servidor")));
+
+            // Act
+            var resultado = await _service.ExportToJsonAsync();
+
+            // Assert
+            resultado.IsFailure.Should().BeTrue();
+            resultado.Error.Should().BeOfType<DomainError.ApiError>();
+            Directory.Exists(_carpetaExport).Should().BeFalse();
+        }
+        
         [Test]
         public async Task CreateAsync_DatosInvalidos_NoDeberiaLlamarALaApi()
         {

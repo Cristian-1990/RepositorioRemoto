@@ -2,7 +2,8 @@
 
 ![.NET](https://img.shields.io/badge/.NET-10-512BD4?style=flat-square&logo=dotnet&logoColor=white)
 ![C#](https://img.shields.io/badge/C%23-14-239120?style=flat-square&logo=csharp&logoColor=white)
-![Tests](https://img.shields.io/badge/tests-65%20passing-2ea44f?style=flat-square)
+![Tests](https://img.shields.io/badge/tests-86%20passing-2ea44f?style=flat-square)
+![Cobertura](https://img.shields.io/badge/cobertura-87%25-2ea44f?style=flat-square)
 ![SQLite](https://img.shields.io/badge/EF%20Core-SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-7-DC382D?style=flat-square&logo=redis&logoColor=white)
@@ -93,6 +94,8 @@ excepción.
 ├── Dockerfile              Imagen multi-etapa de la aplicación
 ├── .dockerignore           Lo que no se manda al construir la imagen
 ├── docker-compose.yml      App + PostgreSQL + Redis
+├── coverlet.runsettings    Configuración de la cobertura (excluye Program)
+├── docs/coverage/          Informe de cobertura en HTMLok
 ├── RepositorioRemoto.slnx
 ├── RepositorioRemoto/      El proyecto
 └── RepositorioRemoto.Tests/
@@ -116,7 +119,7 @@ RepositorioRemoto/
 ├── Validators/       Validación de las peticiones
 └── Program.cs        Arranque y demostración
 
-RepositorioRemoto.Tests/   65 tests con NUnit, Moq y FluentAssertions
+RepositorioRemoto.Tests/   86 tests con NUnit, Moq y FluentAssertions
 ```
 
 Cada carpeta tiene una responsabilidad y solo una. Si algo no encaja en ninguna,
@@ -127,8 +130,8 @@ probablemente esté mal pensado.
 ## 📋 Requisitos
 
 - **.NET 10 SDK**
-- **Docker** para tres cosas: los tests del repositorio local, que levantan un
-  PostgreSQL de verdad con TestContainers; el perfil de producción, que necesita
+-  crearse. Se excluyen los 17 de TestContainers (PostgreSQL y Redis), porque
+   necesitarían Docker dentro de Docker.
   PostgreSQL y Redis; y para ejecutar la aplicación dentro de un contenedor.
   Para ejecutar en desarrollo con `dotnet run` no hace falta.
 - Conexión a internet, porque la API es pública y está fuera.
@@ -157,11 +160,6 @@ Y luego se cambia de perfil con la variable de entorno `DOTNET_ENVIRONMENT`:
 ```powershell
 # PowerShell
 $env:DOTNET_ENVIRONMENT="Production"; dotnet run --project RepositorioRemoto
-```
-
-```bash
-# Linux y macOS
-DOTNET_ENVIRONMENT=Production dotnet run --project RepositorioRemoto
 ```
 
 ### Todo dentro de Docker
@@ -298,8 +296,8 @@ imagen final.
 Tres detalles de ese `Dockerfile`:
 
 - **Los tests corren dentro del build.** Si alguno falla, la imagen no llega a
-  crearse. Se excluyen los 11 de TestContainers, porque necesitarían Docker dentro
-  de Docker.
+  crearse. Se excluyen los 17 de TestContainers (PostgreSQL y Redis), porque
+  necesitarían Docker dentro de Docker.
 - **La imagen final es `runtime`, no `aspnet`.** Esto es una aplicación de consola,
   no una API: no hay puerto que abrir ni servidor web que cargar.
 - **Corre como usuario sin privilegios**, y por eso hay un `chown` de `/app`: la
@@ -355,7 +353,7 @@ solo se ocupa de guardar y leer, y las reglas de negocio están en un único sit
 dotnet test
 ```
 
-**65 tests**, todos con NUnit, Moq y FluentAssertions, siguiendo el patrón AAA
+**86 tests**, todos con NUnit, Moq y FluentAssertions, siguiendo el patrón AAA
 (Arrange, Act, Assert) y separados en `CasosPositivos` y `CasosNegativos`.
 
 | Qué se prueba | Nº |
@@ -363,24 +361,41 @@ dotnet test
 | Mappers | 6 |
 | Errores de dominio | 5 |
 | Validador | 9 |
+| Notificaciones | 5 |
 | Repositorio local (TestContainers) | 11 |
 | Sincronización | 5 |
-| Repositorio remoto | 6 |
-| Caché | 5 |
-| UserService | 13 |
+| Repositorio remoto | 14 |
+| Caché en memoria | 5 |
+| Caché Redis (TestContainers) | 6 |
+| UserService | 20 |
 
 Dos cosas sobre cómo están hechos:
 
 > [!NOTE]
-> **Los 11 del repositorio local necesitan Docker arrancado.** Levantan un PostgreSQL
-> real con TestContainers en vez de simularlo. Si Docker Desktop no está en marcha,
-> esos 11 fallan y los otros 54 pasan igual.
+> **Los 17 de TestContainers necesitan Docker arrancado:** los 11 del repositorio
+> local levantan un PostgreSQL real y los 6 de la caché Redis levantan un Redis real,
+> en vez de simularlos. Si Docker Desktop no está en marcha, esos 17 fallan y los
+> otros 69 pasan igual.
 
 **Los del `UserService` no solo miran lo que devuelve, sino a quién llama.** Por
 ejemplo, cuando un usuario está en la caché se comprueba que la base de datos **no
 se toca** (`Times.Never`). Si alguien rompiera el atajo de la caché, el valor
 devuelto seguiría siendo correcto y el test del valor pasaría — pero el programa
 estaría yendo al disco cada vez. Esa comprobación es la única que lo pilla.
+
+### Cobertura
+
+Los tests cubren el **87,1 %** de las líneas (581 de 667) y el 88,5 % de las ramas.
+Por capas: modelos, mappers, validador y repositorios al 100 %, y `UserService` al
+97,3 %. `Program.cs` se excluye a propósito: es el arranque y la demostración, y se
+comprueba ejecutando la aplicación, no con tests.
+
+```bash
+dotnet test --collect:"XPlat Code Coverage" --settings coverlet.runsettings
+reportgenerator -reports:"RepositorioRemoto.Tests/TestResults/*/coverage.cobertura.xml" -targetdir:docs/coverage -reporttypes:"Html;TextSummary"
+```
+
+El informe visual está en [`docs/coverage/index.html`](docs/coverage/index.html).
 
 ---
 
