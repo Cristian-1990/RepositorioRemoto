@@ -2,10 +2,12 @@
 
 ![.NET](https://img.shields.io/badge/.NET-10-512BD4?style=flat-square&logo=dotnet&logoColor=white)
 ![C#](https://img.shields.io/badge/C%23-14-239120?style=flat-square&logo=csharp&logoColor=white)
-![Tests](https://img.shields.io/badge/tests-65%20passing-2ea44f?style=flat-square)
+![Tests](https://img.shields.io/badge/tests-86%20passing-2ea44f?style=flat-square)
+![Cobertura](https://img.shields.io/badge/cobertura-87%25-2ea44f?style=flat-square)
 ![SQLite](https://img.shields.io/badge/EF%20Core-SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-7-DC382D?style=flat-square&logo=redis&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-multi--stage-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![Refit](https://img.shields.io/badge/Refit-15.2-FF6C37?style=flat-square)
 ![Rx.NET](https://img.shields.io/badge/Rx.NET-reactivo-B7178C?style=flat-square&logo=reactivex&logoColor=white)
 
@@ -34,7 +36,7 @@ completo sobre ella sin tener que salir a internet cada vez.
 
 Funciona con dos perfiles: **Development** (SQLite + caché en memoria) y
 **Production** (PostgreSQL + Redis). Se cambia de uno a otro con una variable de
-entorno, sin tocar código.
+entorno, sin tocar código. Y se puede ejecutar todo dentro de Docker.
 
 ---
 
@@ -88,6 +90,18 @@ excepción.
 ## 📁 Estructura del proyecto
 
 ```
+.
+├── Dockerfile              Imagen multi-etapa de la aplicación
+├── .dockerignore           Lo que no se manda al construir la imagen
+├── docker-compose.yml      App + PostgreSQL + Redis
+├── coverlet.runsettings    Configuración de la cobertura (excluye Program)
+├── docs/coverage/          Informe de cobertura en HTMLok
+├── RepositorioRemoto.slnx
+├── RepositorioRemoto/      El proyecto
+└── RepositorioRemoto.Tests/
+```
+
+```
 RepositorioRemoto/
 ├── Api/              Cliente Refit de JSONPlaceholder
 ├── Cache/            Contrato de caché y sus dos implementaciones
@@ -105,7 +119,7 @@ RepositorioRemoto/
 ├── Validators/       Validación de las peticiones
 └── Program.cs        Arranque y demostración
 
-RepositorioRemoto.Tests/   65 tests con NUnit, Moq y FluentAssertions
+RepositorioRemoto.Tests/   86 tests con NUnit, Moq y FluentAssertions
 ```
 
 Cada carpeta tiene una responsabilidad y solo una. Si algo no encaja en ninguna,
@@ -116,9 +130,10 @@ probablemente esté mal pensado.
 ## 📋 Requisitos
 
 - **.NET 10 SDK**
-- **Docker** para dos cosas: los tests del repositorio local, que levantan un
-  PostgreSQL de verdad con TestContainers, y el perfil de producción, que necesita
-  PostgreSQL y Redis. Para ejecutar en desarrollo no hace falta.
+-  crearse. Se excluyen los 17 de TestContainers (PostgreSQL y Redis), porque
+   necesitarían Docker dentro de Docker.
+  PostgreSQL y Redis; y para ejecutar la aplicación dentro de un contenedor.
+  Para ejecutar en desarrollo con `dotnet run` no hace falta.
 - Conexión a internet, porque la API es pública y está fuera.
 
 ---
@@ -137,7 +152,7 @@ levantar nada antes: la base de datos se crea sola la primera vez.
 Usa PostgreSQL y Redis, así que primero hay que levantarlos:
 
 ```bash
-docker compose up -d
+docker compose up -d postgres redis
 ```
 
 Y luego se cambia de perfil con la variable de entorno `DOTNET_ENVIRONMENT`:
@@ -147,14 +162,24 @@ Y luego se cambia de perfil con la variable de entorno `DOTNET_ENVIRONMENT`:
 $env:DOTNET_ENVIRONMENT="Production"; dotnet run --project RepositorioRemoto
 ```
 
+### Todo dentro de Docker
+
+Construye la imagen y levanta la aplicación junto con PostgreSQL y Redis:
+
 ```bash
-# Linux y macOS
-DOTNET_ENVIRONMENT=Production dotnet run --project RepositorioRemoto
+docker compose up --build
 ```
 
-Lo que verás al arrancar: carga los 10 usuarios de la API, hace una demostración de
-las seis operaciones y se queda esperando. Si lo dejas correr un minuto, salta sola
-la sincronización periódica. Con **ENTER** se para.
+El contenedor de la aplicación **espera a que PostgreSQL y Redis respondan** antes de
+arrancar, así que no hay que lanzarlos por separado ni esperar a nada.
+
+Para pararlo: `Ctrl+C` y después `docker compose down`.
+
+### Qué verás al arrancar
+
+Carga los 10 usuarios de la API, hace una demostración de las seis operaciones y se
+queda esperando. Si lo dejas correr un minuto, salta sola la sincronización
+periódica. Con **ENTER** se para.
 
 ---
 
@@ -168,9 +193,9 @@ La configuración está repartida en tres ficheros que se van montando uno encim
 | `appsettings.Development.json` | Lo propio de desarrollo: SQLite y caché en memoria |
 | `appsettings.Production.json` | Lo propio de producción: PostgreSQL y Redis |
 
-Primero se carga el común y después el del perfil, que pisa lo que coincida. Por eso
-`CacheSettings` aparece en dos sitios: la caducidad es la misma siempre, pero el
-proveedor cambia según dónde estés.
+Primero se carga el común, después el del perfil, y por último **las variables de
+entorno**, que pisan a todo lo demás. Ese último escalón es el que usa el
+`docker-compose.yml` para cambiar las cadenas de conexión sin tocar ningún fichero.
 
 ### Lo común — `appsettings.json`
 
@@ -261,6 +286,37 @@ aplican la misma caducidad de `CacheSettings:ExpirationSeconds` cuando no se les
 una. Si no, la aplicación cambiaría de comportamiento solo por cambiar de perfil, y
 eso es justo lo que una interfaz tiene que evitar.
 
+### La imagen se construye en dos etapas
+
+La primera etapa usa el SDK de .NET, que pesa unos 700 MB: restaura, compila,
+**ejecuta los tests** y publica. La segunda se queda únicamente con el binario
+publicado sobre la imagen de runtime, que es mucho más ligera. El SDK no viaja a la
+imagen final.
+
+Tres detalles de ese `Dockerfile`:
+
+- **Los tests corren dentro del build.** Si alguno falla, la imagen no llega a
+  crearse. Se excluyen los 17 de TestContainers (PostgreSQL y Redis), porque
+  necesitarían Docker dentro de Docker.
+- **La imagen final es `runtime`, no `aspnet`.** Esto es una aplicación de consola,
+  no una API: no hay puerto que abrir ni servidor web que cargar.
+- **Corre como usuario sin privilegios**, y por eso hay un `chown` de `/app`: la
+  aplicación escribe los logs y el fichero exportado, y sin ser dueña de la carpeta
+  no podría.
+
+### El contenedor espera a que la base de datos esté lista
+
+`depends_on` por sí solo únicamente espera a que el contenedor **arranque**, no a que
+PostgreSQL acepte conexiones. Y nuestro `Program.cs` pide la base de datos en la
+primera línea, así que llegaría antes de tiempo y se estrellaría.
+
+Por eso PostgreSQL y Redis llevan un `healthcheck` (`pg_isready` y `redis-cli ping`)
+y la aplicación los espera con `condition: service_healthy`.
+
+Dentro de la red de Docker las conexiones apuntan a `postgres` y `redis`, no a
+`localhost`: cada contenedor **es** su propio localhost, así que buscar Redis en
+localhost sería buscarse a uno mismo.
+
 ### Se valida al crear y al actualizar
 
 El enunciado solo nombra un validador de creación. Nos pareció una laguna: si validas
@@ -297,7 +353,7 @@ solo se ocupa de guardar y leer, y las reglas de negocio están en un único sit
 dotnet test
 ```
 
-**65 tests**, todos con NUnit, Moq y FluentAssertions, siguiendo el patrón AAA
+**86 tests**, todos con NUnit, Moq y FluentAssertions, siguiendo el patrón AAA
 (Arrange, Act, Assert) y separados en `CasosPositivos` y `CasosNegativos`.
 
 | Qué se prueba | Nº |
@@ -305,24 +361,41 @@ dotnet test
 | Mappers | 6 |
 | Errores de dominio | 5 |
 | Validador | 9 |
+| Notificaciones | 5 |
 | Repositorio local (TestContainers) | 11 |
 | Sincronización | 5 |
-| Repositorio remoto | 6 |
-| Caché | 5 |
-| UserService | 13 |
+| Repositorio remoto | 14 |
+| Caché en memoria | 5 |
+| Caché Redis (TestContainers) | 6 |
+| UserService | 20 |
 
 Dos cosas sobre cómo están hechos:
 
 > [!NOTE]
-> **Los 11 del repositorio local necesitan Docker arrancado.** Levantan un PostgreSQL
-> real con TestContainers en vez de simularlo. Si Docker Desktop no está en marcha,
-> esos 11 fallan y los otros 54 pasan igual.
+> **Los 17 de TestContainers necesitan Docker arrancado:** los 11 del repositorio
+> local levantan un PostgreSQL real y los 6 de la caché Redis levantan un Redis real,
+> en vez de simularlos. Si Docker Desktop no está en marcha, esos 17 fallan y los
+> otros 69 pasan igual.
 
 **Los del `UserService` no solo miran lo que devuelve, sino a quién llama.** Por
 ejemplo, cuando un usuario está en la caché se comprueba que la base de datos **no
 se toca** (`Times.Never`). Si alguien rompiera el atajo de la caché, el valor
 devuelto seguiría siendo correcto y el test del valor pasaría — pero el programa
 estaría yendo al disco cada vez. Esa comprobación es la única que lo pilla.
+
+### Cobertura
+
+Los tests cubren el **87,1 %** de las líneas (581 de 667) y el 88,5 % de las ramas.
+Por capas: modelos, mappers, validador y repositorios al 100 %, y `UserService` al
+97,3 %. `Program.cs` se excluye a propósito: es el arranque y la demostración, y se
+comprueba ejecutando la aplicación, no con tests.
+
+```bash
+dotnet test --collect:"XPlat Code Coverage" --settings coverlet.runsettings
+reportgenerator -reports:"RepositorioRemoto.Tests/TestResults/*/coverage.cobertura.xml" -targetdir:docs/coverage -reporttypes:"Html;TextSummary"
+```
+
+El informe visual está en [`docs/coverage/index.html`](docs/coverage/index.html).
 
 ---
 
@@ -338,8 +411,23 @@ estaría yendo al disco cada vez. Esa comprobación es la única que lo pilla.
 | Logging | Serilog, a consola y a fichero con rotación diaria |
 | Notificaciones | System.Reactive (Rx.NET) |
 | Inyección de dependencias | `Microsoft.Extensions.DependencyInjection` |
-| Infraestructura | Docker Compose (PostgreSQL + Redis) |
+| Contenedores | Dockerfile multi-etapa + Docker Compose |
 | Tests | NUnit + Moq + FluentAssertions + TestContainers |
 
 ---
 
+## 🚧 Qué queda fuera
+
+Del enunciado solo falta el **pipeline de CI/CD**, que era opcional.
+
+Y un aviso que aparece al arrancar en Docker y que **no es un fallo**:
+
+```
+Cannot load library libgssapi_krb5.so.2
+```
+
+Es Npgsql buscando la librería de Kerberos por si se usara autenticación integrada.
+Como la conexión va por usuario y contraseña no hace falta, y la aplicación funciona
+igual: los 10 usuarios se cargan sin problema. Se podría silenciar instalando
+`libgssapi-krb5-2` en la imagen, pero son 2 MB para callar un mensaje que no afecta
+a nada.
