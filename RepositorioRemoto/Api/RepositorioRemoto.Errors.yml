@@ -1,0 +1,163 @@
+### YamlMime:ManagedReference
+items:
+- uid: RepositorioRemoto.Errors
+  commentId: N:RepositorioRemoto.Errors
+  id: RepositorioRemoto.Errors
+  children:
+  - RepositorioRemoto.Errors.DomainError
+  - RepositorioRemoto.Errors.DomainError.AlreadyExists
+  - RepositorioRemoto.Errors.DomainError.ApiError
+  - RepositorioRemoto.Errors.DomainError.NotFound
+  - RepositorioRemoto.Errors.DomainError.Storage
+  - RepositorioRemoto.Errors.DomainError.Validation
+  - RepositorioRemoto.Errors.DomainErrors
+  langs:
+  - csharp
+  - vb
+  name: RepositorioRemoto.Errors
+  nameWithType: RepositorioRemoto.Errors
+  fullName: RepositorioRemoto.Errors
+  type: Namespace
+  assemblies:
+  - RepositorioRemoto
+references:
+- uid: RepositorioRemoto.Errors.DomainError
+  commentId: T:RepositorioRemoto.Errors.DomainError
+  parent: RepositorioRemoto.Errors
+  href: RepositorioRemoto.Errors.DomainError.html
+  name: DomainError
+  nameWithType: DomainError
+  fullName: RepositorioRemoto.Errors.DomainError
+- uid: RepositorioRemoto.Errors.DomainError.NotFound
+  commentId: T:RepositorioRemoto.Errors.DomainError.NotFound
+  href: RepositorioRemoto.Errors.DomainError.html
+  name: DomainError.NotFound
+  nameWithType: DomainError.NotFound
+  fullName: RepositorioRemoto.Errors.DomainError.NotFound
+  spec.csharp:
+  - uid: RepositorioRemoto.Errors.DomainError
+    name: DomainError
+    href: RepositorioRemoto.Errors.DomainError.html
+  - name: .
+  - uid: RepositorioRemoto.Errors.DomainError.NotFound
+    name: NotFound
+    href: RepositorioRemoto.Errors.DomainError.NotFound.html
+  spec.vb:
+  - uid: RepositorioRemoto.Errors.DomainError
+    name: DomainError
+    href: RepositorioRemoto.Errors.DomainError.html
+  - name: .
+  - uid: RepositorioRemoto.Errors.DomainError.NotFound
+    name: NotFound
+    href: RepositorioRemoto.Errors.DomainError.NotFound.html
+- uid: RepositorioRemoto.Errors.DomainError.Validation
+  commentId: T:RepositorioRemoto.Errors.DomainError.Validation
+  href: RepositorioRemoto.Errors.DomainError.html
+  name: DomainError.Validation
+  nameWithType: DomainError.Validation
+  fullName: RepositorioRemoto.Errors.DomainError.Validation
+  spec.csharp:
+  - uid: RepositorioRemoto.Errors.DomainError
+    name: DomainError
+    href: RepositorioRemoto.Errors.DomainError.html
+  - name: .
+  - uid: RepositorioRemoto.Errors.DomainError.Validation
+    name: Validation
+    href: RepositorioRemoto.Errors.DomainError.Validation.html
+  spec.vb:
+  - uid: RepositorioRemoto.Errors.DomainError
+    name: DomainError
+    href: RepositorioRemoto.Errors.DomainError.html
+  - name: .
+  - uid: RepositorioRemoto.Errors.DomainError.Validation
+    name: Validation
+    href: RepositorioRemoto.Errors.DomainError.Validation.html
+- uid: RepositorioRemoto.Errors.DomainError.AlreadyExists
+  commentId: T:RepositorioRemoto.Errors.DomainError.AlreadyExists
+  href: RepositorioRemoto.Errors.DomainError.html
+  name: DomainError.AlreadyExists
+  nameWithType: DomainError.AlreadyExists
+  fullName: RepositorioRemoto.Errors.DomainError.AlreadyExists
+  spec.csharp:
+  - uid: RepositorioRemoto.Errors.DomainError
+    name: DomainError
+    href: RepositorioRemoto.Errors.DomainError.html
+  - name: .
+  - uid: RepositorioRemoto.Errors.DomainError.AlreadyExists
+    name: AlreadyExists
+    href: RepositorioRemoto.Errors.DomainError.AlreadyExists.html
+  spec.vb:
+  - uid: RepositorioRemoto.Errors.DomainError
+    name: DomainError
+    href: RepositorioRemoto.Errors.DomainError.html
+  - name: .
+  - uid: RepositorioRemoto.Errors.DomainError.AlreadyExists
+    name: AlreadyExists
+    href: RepositorioRemoto.Errors.DomainError.AlreadyExists.html
+- uid: RepositorioRemoto.Errors.DomainError.ApiError
+  commentId: T:RepositorioRemoto.Errors.DomainError.ApiError
+  href: RepositorioRemoto.Errors.DomainError.html
+  name: DomainError.ApiError
+  nameWithType: DomainError.ApiError
+  fullName: RepositorioRemoto.Errors.DomainError.ApiError
+  spec.csharp:
+  - uid: RepositorioRemoto.Errors.DomainError
+    name: DomainError
+    href: RepositorioRemoto.Errors.DomainError.html
+  - name: .
+  - uid: RepositorioRemoto.Errors.DomainError.ApiError
+    name: ApiError
+    href: RepositorioRemoto.Errors.DomainError.ApiError.html
+  spec.vb:
+  - uid: RepositorioRemoto.Errors.DomainError
+    name: DomainError
+    href: RepositorioRemoto.Errors.DomainError.html
+  - name: .
+  - uid: RepositorioRemoto.Errors.DomainError.ApiError
+    name: ApiError
+    href: RepositorioRemoto.Errors.DomainError.ApiError.html
+- uid: RepositorioRemoto.Errors.DomainError.Storage
+  commentId: T:RepositorioRemoto.Errors.DomainError.Storage
+  href: RepositorioRemoto.Errors.DomainError.html
+  name: DomainError.Storage
+  nameWithType: DomainError.Storage
+  fullName: RepositorioRemoto.Errors.DomainError.Storage
+  spec.csharp:
+  - uid: RepositorioRemoto.Errors.DomainError
+    name: DomainError
+    href: RepositorioRemoto.Errors.DomainError.html
+  - name: .
+  - uid: RepositorioRemoto.Errors.DomainError.Storage
+    name: Storage
+    href: RepositorioRemoto.Errors.DomainError.Storage.html
+  spec.vb:
+  - uid: RepositorioRemoto.Errors.DomainError
+    name: DomainError
+    href: RepositorioRemoto.Errors.DomainError.html
+  - name: .
+  - uid: RepositorioRemoto.Errors.DomainError.Storage
+    name: Storage
+    href: RepositorioRemoto.Errors.DomainError.Storage.html
+- uid: RepositorioRemoto.Errors.DomainErrors
+  commentId: T:RepositorioRemoto.Errors.DomainErrors
+  href: RepositorioRemoto.Errors.DomainErrors.html
+  name: DomainErrors
+  nameWithType: DomainErrors
+  fullName: RepositorioRemoto.Errors.DomainErrors
+- uid: RepositorioRemoto.Errors
+  commentId: N:RepositorioRemoto.Errors
+  name: RepositorioRemoto.Errors
+  nameWithType: RepositorioRemoto.Errors
+  fullName: RepositorioRemoto.Errors
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Errors
+    name: Errors
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Errors
+    name: Errors

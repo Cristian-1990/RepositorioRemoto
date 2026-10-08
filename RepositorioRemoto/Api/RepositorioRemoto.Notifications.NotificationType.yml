@@ -1,0 +1,142 @@
+### YamlMime:ManagedReference
+items:
+- uid: RepositorioRemoto.Notifications.NotificationType
+  commentId: T:RepositorioRemoto.Notifications.NotificationType
+  id: NotificationType
+  parent: RepositorioRemoto.Notifications
+  children:
+  - RepositorioRemoto.Notifications.NotificationType.Create
+  - RepositorioRemoto.Notifications.NotificationType.Delete
+  - RepositorioRemoto.Notifications.NotificationType.Update
+  langs:
+  - csharp
+  - vb
+  name: NotificationType
+  nameWithType: NotificationType
+  fullName: RepositorioRemoto.Notifications.NotificationType
+  type: Enum
+  source:
+    remote:
+      path: RepositorioRemoto/Notifications/INotificationService.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: NotificationType
+    path: Notifications/INotificationService.cs
+    startLine: 7
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Notifications
+  summary: Tipo de evento que se notifica.
+  example: []
+  syntax:
+    content: public enum NotificationType
+    content.vb: Public Enum NotificationType
+- uid: RepositorioRemoto.Notifications.NotificationType.Create
+  commentId: F:RepositorioRemoto.Notifications.NotificationType.Create
+  id: Create
+  parent: RepositorioRemoto.Notifications.NotificationType
+  langs:
+  - csharp
+  - vb
+  name: Create
+  nameWithType: NotificationType.Create
+  fullName: RepositorioRemoto.Notifications.NotificationType.Create
+  type: Field
+  source:
+    remote:
+      path: RepositorioRemoto/Notifications/INotificationService.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: Create
+    path: Notifications/INotificationService.cs
+    startLine: 10
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Notifications
+  summary: Se ha creado un usuario.
+  example: []
+  syntax:
+    content: Create = 0
+    return:
+      type: RepositorioRemoto.Notifications.NotificationType
+- uid: RepositorioRemoto.Notifications.NotificationType.Update
+  commentId: F:RepositorioRemoto.Notifications.NotificationType.Update
+  id: Update
+  parent: RepositorioRemoto.Notifications.NotificationType
+  langs:
+  - csharp
+  - vb
+  name: Update
+  nameWithType: NotificationType.Update
+  fullName: RepositorioRemoto.Notifications.NotificationType.Update
+  type: Field
+  source:
+    remote:
+      path: RepositorioRemoto/Notifications/INotificationService.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: Update
+    path: Notifications/INotificationService.cs
+    startLine: 13
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Notifications
+  summary: Se ha actualizado un usuario.
+  example: []
+  syntax:
+    content: Update = 1
+    return:
+      type: RepositorioRemoto.Notifications.NotificationType
+- uid: RepositorioRemoto.Notifications.NotificationType.Delete
+  commentId: F:RepositorioRemoto.Notifications.NotificationType.Delete
+  id: Delete
+  parent: RepositorioRemoto.Notifications.NotificationType
+  langs:
+  - csharp
+  - vb
+  name: Delete
+  nameWithType: NotificationType.Delete
+  fullName: RepositorioRemoto.Notifications.NotificationType.Delete
+  type: Field
+  source:
+    remote:
+      path: RepositorioRemoto/Notifications/INotificationService.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: Delete
+    path: Notifications/INotificationService.cs
+    startLine: 16
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Notifications
+  summary: Se ha eliminado un usuario.
+  example: []
+  syntax:
+    content: Delete = 2
+    return:
+      type: RepositorioRemoto.Notifications.NotificationType
+references:
+- uid: RepositorioRemoto.Notifications
+  commentId: N:RepositorioRemoto.Notifications
+  name: RepositorioRemoto.Notifications
+  nameWithType: RepositorioRemoto.Notifications
+  fullName: RepositorioRemoto.Notifications
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Notifications
+    name: Notifications
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Notifications
+    name: Notifications
+- uid: RepositorioRemoto.Notifications.NotificationType
+  commentId: T:RepositorioRemoto.Notifications.NotificationType
+  parent: RepositorioRemoto.Notifications
+  href: RepositorioRemoto.Notifications.NotificationType.html
+  name: NotificationType
+  nameWithType: NotificationType
+  fullName: RepositorioRemoto.Notifications.NotificationType

@@ -7,8 +7,7 @@ namespace RepositorioRemoto.Cache;
 
 /// <summary>
 /// Implementación de ICacheService con Redis.
-/// Es la del perfil Prod: la caché vive fuera del proceso y se puede compartir
-/// entre varias instancias. Patrón de la solución 06-Redis-Cache.
+/// Es la del perfil Prod: la caché vive fuera del proceso y se puede compartir entre varias instancias.
 /// </summary>
 public class RedisCacheService(IConnectionMultiplexer redis, IOptions<CacheConfig> options) : ICacheService
 {

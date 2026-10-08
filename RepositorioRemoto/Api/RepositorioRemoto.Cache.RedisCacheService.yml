@@ -1,0 +1,1082 @@
+### YamlMime:ManagedReference
+items:
+- uid: RepositorioRemoto.Cache.RedisCacheService
+  commentId: T:RepositorioRemoto.Cache.RedisCacheService
+  id: RedisCacheService
+  parent: RepositorioRemoto.Cache
+  children:
+  - RepositorioRemoto.Cache.RedisCacheService.#ctor(StackExchange.Redis.IConnectionMultiplexer,Microsoft.Extensions.Options.IOptions{RepositorioRemoto.Config.CacheConfig})
+  - RepositorioRemoto.Cache.RedisCacheService.ClearAsync
+  - RepositorioRemoto.Cache.RedisCacheService.GetAsync``1(System.String)
+  - RepositorioRemoto.Cache.RedisCacheService.RemoveAsync(System.String)
+  - RepositorioRemoto.Cache.RedisCacheService.SetAsync``1(System.String,``0,System.Nullable{System.TimeSpan})
+  langs:
+  - csharp
+  - vb
+  name: RedisCacheService
+  nameWithType: RedisCacheService
+  fullName: RepositorioRemoto.Cache.RedisCacheService
+  type: Class
+  source:
+    remote:
+      path: RepositorioRemoto/Cache/RedisCacheService.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: RedisCacheService
+    path: Cache/RedisCacheService.cs
+    startLine: 11
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Cache
+  summary: >-
+    Implementación de ICacheService con Redis.
+
+    Es la del perfil Prod: la caché vive fuera del proceso y se puede compartir entre varias instancias.
+  example: []
+  syntax:
+    content: 'public class RedisCacheService : ICacheService'
+    content.vb: Public Class RedisCacheService Implements ICacheService
+  inheritance:
+  - System.Object
+  implements:
+  - RepositorioRemoto.Cache.ICacheService
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: RepositorioRemoto.Cache.RedisCacheService.#ctor(StackExchange.Redis.IConnectionMultiplexer,Microsoft.Extensions.Options.IOptions{RepositorioRemoto.Config.CacheConfig})
+  commentId: M:RepositorioRemoto.Cache.RedisCacheService.#ctor(StackExchange.Redis.IConnectionMultiplexer,Microsoft.Extensions.Options.IOptions{RepositorioRemoto.Config.CacheConfig})
+  id: '#ctor(StackExchange.Redis.IConnectionMultiplexer,Microsoft.Extensions.Options.IOptions{RepositorioRemoto.Config.CacheConfig})'
+  parent: RepositorioRemoto.Cache.RedisCacheService
+  langs:
+  - csharp
+  - vb
+  name: RedisCacheService(IConnectionMultiplexer, IOptions<CacheConfig>)
+  nameWithType: RedisCacheService.RedisCacheService(IConnectionMultiplexer, IOptions<CacheConfig>)
+  fullName: RepositorioRemoto.Cache.RedisCacheService.RedisCacheService(StackExchange.Redis.IConnectionMultiplexer, Microsoft.Extensions.Options.IOptions<RepositorioRemoto.Config.CacheConfig>)
+  type: Constructor
+  source:
+    remote:
+      path: RepositorioRemoto/Cache/RedisCacheService.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: .ctor
+    path: Cache/RedisCacheService.cs
+    startLine: 11
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Cache
+  summary: >-
+    Implementación de ICacheService con Redis.
+
+    Es la del perfil Prod: la caché vive fuera del proceso y se puede compartir entre varias instancias.
+  example: []
+  syntax:
+    content: public RedisCacheService(IConnectionMultiplexer redis, IOptions<CacheConfig> options)
+    parameters:
+    - id: redis
+      type: StackExchange.Redis.IConnectionMultiplexer
+    - id: options
+      type: Microsoft.Extensions.Options.IOptions{RepositorioRemoto.Config.CacheConfig}
+    content.vb: Public Sub New(redis As IConnectionMultiplexer, options As IOptions(Of CacheConfig))
+  overload: RepositorioRemoto.Cache.RedisCacheService.#ctor*
+  nameWithType.vb: RedisCacheService.New(IConnectionMultiplexer, IOptions(Of CacheConfig))
+  fullName.vb: RepositorioRemoto.Cache.RedisCacheService.New(StackExchange.Redis.IConnectionMultiplexer, Microsoft.Extensions.Options.IOptions(Of RepositorioRemoto.Config.CacheConfig))
+  name.vb: New(IConnectionMultiplexer, IOptions(Of CacheConfig))
+- uid: RepositorioRemoto.Cache.RedisCacheService.GetAsync``1(System.String)
+  commentId: M:RepositorioRemoto.Cache.RedisCacheService.GetAsync``1(System.String)
+  id: GetAsync``1(System.String)
+  parent: RepositorioRemoto.Cache.RedisCacheService
+  langs:
+  - csharp
+  - vb
+  name: GetAsync<T>(string)
+  nameWithType: RedisCacheService.GetAsync<T>(string)
+  fullName: RepositorioRemoto.Cache.RedisCacheService.GetAsync<T>(string)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Cache/RedisCacheService.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: GetAsync
+    path: Cache/RedisCacheService.cs
+    startLine: 19
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Cache
+  summary: Obtiene un valor de la caché, o null si no está.
+  example: []
+  syntax:
+    content: 'public Task<T?> GetAsync<T>(string key) where T : class'
+    parameters:
+    - id: key
+      type: System.String
+      description: Clave del valor, por ejemplo "user:1".
+    typeParameters:
+    - id: T
+    return:
+      type: System.Threading.Tasks.Task{{T}}
+    content.vb: Public Function GetAsync(Of T As Class)(key As String) As Task(Of T)
+  overload: RepositorioRemoto.Cache.RedisCacheService.GetAsync*
+  implements:
+  - RepositorioRemoto.Cache.ICacheService.GetAsync``1(System.String)
+  nameWithType.vb: RedisCacheService.GetAsync(Of T)(String)
+  fullName.vb: RepositorioRemoto.Cache.RedisCacheService.GetAsync(Of T)(String)
+  name.vb: GetAsync(Of T)(String)
+- uid: RepositorioRemoto.Cache.RedisCacheService.SetAsync``1(System.String,``0,System.Nullable{System.TimeSpan})
+  commentId: M:RepositorioRemoto.Cache.RedisCacheService.SetAsync``1(System.String,``0,System.Nullable{System.TimeSpan})
+  id: SetAsync``1(System.String,``0,System.Nullable{System.TimeSpan})
+  parent: RepositorioRemoto.Cache.RedisCacheService
+  langs:
+  - csharp
+  - vb
+  name: SetAsync<T>(string, T, TimeSpan?)
+  nameWithType: RedisCacheService.SetAsync<T>(string, T, TimeSpan?)
+  fullName: RepositorioRemoto.Cache.RedisCacheService.SetAsync<T>(string, T, System.TimeSpan?)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Cache/RedisCacheService.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: SetAsync
+    path: Cache/RedisCacheService.cs
+    startLine: 31
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Cache
+  summary: Guarda un valor en la caché.
+  example: []
+  syntax:
+    content: 'public Task SetAsync<T>(string key, T value, TimeSpan? expiration = null) where T : class'
+    parameters:
+    - id: key
+      type: System.String
+      description: Clave del valor.
+    - id: value
+      type: '{T}'
+      description: Valor a guardar.
+    - id: expiration
+      type: System.Nullable{System.TimeSpan}
+      description: Tiempo que vive en la caché. Si es null, se usa el de la configuración.
+    typeParameters:
+    - id: T
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function SetAsync(Of T As Class)(key As String, value As T, expiration As TimeSpan? = Nothing) As Task
+  overload: RepositorioRemoto.Cache.RedisCacheService.SetAsync*
+  implements:
+  - RepositorioRemoto.Cache.ICacheService.SetAsync``1(System.String,{T},System.Nullable{System.TimeSpan})
+  nameWithType.vb: RedisCacheService.SetAsync(Of T)(String, T, TimeSpan?)
+  fullName.vb: RepositorioRemoto.Cache.RedisCacheService.SetAsync(Of T)(String, T, System.TimeSpan?)
+  name.vb: SetAsync(Of T)(String, T, TimeSpan?)
+- uid: RepositorioRemoto.Cache.RedisCacheService.RemoveAsync(System.String)
+  commentId: M:RepositorioRemoto.Cache.RedisCacheService.RemoveAsync(System.String)
+  id: RemoveAsync(System.String)
+  parent: RepositorioRemoto.Cache.RedisCacheService
+  langs:
+  - csharp
+  - vb
+  name: RemoveAsync(string)
+  nameWithType: RedisCacheService.RemoveAsync(string)
+  fullName: RepositorioRemoto.Cache.RedisCacheService.RemoveAsync(string)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Cache/RedisCacheService.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: RemoveAsync
+    path: Cache/RedisCacheService.cs
+    startLine: 38
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Cache
+  summary: Borra un valor de la caché. Devuelve false si no estaba.
+  example: []
+  syntax:
+    content: public Task<bool> RemoveAsync(string key)
+    parameters:
+    - id: key
+      type: System.String
+      description: Clave del valor.
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Public Function RemoveAsync(key As String) As Task(Of Boolean)
+  overload: RepositorioRemoto.Cache.RedisCacheService.RemoveAsync*
+  implements:
+  - RepositorioRemoto.Cache.ICacheService.RemoveAsync(System.String)
+  nameWithType.vb: RedisCacheService.RemoveAsync(String)
+  fullName.vb: RepositorioRemoto.Cache.RedisCacheService.RemoveAsync(String)
+  name.vb: RemoveAsync(String)
+- uid: RepositorioRemoto.Cache.RedisCacheService.ClearAsync
+  commentId: M:RepositorioRemoto.Cache.RedisCacheService.ClearAsync
+  id: ClearAsync
+  parent: RepositorioRemoto.Cache.RedisCacheService
+  langs:
+  - csharp
+  - vb
+  name: ClearAsync()
+  nameWithType: RedisCacheService.ClearAsync()
+  fullName: RepositorioRemoto.Cache.RedisCacheService.ClearAsync()
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Cache/RedisCacheService.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: ClearAsync
+    path: Cache/RedisCacheService.cs
+    startLine: 44
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Cache
+  summary: Vacía la caché entera. Lo usan el arranque y la sincronización.
+  example: []
+  syntax:
+    content: public Task ClearAsync()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function ClearAsync() As Task
+  overload: RepositorioRemoto.Cache.RedisCacheService.ClearAsync*
+  implements:
+  - RepositorioRemoto.Cache.ICacheService.ClearAsync
+references:
+- uid: RepositorioRemoto.Cache
+  commentId: N:RepositorioRemoto.Cache
+  name: RepositorioRemoto.Cache
+  nameWithType: RepositorioRemoto.Cache
+  fullName: RepositorioRemoto.Cache
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Cache
+    name: Cache
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Cache
+    name: Cache
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: RepositorioRemoto.Cache.ICacheService
+  commentId: T:RepositorioRemoto.Cache.ICacheService
+  parent: RepositorioRemoto.Cache
+  href: RepositorioRemoto.Cache.ICacheService.html
+  name: ICacheService
+  nameWithType: ICacheService
+  fullName: RepositorioRemoto.Cache.ICacheService
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: RepositorioRemoto.Cache.RedisCacheService.#ctor*
+  commentId: Overload:RepositorioRemoto.Cache.RedisCacheService.#ctor
+  href: RepositorioRemoto.Cache.RedisCacheService.html#RepositorioRemoto_Cache_RedisCacheService__ctor_StackExchange_Redis_IConnectionMultiplexer_Microsoft_Extensions_Options_IOptions_RepositorioRemoto_Config_CacheConfig__
+  name: RedisCacheService
+  nameWithType: RedisCacheService.RedisCacheService
+  fullName: RepositorioRemoto.Cache.RedisCacheService.RedisCacheService
+  nameWithType.vb: RedisCacheService.New
+  fullName.vb: RepositorioRemoto.Cache.RedisCacheService.New
+  name.vb: New
+- uid: StackExchange.Redis.IConnectionMultiplexer
+  commentId: T:StackExchange.Redis.IConnectionMultiplexer
+  parent: StackExchange.Redis
+  isExternal: true
+  name: IConnectionMultiplexer
+  nameWithType: IConnectionMultiplexer
+  fullName: StackExchange.Redis.IConnectionMultiplexer
+- uid: Microsoft.Extensions.Options.IOptions{RepositorioRemoto.Config.CacheConfig}
+  commentId: T:Microsoft.Extensions.Options.IOptions{RepositorioRemoto.Config.CacheConfig}
+  parent: Microsoft.Extensions.Options
+  definition: Microsoft.Extensions.Options.IOptions`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  name: IOptions<CacheConfig>
+  nameWithType: IOptions<CacheConfig>
+  fullName: Microsoft.Extensions.Options.IOptions<RepositorioRemoto.Config.CacheConfig>
+  nameWithType.vb: IOptions(Of CacheConfig)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of RepositorioRemoto.Config.CacheConfig)
+  name.vb: IOptions(Of CacheConfig)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: <
+  - uid: RepositorioRemoto.Config.CacheConfig
+    name: CacheConfig
+    href: RepositorioRemoto.Config.CacheConfig.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: RepositorioRemoto.Config.CacheConfig
+    name: CacheConfig
+    href: RepositorioRemoto.Config.CacheConfig.html
+  - name: )
+- uid: StackExchange.Redis
+  commentId: N:StackExchange.Redis
+  isExternal: true
+  name: StackExchange.Redis
+  nameWithType: StackExchange.Redis
+  fullName: StackExchange.Redis
+  spec.csharp:
+  - uid: StackExchange
+    name: StackExchange
+    isExternal: true
+  - name: .
+  - uid: StackExchange.Redis
+    name: Redis
+    isExternal: true
+  spec.vb:
+  - uid: StackExchange
+    name: StackExchange
+    isExternal: true
+  - name: .
+  - uid: StackExchange.Redis
+    name: Redis
+    isExternal: true
+- uid: Microsoft.Extensions.Options.IOptions`1
+  commentId: T:Microsoft.Extensions.Options.IOptions`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  name: IOptions<TOptions>
+  nameWithType: IOptions<TOptions>
+  fullName: Microsoft.Extensions.Options.IOptions<TOptions>
+  nameWithType.vb: IOptions(Of TOptions)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TOptions)
+  name.vb: IOptions(Of TOptions)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: <
+  - name: TOptions
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TOptions
+  - name: )
+- uid: Microsoft.Extensions.Options
+  commentId: N:Microsoft.Extensions.Options
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Options
+  nameWithType: Microsoft.Extensions.Options
+  fullName: Microsoft.Extensions.Options
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Options
+    name: Options
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Options
+    name: Options
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options
+- uid: RepositorioRemoto.Cache.RedisCacheService.GetAsync*
+  commentId: Overload:RepositorioRemoto.Cache.RedisCacheService.GetAsync
+  href: RepositorioRemoto.Cache.RedisCacheService.html#RepositorioRemoto_Cache_RedisCacheService_GetAsync__1_System_String_
+  name: GetAsync
+  nameWithType: RedisCacheService.GetAsync
+  fullName: RepositorioRemoto.Cache.RedisCacheService.GetAsync
+- uid: RepositorioRemoto.Cache.ICacheService.GetAsync``1(System.String)
+  commentId: M:RepositorioRemoto.Cache.ICacheService.GetAsync``1(System.String)
+  parent: RepositorioRemoto.Cache.ICacheService
+  isExternal: true
+  href: RepositorioRemoto.Cache.ICacheService.html#RepositorioRemoto_Cache_ICacheService_GetAsync__1_System_String_
+  name: GetAsync<T>(string)
+  nameWithType: ICacheService.GetAsync<T>(string)
+  fullName: RepositorioRemoto.Cache.ICacheService.GetAsync<T>(string)
+  nameWithType.vb: ICacheService.GetAsync(Of T)(String)
+  fullName.vb: RepositorioRemoto.Cache.ICacheService.GetAsync(Of T)(String)
+  name.vb: GetAsync(Of T)(String)
+  spec.csharp:
+  - uid: RepositorioRemoto.Cache.ICacheService.GetAsync``1(System.String)
+    name: GetAsync
+    href: RepositorioRemoto.Cache.ICacheService.html#RepositorioRemoto_Cache_ICacheService_GetAsync__1_System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: RepositorioRemoto.Cache.ICacheService.GetAsync``1(System.String)
+    name: GetAsync
+    href: RepositorioRemoto.Cache.ICacheService.html#RepositorioRemoto_Cache_ICacheService_GetAsync__1_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{{T}}
+  commentId: T:System.Threading.Tasks.Task{``0}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<T>
+  nameWithType: Task<T>
+  fullName: System.Threading.Tasks.Task<T>
+  nameWithType.vb: Task(Of T)
+  fullName.vb: System.Threading.Tasks.Task(Of T)
+  name.vb: Task(Of T)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: RepositorioRemoto.Cache.RedisCacheService.SetAsync*
+  commentId: Overload:RepositorioRemoto.Cache.RedisCacheService.SetAsync
+  href: RepositorioRemoto.Cache.RedisCacheService.html#RepositorioRemoto_Cache_RedisCacheService_SetAsync__1_System_String___0_System_Nullable_System_TimeSpan__
+  name: SetAsync
+  nameWithType: RedisCacheService.SetAsync
+  fullName: RepositorioRemoto.Cache.RedisCacheService.SetAsync
+- uid: RepositorioRemoto.Cache.ICacheService.SetAsync``1(System.String,{T},System.Nullable{System.TimeSpan})
+  commentId: M:RepositorioRemoto.Cache.ICacheService.SetAsync``1(System.String,``0,System.Nullable{System.TimeSpan})
+  parent: RepositorioRemoto.Cache.ICacheService
+  definition: RepositorioRemoto.Cache.ICacheService.SetAsync``1(System.String,``0,System.Nullable{System.TimeSpan})
+  href: RepositorioRemoto.Cache.ICacheService.html#RepositorioRemoto_Cache_ICacheService_SetAsync__1_System_String___0_System_Nullable_System_TimeSpan__
+  name: SetAsync<T>(string, T, TimeSpan?)
+  nameWithType: ICacheService.SetAsync<T>(string, T, TimeSpan?)
+  fullName: RepositorioRemoto.Cache.ICacheService.SetAsync<T>(string, T, System.TimeSpan?)
+  nameWithType.vb: ICacheService.SetAsync(Of T)(String, T, TimeSpan?)
+  fullName.vb: RepositorioRemoto.Cache.ICacheService.SetAsync(Of T)(String, T, System.TimeSpan?)
+  name.vb: SetAsync(Of T)(String, T, TimeSpan?)
+  spec.csharp:
+  - uid: RepositorioRemoto.Cache.ICacheService.SetAsync``1(System.String,``0,System.Nullable{System.TimeSpan})
+    name: SetAsync
+    href: RepositorioRemoto.Cache.ICacheService.html#RepositorioRemoto_Cache_ICacheService_SetAsync__1_System_String___0_System_Nullable_System_TimeSpan__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: '?'
+  - name: )
+  spec.vb:
+  - uid: RepositorioRemoto.Cache.ICacheService.SetAsync``1(System.String,``0,System.Nullable{System.TimeSpan})
+    name: SetAsync
+    href: RepositorioRemoto.Cache.ICacheService.html#RepositorioRemoto_Cache_ICacheService_SetAsync__1_System_String___0_System_Nullable_System_TimeSpan__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: '?'
+  - name: )
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Nullable{System.TimeSpan}
+  commentId: T:System.Nullable{System.TimeSpan}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan?
+  nameWithType: TimeSpan?
+  fullName: System.TimeSpan?
+  spec.csharp:
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: '?'
+  spec.vb:
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: '?'
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: RepositorioRemoto.Cache.ICacheService.SetAsync``1(System.String,``0,System.Nullable{System.TimeSpan})
+  commentId: M:RepositorioRemoto.Cache.ICacheService.SetAsync``1(System.String,``0,System.Nullable{System.TimeSpan})
+  isExternal: true
+  href: RepositorioRemoto.Cache.ICacheService.html#RepositorioRemoto_Cache_ICacheService_SetAsync__1_System_String___0_System_Nullable_System_TimeSpan__
+  name: SetAsync<T>(string, T, TimeSpan?)
+  nameWithType: ICacheService.SetAsync<T>(string, T, TimeSpan?)
+  fullName: RepositorioRemoto.Cache.ICacheService.SetAsync<T>(string, T, System.TimeSpan?)
+  nameWithType.vb: ICacheService.SetAsync(Of T)(String, T, TimeSpan?)
+  fullName.vb: RepositorioRemoto.Cache.ICacheService.SetAsync(Of T)(String, T, System.TimeSpan?)
+  name.vb: SetAsync(Of T)(String, T, TimeSpan?)
+  spec.csharp:
+  - uid: RepositorioRemoto.Cache.ICacheService.SetAsync``1(System.String,``0,System.Nullable{System.TimeSpan})
+    name: SetAsync
+    href: RepositorioRemoto.Cache.ICacheService.html#RepositorioRemoto_Cache_ICacheService_SetAsync__1_System_String___0_System_Nullable_System_TimeSpan__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: '?'
+  - name: )
+  spec.vb:
+  - uid: RepositorioRemoto.Cache.ICacheService.SetAsync``1(System.String,``0,System.Nullable{System.TimeSpan})
+    name: SetAsync
+    href: RepositorioRemoto.Cache.ICacheService.html#RepositorioRemoto_Cache_ICacheService_SetAsync__1_System_String___0_System_Nullable_System_TimeSpan__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: '?'
+  - name: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: RepositorioRemoto.Cache.RedisCacheService.RemoveAsync*
+  commentId: Overload:RepositorioRemoto.Cache.RedisCacheService.RemoveAsync
+  href: RepositorioRemoto.Cache.RedisCacheService.html#RepositorioRemoto_Cache_RedisCacheService_RemoveAsync_System_String_
+  name: RemoveAsync
+  nameWithType: RedisCacheService.RemoveAsync
+  fullName: RepositorioRemoto.Cache.RedisCacheService.RemoveAsync
+- uid: RepositorioRemoto.Cache.ICacheService.RemoveAsync(System.String)
+  commentId: M:RepositorioRemoto.Cache.ICacheService.RemoveAsync(System.String)
+  parent: RepositorioRemoto.Cache.ICacheService
+  isExternal: true
+  href: RepositorioRemoto.Cache.ICacheService.html#RepositorioRemoto_Cache_ICacheService_RemoveAsync_System_String_
+  name: RemoveAsync(string)
+  nameWithType: ICacheService.RemoveAsync(string)
+  fullName: RepositorioRemoto.Cache.ICacheService.RemoveAsync(string)
+  nameWithType.vb: ICacheService.RemoveAsync(String)
+  fullName.vb: RepositorioRemoto.Cache.ICacheService.RemoveAsync(String)
+  name.vb: RemoveAsync(String)
+  spec.csharp:
+  - uid: RepositorioRemoto.Cache.ICacheService.RemoveAsync(System.String)
+    name: RemoveAsync
+    href: RepositorioRemoto.Cache.ICacheService.html#RepositorioRemoto_Cache_ICacheService_RemoveAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: RepositorioRemoto.Cache.ICacheService.RemoveAsync(System.String)
+    name: RemoveAsync
+    href: RepositorioRemoto.Cache.ICacheService.html#RepositorioRemoto_Cache_ICacheService_RemoveAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: RepositorioRemoto.Cache.RedisCacheService.ClearAsync*
+  commentId: Overload:RepositorioRemoto.Cache.RedisCacheService.ClearAsync
+  href: RepositorioRemoto.Cache.RedisCacheService.html#RepositorioRemoto_Cache_RedisCacheService_ClearAsync
+  name: ClearAsync
+  nameWithType: RedisCacheService.ClearAsync
+  fullName: RepositorioRemoto.Cache.RedisCacheService.ClearAsync
+- uid: RepositorioRemoto.Cache.ICacheService.ClearAsync
+  commentId: M:RepositorioRemoto.Cache.ICacheService.ClearAsync
+  parent: RepositorioRemoto.Cache.ICacheService
+  href: RepositorioRemoto.Cache.ICacheService.html#RepositorioRemoto_Cache_ICacheService_ClearAsync
+  name: ClearAsync()
+  nameWithType: ICacheService.ClearAsync()
+  fullName: RepositorioRemoto.Cache.ICacheService.ClearAsync()
+  spec.csharp:
+  - uid: RepositorioRemoto.Cache.ICacheService.ClearAsync
+    name: ClearAsync
+    href: RepositorioRemoto.Cache.ICacheService.html#RepositorioRemoto_Cache_ICacheService_ClearAsync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: RepositorioRemoto.Cache.ICacheService.ClearAsync
+    name: ClearAsync
+    href: RepositorioRemoto.Cache.ICacheService.html#RepositorioRemoto_Cache_ICacheService_ClearAsync
+  - name: (
+  - name: )

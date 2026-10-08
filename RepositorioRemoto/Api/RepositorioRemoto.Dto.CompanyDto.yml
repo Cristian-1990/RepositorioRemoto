@@ -1,0 +1,610 @@
+### YamlMime:ManagedReference
+items:
+- uid: RepositorioRemoto.Dto.CompanyDto
+  commentId: T:RepositorioRemoto.Dto.CompanyDto
+  id: CompanyDto
+  parent: RepositorioRemoto.Dto
+  children:
+  - RepositorioRemoto.Dto.CompanyDto.#ctor(System.String,System.String,System.String)
+  - RepositorioRemoto.Dto.CompanyDto.Bs
+  - RepositorioRemoto.Dto.CompanyDto.CatchPhrase
+  - RepositorioRemoto.Dto.CompanyDto.Name
+  langs:
+  - csharp
+  - vb
+  name: CompanyDto
+  nameWithType: CompanyDto
+  fullName: RepositorioRemoto.Dto.CompanyDto
+  type: Class
+  source:
+    remote:
+      path: RepositorioRemoto/Dto/CompanyDto.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: CompanyDto
+    path: Dto/CompanyDto.cs
+    startLine: 8
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Dto
+  summary: DTO de empresa.
+  example: []
+  syntax:
+    content: 'public record CompanyDto : IEquatable<CompanyDto>'
+    content.vb: Public Class CompanyDto Implements IEquatable(Of CompanyDto)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{RepositorioRemoto.Dto.CompanyDto}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - RepositorioRemoto.Dto.CompanyDto.RepositorioRemoto.Mappers.UserMapper.ToModel
+- uid: RepositorioRemoto.Dto.CompanyDto.#ctor(System.String,System.String,System.String)
+  commentId: M:RepositorioRemoto.Dto.CompanyDto.#ctor(System.String,System.String,System.String)
+  id: '#ctor(System.String,System.String,System.String)'
+  parent: RepositorioRemoto.Dto.CompanyDto
+  langs:
+  - csharp
+  - vb
+  name: CompanyDto(string, string, string)
+  nameWithType: CompanyDto.CompanyDto(string, string, string)
+  fullName: RepositorioRemoto.Dto.CompanyDto.CompanyDto(string, string, string)
+  type: Constructor
+  source:
+    remote:
+      path: RepositorioRemoto/Dto/CompanyDto.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: .ctor
+    path: Dto/CompanyDto.cs
+    startLine: 8
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Dto
+  summary: DTO de empresa.
+  example: []
+  syntax:
+    content: public CompanyDto(string Name, string CatchPhrase, string Bs)
+    parameters:
+    - id: Name
+      type: System.String
+      description: Nombre de la empresa.
+    - id: CatchPhrase
+      type: System.String
+      description: Eslogan.
+    - id: Bs
+      type: System.String
+      description: Lema de negocio.
+    content.vb: Public Sub New(Name As String, CatchPhrase As String, Bs As String)
+  overload: RepositorioRemoto.Dto.CompanyDto.#ctor*
+  nameWithType.vb: CompanyDto.New(String, String, String)
+  fullName.vb: RepositorioRemoto.Dto.CompanyDto.New(String, String, String)
+  name.vb: New(String, String, String)
+- uid: RepositorioRemoto.Dto.CompanyDto.Name
+  commentId: P:RepositorioRemoto.Dto.CompanyDto.Name
+  id: Name
+  parent: RepositorioRemoto.Dto.CompanyDto
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: CompanyDto.Name
+  fullName: RepositorioRemoto.Dto.CompanyDto.Name
+  type: Property
+  source:
+    remote:
+      path: RepositorioRemoto/Dto/CompanyDto.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: Name
+    path: Dto/CompanyDto.cs
+    startLine: 9
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Dto
+  summary: Nombre de la empresa.
+  example: []
+  syntax:
+    content: public string Name { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: RepositorioRemoto.Dto.CompanyDto.Name*
+- uid: RepositorioRemoto.Dto.CompanyDto.CatchPhrase
+  commentId: P:RepositorioRemoto.Dto.CompanyDto.CatchPhrase
+  id: CatchPhrase
+  parent: RepositorioRemoto.Dto.CompanyDto
+  langs:
+  - csharp
+  - vb
+  name: CatchPhrase
+  nameWithType: CompanyDto.CatchPhrase
+  fullName: RepositorioRemoto.Dto.CompanyDto.CatchPhrase
+  type: Property
+  source:
+    remote:
+      path: RepositorioRemoto/Dto/CompanyDto.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: CatchPhrase
+    path: Dto/CompanyDto.cs
+    startLine: 10
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Dto
+  summary: Eslogan.
+  example: []
+  syntax:
+    content: public string CatchPhrase { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CatchPhrase As String
+  overload: RepositorioRemoto.Dto.CompanyDto.CatchPhrase*
+- uid: RepositorioRemoto.Dto.CompanyDto.Bs
+  commentId: P:RepositorioRemoto.Dto.CompanyDto.Bs
+  id: Bs
+  parent: RepositorioRemoto.Dto.CompanyDto
+  langs:
+  - csharp
+  - vb
+  name: Bs
+  nameWithType: CompanyDto.Bs
+  fullName: RepositorioRemoto.Dto.CompanyDto.Bs
+  type: Property
+  source:
+    remote:
+      path: RepositorioRemoto/Dto/CompanyDto.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: Bs
+    path: Dto/CompanyDto.cs
+    startLine: 11
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Dto
+  summary: Lema de negocio.
+  example: []
+  syntax:
+    content: public string Bs { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Bs As String
+  overload: RepositorioRemoto.Dto.CompanyDto.Bs*
+references:
+- uid: RepositorioRemoto.Dto
+  commentId: N:RepositorioRemoto.Dto
+  name: RepositorioRemoto.Dto
+  nameWithType: RepositorioRemoto.Dto
+  fullName: RepositorioRemoto.Dto
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Dto
+    name: Dto
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Dto
+    name: Dto
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{RepositorioRemoto.Dto.CompanyDto}
+  commentId: T:System.IEquatable{RepositorioRemoto.Dto.CompanyDto}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<CompanyDto>
+  nameWithType: IEquatable<CompanyDto>
+  fullName: System.IEquatable<RepositorioRemoto.Dto.CompanyDto>
+  nameWithType.vb: IEquatable(Of CompanyDto)
+  fullName.vb: System.IEquatable(Of RepositorioRemoto.Dto.CompanyDto)
+  name.vb: IEquatable(Of CompanyDto)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: RepositorioRemoto.Dto.CompanyDto
+    name: CompanyDto
+    href: RepositorioRemoto.Dto.CompanyDto.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: RepositorioRemoto.Dto.CompanyDto
+    name: CompanyDto
+    href: RepositorioRemoto.Dto.CompanyDto.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: RepositorioRemoto.Dto.CompanyDto.RepositorioRemoto.Mappers.UserMapper.ToModel
+  commentId: M:RepositorioRemoto.Mappers.UserMapper.ToModel(RepositorioRemoto.Dto.CompanyDto)
+  parent: RepositorioRemoto.Mappers.UserMapper
+  definition: RepositorioRemoto.Mappers.UserMapper.ToModel(RepositorioRemoto.Dto.CompanyDto)
+  href: RepositorioRemoto.Mappers.UserMapper.html#RepositorioRemoto_Mappers_UserMapper_ToModel_RepositorioRemoto_Dto_CompanyDto_
+  name: ToModel(CompanyDto)
+  nameWithType: UserMapper.ToModel(CompanyDto)
+  fullName: RepositorioRemoto.Mappers.UserMapper.ToModel(RepositorioRemoto.Dto.CompanyDto)
+  spec.csharp:
+  - uid: RepositorioRemoto.Mappers.UserMapper.ToModel(RepositorioRemoto.Dto.CompanyDto)
+    name: ToModel
+    href: RepositorioRemoto.Mappers.UserMapper.html#RepositorioRemoto_Mappers_UserMapper_ToModel_RepositorioRemoto_Dto_CompanyDto_
+  - name: (
+  - uid: RepositorioRemoto.Dto.CompanyDto
+    name: CompanyDto
+    href: RepositorioRemoto.Dto.CompanyDto.html
+  - name: )
+  spec.vb:
+  - uid: RepositorioRemoto.Mappers.UserMapper.ToModel(RepositorioRemoto.Dto.CompanyDto)
+    name: ToModel
+    href: RepositorioRemoto.Mappers.UserMapper.html#RepositorioRemoto_Mappers_UserMapper_ToModel_RepositorioRemoto_Dto_CompanyDto_
+  - name: (
+  - uid: RepositorioRemoto.Dto.CompanyDto
+    name: CompanyDto
+    href: RepositorioRemoto.Dto.CompanyDto.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: RepositorioRemoto.Mappers.UserMapper.ToModel(RepositorioRemoto.Dto.CompanyDto)
+  commentId: M:RepositorioRemoto.Mappers.UserMapper.ToModel(RepositorioRemoto.Dto.CompanyDto)
+  href: RepositorioRemoto.Mappers.UserMapper.html#RepositorioRemoto_Mappers_UserMapper_ToModel_RepositorioRemoto_Dto_CompanyDto_
+  name: ToModel(CompanyDto)
+  nameWithType: UserMapper.ToModel(CompanyDto)
+  fullName: RepositorioRemoto.Mappers.UserMapper.ToModel(RepositorioRemoto.Dto.CompanyDto)
+  spec.csharp:
+  - uid: RepositorioRemoto.Mappers.UserMapper.ToModel(RepositorioRemoto.Dto.CompanyDto)
+    name: ToModel
+    href: RepositorioRemoto.Mappers.UserMapper.html#RepositorioRemoto_Mappers_UserMapper_ToModel_RepositorioRemoto_Dto_CompanyDto_
+  - name: (
+  - uid: RepositorioRemoto.Dto.CompanyDto
+    name: CompanyDto
+    href: RepositorioRemoto.Dto.CompanyDto.html
+  - name: )
+  spec.vb:
+  - uid: RepositorioRemoto.Mappers.UserMapper.ToModel(RepositorioRemoto.Dto.CompanyDto)
+    name: ToModel
+    href: RepositorioRemoto.Mappers.UserMapper.html#RepositorioRemoto_Mappers_UserMapper_ToModel_RepositorioRemoto_Dto_CompanyDto_
+  - name: (
+  - uid: RepositorioRemoto.Dto.CompanyDto
+    name: CompanyDto
+    href: RepositorioRemoto.Dto.CompanyDto.html
+  - name: )
+- uid: RepositorioRemoto.Mappers.UserMapper
+  commentId: T:RepositorioRemoto.Mappers.UserMapper
+  parent: RepositorioRemoto.Mappers
+  href: RepositorioRemoto.Mappers.UserMapper.html
+  name: UserMapper
+  nameWithType: UserMapper
+  fullName: RepositorioRemoto.Mappers.UserMapper
+- uid: RepositorioRemoto.Mappers
+  commentId: N:RepositorioRemoto.Mappers
+  name: RepositorioRemoto.Mappers
+  nameWithType: RepositorioRemoto.Mappers
+  fullName: RepositorioRemoto.Mappers
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Mappers
+    name: Mappers
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Mappers
+    name: Mappers
+- uid: RepositorioRemoto.Dto.CompanyDto.#ctor*
+  commentId: Overload:RepositorioRemoto.Dto.CompanyDto.#ctor
+  href: RepositorioRemoto.Dto.CompanyDto.html#RepositorioRemoto_Dto_CompanyDto__ctor_System_String_System_String_System_String_
+  name: CompanyDto
+  nameWithType: CompanyDto.CompanyDto
+  fullName: RepositorioRemoto.Dto.CompanyDto.CompanyDto
+  nameWithType.vb: CompanyDto.New
+  fullName.vb: RepositorioRemoto.Dto.CompanyDto.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: RepositorioRemoto.Dto.CompanyDto.Name*
+  commentId: Overload:RepositorioRemoto.Dto.CompanyDto.Name
+  href: RepositorioRemoto.Dto.CompanyDto.html#RepositorioRemoto_Dto_CompanyDto_Name
+  name: Name
+  nameWithType: CompanyDto.Name
+  fullName: RepositorioRemoto.Dto.CompanyDto.Name
+- uid: RepositorioRemoto.Dto.CompanyDto.CatchPhrase*
+  commentId: Overload:RepositorioRemoto.Dto.CompanyDto.CatchPhrase
+  href: RepositorioRemoto.Dto.CompanyDto.html#RepositorioRemoto_Dto_CompanyDto_CatchPhrase
+  name: CatchPhrase
+  nameWithType: CompanyDto.CatchPhrase
+  fullName: RepositorioRemoto.Dto.CompanyDto.CatchPhrase
+- uid: RepositorioRemoto.Dto.CompanyDto.Bs*
+  commentId: Overload:RepositorioRemoto.Dto.CompanyDto.Bs
+  href: RepositorioRemoto.Dto.CompanyDto.html#RepositorioRemoto_Dto_CompanyDto_Bs
+  name: Bs
+  nameWithType: CompanyDto.Bs
+  fullName: RepositorioRemoto.Dto.CompanyDto.Bs

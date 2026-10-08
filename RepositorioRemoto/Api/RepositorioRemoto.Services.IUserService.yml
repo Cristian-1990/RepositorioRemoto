@@ -1,0 +1,668 @@
+### YamlMime:ManagedReference
+items:
+- uid: RepositorioRemoto.Services.IUserService
+  commentId: T:RepositorioRemoto.Services.IUserService
+  id: IUserService
+  parent: RepositorioRemoto.Services
+  children:
+  - RepositorioRemoto.Services.IUserService.CreateAsync(RepositorioRemoto.Dto.CreateUserRequest)
+  - RepositorioRemoto.Services.IUserService.DeleteAsync(System.Int32)
+  - RepositorioRemoto.Services.IUserService.ExportToJsonAsync
+  - RepositorioRemoto.Services.IUserService.GetAllAsync
+  - RepositorioRemoto.Services.IUserService.GetByIdAsync(System.Int32)
+  - RepositorioRemoto.Services.IUserService.UpdateAsync(System.Int32,RepositorioRemoto.Dto.UpdateUserRequest)
+  langs:
+  - csharp
+  - vb
+  name: IUserService
+  nameWithType: IUserService
+  fullName: RepositorioRemoto.Services.IUserService
+  type: Interface
+  source:
+    remote:
+      path: RepositorioRemoto/Services/IUserService.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: IUserService
+    path: Services/IUserService.cs
+    startLine: 10
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Services
+  summary: >-
+    Contrato del servicio de usuarios: orquesta los tres niveles de almacenamiento
+
+    (caché, base de datos local y API REST remota) y notifica las escrituras.
+  example: []
+  syntax:
+    content: public interface IUserService
+    content.vb: Public Interface IUserService
+  derivedClasses:
+  - RepositorioRemoto.Services.UserService
+- uid: RepositorioRemoto.Services.IUserService.GetAllAsync
+  commentId: M:RepositorioRemoto.Services.IUserService.GetAllAsync
+  id: GetAllAsync
+  parent: RepositorioRemoto.Services.IUserService
+  langs:
+  - csharp
+  - vb
+  name: GetAllAsync()
+  nameWithType: IUserService.GetAllAsync()
+  fullName: RepositorioRemoto.Services.IUserService.GetAllAsync()
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Services/IUserService.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: GetAllAsync
+    path: Services/IUserService.cs
+    startLine: 16
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Services
+  summary: >-
+    Obtiene todos los usuarios de la base de datos local.
+
+    Si está vacía, los trae de la API remota y los guarda antes de devolverlos.
+  example: []
+  syntax:
+    content: Task<Result<List<UserResponseDto>, DomainError>> GetAllAsync()
+    return:
+      type: System.Threading.Tasks.Task{CSharpFunctionalExtensions.Result{System.Collections.Generic.List{RepositorioRemoto.Dto.UserResponseDto},RepositorioRemoto.Errors.DomainError}}
+    content.vb: Function GetAllAsync() As Task(Of Result(Of List(Of UserResponseDto), DomainError))
+  overload: RepositorioRemoto.Services.IUserService.GetAllAsync*
+- uid: RepositorioRemoto.Services.IUserService.GetByIdAsync(System.Int32)
+  commentId: M:RepositorioRemoto.Services.IUserService.GetByIdAsync(System.Int32)
+  id: GetByIdAsync(System.Int32)
+  parent: RepositorioRemoto.Services.IUserService
+  langs:
+  - csharp
+  - vb
+  name: GetByIdAsync(int)
+  nameWithType: IUserService.GetByIdAsync(int)
+  fullName: RepositorioRemoto.Services.IUserService.GetByIdAsync(int)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Services/IUserService.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: GetByIdAsync
+    path: Services/IUserService.cs
+    startLine: 23
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Services
+  summary: >-
+    Obtiene un usuario buscando en caché, luego en la base de datos local
+
+    y por último en la API remota. NotFound si no está en ninguno.
+  example: []
+  syntax:
+    content: Task<Result<UserResponseDto, DomainError>> GetByIdAsync(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: Identificador del usuario.
+    return:
+      type: System.Threading.Tasks.Task{CSharpFunctionalExtensions.Result{RepositorioRemoto.Dto.UserResponseDto,RepositorioRemoto.Errors.DomainError}}
+    content.vb: Function GetByIdAsync(id As Integer) As Task(Of Result(Of UserResponseDto, DomainError))
+  overload: RepositorioRemoto.Services.IUserService.GetByIdAsync*
+  nameWithType.vb: IUserService.GetByIdAsync(Integer)
+  fullName.vb: RepositorioRemoto.Services.IUserService.GetByIdAsync(Integer)
+  name.vb: GetByIdAsync(Integer)
+- uid: RepositorioRemoto.Services.IUserService.CreateAsync(RepositorioRemoto.Dto.CreateUserRequest)
+  commentId: M:RepositorioRemoto.Services.IUserService.CreateAsync(RepositorioRemoto.Dto.CreateUserRequest)
+  id: CreateAsync(RepositorioRemoto.Dto.CreateUserRequest)
+  parent: RepositorioRemoto.Services.IUserService
+  langs:
+  - csharp
+  - vb
+  name: CreateAsync(CreateUserRequest)
+  nameWithType: IUserService.CreateAsync(CreateUserRequest)
+  fullName: RepositorioRemoto.Services.IUserService.CreateAsync(RepositorioRemoto.Dto.CreateUserRequest)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Services/IUserService.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: CreateAsync
+    path: Services/IUserService.cs
+    startLine: 30
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Services
+  summary: >-
+    Crea un usuario: lo valida, lo envía a la API remota y guarda
+
+    el resultado en la base de datos local y en la caché.
+  example: []
+  syntax:
+    content: Task<Result<UserResponseDto, DomainError>> CreateAsync(CreateUserRequest request)
+    parameters:
+    - id: request
+      type: RepositorioRemoto.Dto.CreateUserRequest
+      description: Datos del usuario a crear.
+    return:
+      type: System.Threading.Tasks.Task{CSharpFunctionalExtensions.Result{RepositorioRemoto.Dto.UserResponseDto,RepositorioRemoto.Errors.DomainError}}
+    content.vb: Function CreateAsync(request As CreateUserRequest) As Task(Of Result(Of UserResponseDto, DomainError))
+  overload: RepositorioRemoto.Services.IUserService.CreateAsync*
+- uid: RepositorioRemoto.Services.IUserService.UpdateAsync(System.Int32,RepositorioRemoto.Dto.UpdateUserRequest)
+  commentId: M:RepositorioRemoto.Services.IUserService.UpdateAsync(System.Int32,RepositorioRemoto.Dto.UpdateUserRequest)
+  id: UpdateAsync(System.Int32,RepositorioRemoto.Dto.UpdateUserRequest)
+  parent: RepositorioRemoto.Services.IUserService
+  langs:
+  - csharp
+  - vb
+  name: UpdateAsync(int, UpdateUserRequest)
+  nameWithType: IUserService.UpdateAsync(int, UpdateUserRequest)
+  fullName: RepositorioRemoto.Services.IUserService.UpdateAsync(int, RepositorioRemoto.Dto.UpdateUserRequest)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Services/IUserService.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: UpdateAsync
+    path: Services/IUserService.cs
+    startLine: 38
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Services
+  summary: >-
+    Actualiza un usuario: lo valida, lo envía a la API remota y refresca
+
+    la base de datos local y la caché.
+  example: []
+  syntax:
+    content: Task<Result<UserResponseDto, DomainError>> UpdateAsync(int id, UpdateUserRequest request)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: Identificador del usuario a actualizar.
+    - id: request
+      type: RepositorioRemoto.Dto.UpdateUserRequest
+      description: Datos nuevos.
+    return:
+      type: System.Threading.Tasks.Task{CSharpFunctionalExtensions.Result{RepositorioRemoto.Dto.UserResponseDto,RepositorioRemoto.Errors.DomainError}}
+    content.vb: Function UpdateAsync(id As Integer, request As UpdateUserRequest) As Task(Of Result(Of UserResponseDto, DomainError))
+  overload: RepositorioRemoto.Services.IUserService.UpdateAsync*
+  nameWithType.vb: IUserService.UpdateAsync(Integer, UpdateUserRequest)
+  fullName.vb: RepositorioRemoto.Services.IUserService.UpdateAsync(Integer, RepositorioRemoto.Dto.UpdateUserRequest)
+  name.vb: UpdateAsync(Integer, UpdateUserRequest)
+- uid: RepositorioRemoto.Services.IUserService.DeleteAsync(System.Int32)
+  commentId: M:RepositorioRemoto.Services.IUserService.DeleteAsync(System.Int32)
+  id: DeleteAsync(System.Int32)
+  parent: RepositorioRemoto.Services.IUserService
+  langs:
+  - csharp
+  - vb
+  name: DeleteAsync(int)
+  nameWithType: IUserService.DeleteAsync(int)
+  fullName: RepositorioRemoto.Services.IUserService.DeleteAsync(int)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Services/IUserService.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: DeleteAsync
+    path: Services/IUserService.cs
+    startLine: 44
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Services
+  summary: Elimina un usuario de la API remota, de la base de datos local y de la caché.
+  example: []
+  syntax:
+    content: Task<Result<bool, DomainError>> DeleteAsync(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: Identificador del usuario a eliminar.
+    return:
+      type: System.Threading.Tasks.Task{CSharpFunctionalExtensions.Result{System.Boolean,RepositorioRemoto.Errors.DomainError}}
+    content.vb: Function DeleteAsync(id As Integer) As Task(Of Result(Of Boolean, DomainError))
+  overload: RepositorioRemoto.Services.IUserService.DeleteAsync*
+  nameWithType.vb: IUserService.DeleteAsync(Integer)
+  fullName.vb: RepositorioRemoto.Services.IUserService.DeleteAsync(Integer)
+  name.vb: DeleteAsync(Integer)
+- uid: RepositorioRemoto.Services.IUserService.ExportToJsonAsync
+  commentId: M:RepositorioRemoto.Services.IUserService.ExportToJsonAsync
+  id: ExportToJsonAsync
+  parent: RepositorioRemoto.Services.IUserService
+  langs:
+  - csharp
+  - vb
+  name: ExportToJsonAsync()
+  nameWithType: IUserService.ExportToJsonAsync()
+  fullName: RepositorioRemoto.Services.IUserService.ExportToJsonAsync()
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Services/IUserService.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: ExportToJsonAsync
+    path: Services/IUserService.cs
+    startLine: 50
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Services
+  summary: Exporta todos los usuarios a un fichero JSON.
+  example: []
+  syntax:
+    content: Task<Result<string, DomainError>> ExportToJsonAsync()
+    return:
+      type: System.Threading.Tasks.Task{CSharpFunctionalExtensions.Result{System.String,RepositorioRemoto.Errors.DomainError}}
+      description: La ruta del fichero generado.
+    content.vb: Function ExportToJsonAsync() As Task(Of Result(Of String, DomainError))
+  overload: RepositorioRemoto.Services.IUserService.ExportToJsonAsync*
+references:
+- uid: RepositorioRemoto.Services
+  commentId: N:RepositorioRemoto.Services
+  name: RepositorioRemoto.Services
+  nameWithType: RepositorioRemoto.Services
+  fullName: RepositorioRemoto.Services
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Services
+    name: Services
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Services
+    name: Services
+- uid: RepositorioRemoto.Services.IUserService.GetAllAsync*
+  commentId: Overload:RepositorioRemoto.Services.IUserService.GetAllAsync
+  href: RepositorioRemoto.Services.IUserService.html#RepositorioRemoto_Services_IUserService_GetAllAsync
+  name: GetAllAsync
+  nameWithType: IUserService.GetAllAsync
+  fullName: RepositorioRemoto.Services.IUserService.GetAllAsync
+- uid: System.Threading.Tasks.Task{CSharpFunctionalExtensions.Result{System.Collections.Generic.List{RepositorioRemoto.Dto.UserResponseDto},RepositorioRemoto.Errors.DomainError}}
+  commentId: T:System.Threading.Tasks.Task{CSharpFunctionalExtensions.Result{System.Collections.Generic.List{RepositorioRemoto.Dto.UserResponseDto},RepositorioRemoto.Errors.DomainError}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Result<List<UserResponseDto>, DomainError>>
+  nameWithType: Task<Result<List<UserResponseDto>, DomainError>>
+  fullName: System.Threading.Tasks.Task<CSharpFunctionalExtensions.Result<System.Collections.Generic.List<RepositorioRemoto.Dto.UserResponseDto>, RepositorioRemoto.Errors.DomainError>>
+  nameWithType.vb: Task(Of Result(Of List(Of UserResponseDto), DomainError))
+  fullName.vb: System.Threading.Tasks.Task(Of CSharpFunctionalExtensions.Result(Of System.Collections.Generic.List(Of RepositorioRemoto.Dto.UserResponseDto), RepositorioRemoto.Errors.DomainError))
+  name.vb: Task(Of Result(Of List(Of UserResponseDto), DomainError))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: CSharpFunctionalExtensions.Result`2
+    name: Result
+    isExternal: true
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: RepositorioRemoto.Dto.UserResponseDto
+    name: UserResponseDto
+    href: RepositorioRemoto.Dto.UserResponseDto.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: RepositorioRemoto.Errors.DomainError
+    name: DomainError
+    href: RepositorioRemoto.Errors.DomainError.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: CSharpFunctionalExtensions.Result`2
+    name: Result
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: RepositorioRemoto.Dto.UserResponseDto
+    name: UserResponseDto
+    href: RepositorioRemoto.Dto.UserResponseDto.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: RepositorioRemoto.Errors.DomainError
+    name: DomainError
+    href: RepositorioRemoto.Errors.DomainError.html
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: RepositorioRemoto.Services.IUserService.GetByIdAsync*
+  commentId: Overload:RepositorioRemoto.Services.IUserService.GetByIdAsync
+  href: RepositorioRemoto.Services.IUserService.html#RepositorioRemoto_Services_IUserService_GetByIdAsync_System_Int32_
+  name: GetByIdAsync
+  nameWithType: IUserService.GetByIdAsync
+  fullName: RepositorioRemoto.Services.IUserService.GetByIdAsync
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Threading.Tasks.Task{CSharpFunctionalExtensions.Result{RepositorioRemoto.Dto.UserResponseDto,RepositorioRemoto.Errors.DomainError}}
+  commentId: T:System.Threading.Tasks.Task{CSharpFunctionalExtensions.Result{RepositorioRemoto.Dto.UserResponseDto,RepositorioRemoto.Errors.DomainError}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Result<UserResponseDto, DomainError>>
+  nameWithType: Task<Result<UserResponseDto, DomainError>>
+  fullName: System.Threading.Tasks.Task<CSharpFunctionalExtensions.Result<RepositorioRemoto.Dto.UserResponseDto, RepositorioRemoto.Errors.DomainError>>
+  nameWithType.vb: Task(Of Result(Of UserResponseDto, DomainError))
+  fullName.vb: System.Threading.Tasks.Task(Of CSharpFunctionalExtensions.Result(Of RepositorioRemoto.Dto.UserResponseDto, RepositorioRemoto.Errors.DomainError))
+  name.vb: Task(Of Result(Of UserResponseDto, DomainError))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: CSharpFunctionalExtensions.Result`2
+    name: Result
+    isExternal: true
+  - name: <
+  - uid: RepositorioRemoto.Dto.UserResponseDto
+    name: UserResponseDto
+    href: RepositorioRemoto.Dto.UserResponseDto.html
+  - name: ','
+  - name: " "
+  - uid: RepositorioRemoto.Errors.DomainError
+    name: DomainError
+    href: RepositorioRemoto.Errors.DomainError.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: CSharpFunctionalExtensions.Result`2
+    name: Result
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: RepositorioRemoto.Dto.UserResponseDto
+    name: UserResponseDto
+    href: RepositorioRemoto.Dto.UserResponseDto.html
+  - name: ','
+  - name: " "
+  - uid: RepositorioRemoto.Errors.DomainError
+    name: DomainError
+    href: RepositorioRemoto.Errors.DomainError.html
+  - name: )
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: RepositorioRemoto.Services.IUserService.CreateAsync*
+  commentId: Overload:RepositorioRemoto.Services.IUserService.CreateAsync
+  href: RepositorioRemoto.Services.IUserService.html#RepositorioRemoto_Services_IUserService_CreateAsync_RepositorioRemoto_Dto_CreateUserRequest_
+  name: CreateAsync
+  nameWithType: IUserService.CreateAsync
+  fullName: RepositorioRemoto.Services.IUserService.CreateAsync
+- uid: RepositorioRemoto.Dto.CreateUserRequest
+  commentId: T:RepositorioRemoto.Dto.CreateUserRequest
+  parent: RepositorioRemoto.Dto
+  href: RepositorioRemoto.Dto.CreateUserRequest.html
+  name: CreateUserRequest
+  nameWithType: CreateUserRequest
+  fullName: RepositorioRemoto.Dto.CreateUserRequest
+- uid: RepositorioRemoto.Dto
+  commentId: N:RepositorioRemoto.Dto
+  name: RepositorioRemoto.Dto
+  nameWithType: RepositorioRemoto.Dto
+  fullName: RepositorioRemoto.Dto
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Dto
+    name: Dto
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Dto
+    name: Dto
+- uid: RepositorioRemoto.Services.IUserService.UpdateAsync*
+  commentId: Overload:RepositorioRemoto.Services.IUserService.UpdateAsync
+  href: RepositorioRemoto.Services.IUserService.html#RepositorioRemoto_Services_IUserService_UpdateAsync_System_Int32_RepositorioRemoto_Dto_UpdateUserRequest_
+  name: UpdateAsync
+  nameWithType: IUserService.UpdateAsync
+  fullName: RepositorioRemoto.Services.IUserService.UpdateAsync
+- uid: RepositorioRemoto.Dto.UpdateUserRequest
+  commentId: T:RepositorioRemoto.Dto.UpdateUserRequest
+  parent: RepositorioRemoto.Dto
+  href: RepositorioRemoto.Dto.UpdateUserRequest.html
+  name: UpdateUserRequest
+  nameWithType: UpdateUserRequest
+  fullName: RepositorioRemoto.Dto.UpdateUserRequest
+- uid: RepositorioRemoto.Services.IUserService.DeleteAsync*
+  commentId: Overload:RepositorioRemoto.Services.IUserService.DeleteAsync
+  href: RepositorioRemoto.Services.IUserService.html#RepositorioRemoto_Services_IUserService_DeleteAsync_System_Int32_
+  name: DeleteAsync
+  nameWithType: IUserService.DeleteAsync
+  fullName: RepositorioRemoto.Services.IUserService.DeleteAsync
+- uid: System.Threading.Tasks.Task{CSharpFunctionalExtensions.Result{System.Boolean,RepositorioRemoto.Errors.DomainError}}
+  commentId: T:System.Threading.Tasks.Task{CSharpFunctionalExtensions.Result{System.Boolean,RepositorioRemoto.Errors.DomainError}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Result<bool, DomainError>>
+  nameWithType: Task<Result<bool, DomainError>>
+  fullName: System.Threading.Tasks.Task<CSharpFunctionalExtensions.Result<bool, RepositorioRemoto.Errors.DomainError>>
+  nameWithType.vb: Task(Of Result(Of Boolean, DomainError))
+  fullName.vb: System.Threading.Tasks.Task(Of CSharpFunctionalExtensions.Result(Of Boolean, RepositorioRemoto.Errors.DomainError))
+  name.vb: Task(Of Result(Of Boolean, DomainError))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: CSharpFunctionalExtensions.Result`2
+    name: Result
+    isExternal: true
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: RepositorioRemoto.Errors.DomainError
+    name: DomainError
+    href: RepositorioRemoto.Errors.DomainError.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: CSharpFunctionalExtensions.Result`2
+    name: Result
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: RepositorioRemoto.Errors.DomainError
+    name: DomainError
+    href: RepositorioRemoto.Errors.DomainError.html
+  - name: )
+  - name: )
+- uid: RepositorioRemoto.Services.IUserService.ExportToJsonAsync*
+  commentId: Overload:RepositorioRemoto.Services.IUserService.ExportToJsonAsync
+  href: RepositorioRemoto.Services.IUserService.html#RepositorioRemoto_Services_IUserService_ExportToJsonAsync
+  name: ExportToJsonAsync
+  nameWithType: IUserService.ExportToJsonAsync
+  fullName: RepositorioRemoto.Services.IUserService.ExportToJsonAsync
+- uid: System.Threading.Tasks.Task{CSharpFunctionalExtensions.Result{System.String,RepositorioRemoto.Errors.DomainError}}
+  commentId: T:System.Threading.Tasks.Task{CSharpFunctionalExtensions.Result{System.String,RepositorioRemoto.Errors.DomainError}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Result<string, DomainError>>
+  nameWithType: Task<Result<string, DomainError>>
+  fullName: System.Threading.Tasks.Task<CSharpFunctionalExtensions.Result<string, RepositorioRemoto.Errors.DomainError>>
+  nameWithType.vb: Task(Of Result(Of String, DomainError))
+  fullName.vb: System.Threading.Tasks.Task(Of CSharpFunctionalExtensions.Result(Of String, RepositorioRemoto.Errors.DomainError))
+  name.vb: Task(Of Result(Of String, DomainError))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: CSharpFunctionalExtensions.Result`2
+    name: Result
+    isExternal: true
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: RepositorioRemoto.Errors.DomainError
+    name: DomainError
+    href: RepositorioRemoto.Errors.DomainError.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: CSharpFunctionalExtensions.Result`2
+    name: Result
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: RepositorioRemoto.Errors.DomainError
+    name: DomainError
+    href: RepositorioRemoto.Errors.DomainError.html
+  - name: )
+  - name: )

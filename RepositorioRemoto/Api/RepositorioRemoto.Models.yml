@@ -1,0 +1,65 @@
+### YamlMime:ManagedReference
+items:
+- uid: RepositorioRemoto.Models
+  commentId: N:RepositorioRemoto.Models
+  id: RepositorioRemoto.Models
+  children:
+  - RepositorioRemoto.Models.Address
+  - RepositorioRemoto.Models.Company
+  - RepositorioRemoto.Models.Geo
+  - RepositorioRemoto.Models.User
+  langs:
+  - csharp
+  - vb
+  name: RepositorioRemoto.Models
+  nameWithType: RepositorioRemoto.Models
+  fullName: RepositorioRemoto.Models
+  type: Namespace
+  assemblies:
+  - RepositorioRemoto
+references:
+- uid: RepositorioRemoto.Models.Address
+  commentId: T:RepositorioRemoto.Models.Address
+  parent: RepositorioRemoto.Models
+  href: RepositorioRemoto.Models.Address.html
+  name: Address
+  nameWithType: Address
+  fullName: RepositorioRemoto.Models.Address
+- uid: RepositorioRemoto.Models.Company
+  commentId: T:RepositorioRemoto.Models.Company
+  parent: RepositorioRemoto.Models
+  href: RepositorioRemoto.Models.Company.html
+  name: Company
+  nameWithType: Company
+  fullName: RepositorioRemoto.Models.Company
+- uid: RepositorioRemoto.Models.Geo
+  commentId: T:RepositorioRemoto.Models.Geo
+  parent: RepositorioRemoto.Models
+  href: RepositorioRemoto.Models.Geo.html
+  name: Geo
+  nameWithType: Geo
+  fullName: RepositorioRemoto.Models.Geo
+- uid: RepositorioRemoto.Models.User
+  commentId: T:RepositorioRemoto.Models.User
+  parent: RepositorioRemoto.Models
+  href: RepositorioRemoto.Models.User.html
+  name: User
+  nameWithType: User
+  fullName: RepositorioRemoto.Models.User
+- uid: RepositorioRemoto.Models
+  commentId: N:RepositorioRemoto.Models
+  name: RepositorioRemoto.Models
+  nameWithType: RepositorioRemoto.Models
+  fullName: RepositorioRemoto.Models
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Models
+    name: Models
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Models
+    name: Models

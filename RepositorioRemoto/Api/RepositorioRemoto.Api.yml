@@ -1,0 +1,41 @@
+### YamlMime:ManagedReference
+items:
+- uid: RepositorioRemoto.Api
+  commentId: N:RepositorioRemoto.Api
+  id: RepositorioRemoto.Api
+  children:
+  - RepositorioRemoto.Api.IJsonPlaceholderApi
+  langs:
+  - csharp
+  - vb
+  name: RepositorioRemoto.Api
+  nameWithType: RepositorioRemoto.Api
+  fullName: RepositorioRemoto.Api
+  type: Namespace
+  assemblies:
+  - RepositorioRemoto
+references:
+- uid: RepositorioRemoto.Api.IJsonPlaceholderApi
+  commentId: T:RepositorioRemoto.Api.IJsonPlaceholderApi
+  parent: RepositorioRemoto.Api
+  href: RepositorioRemoto.Api.IJsonPlaceholderApi.html
+  name: IJsonPlaceholderApi
+  nameWithType: IJsonPlaceholderApi
+  fullName: RepositorioRemoto.Api.IJsonPlaceholderApi
+- uid: RepositorioRemoto.Api
+  commentId: N:RepositorioRemoto.Api
+  name: RepositorioRemoto.Api
+  nameWithType: RepositorioRemoto.Api
+  fullName: RepositorioRemoto.Api
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Api
+    name: Api
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Api
+    name: Api

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class UserService | RepositorioRemoto </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class UserService | RepositorioRemoto ">
+      
+      <meta name="description" content="Servicio de usuarios. Orquesta los tres niveles de almacenamiento (cach&#233;, base de datos local y API REST) y notifica las escrituras.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Cristian-1990/RepositorioRemoto/new/dev/apiSpec/new?filename=RepositorioRemoto_Services_UserService.md&amp;value=---%0Auid%3A%20RepositorioRemoto.Services.UserService%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="RepositorioRemoto">
+            RepositorioRemoto
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="RepositorioRemoto.Services.UserService">
+
+
+
+  <h1 id="RepositorioRemoto_Services_UserService" data-uid="RepositorioRemoto.Services.UserService" class="text-break">
+Class UserService  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Services/UserService.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">RepositorioRemoto</span>.<a class="xref" href="RepositorioRemoto.Services.html">Services</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>RepositorioRemoto.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Servicio de usuarios. Orquesta los tres niveles de almacenamiento
+(caché, base de datos local y API REST) y notifica las escrituras.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class UserService : IUserService</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">UserService</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="RepositorioRemoto.Services.IUserService.html">IUserService</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="RepositorioRemoto_Services_UserService__ctor_" data-uid="RepositorioRemoto.Services.UserService.#ctor*"></a>
+
+  <h3 id="RepositorioRemoto_Services_UserService__ctor_RepositorioRemoto_Repositories_IUserRepository_RepositorioRemoto_Repositories_IUserRemoteRepository_RepositorioRemoto_Cache_ICacheService_RepositorioRemoto_Validators_IUserValidator_RepositorioRemoto_Notifications_INotificationService_Microsoft_Extensions_Options_IOptions_RepositorioRemoto_Config_ExportConfig__Microsoft_Extensions_Logging_ILogger_RepositorioRemoto_Services_UserService__" data-uid="RepositorioRemoto.Services.UserService.#ctor(RepositorioRemoto.Repositories.IUserRepository,RepositorioRemoto.Repositories.IUserRemoteRepository,RepositorioRemoto.Cache.ICacheService,RepositorioRemoto.Validators.IUserValidator,RepositorioRemoto.Notifications.INotificationService,Microsoft.Extensions.Options.IOptions{RepositorioRemoto.Config.ExportConfig},Microsoft.Extensions.Logging.ILogger{RepositorioRemoto.Services.UserService})">
+  UserService(IUserRepository, IUserRemoteRepository, ICacheService, IUserValidator, INotificationService, IOptions&lt;ExportConfig&gt;, ILogger&lt;UserService&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Services/UserService.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Servicio de usuarios. Orquesta los tres niveles de almacenamiento
+(caché, base de datos local y API REST) y notifica las escrituras.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UserService(IUserRepository localRepository, IUserRemoteRepository remoteRepository, ICacheService cache, IUserValidator validator, INotificationService notificationService, IOptions&lt;ExportConfig&gt; exportOptions, ILogger&lt;UserService&gt; logger)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>localRepository</code> <a class="xref" href="RepositorioRemoto.Repositories.IUserRepository.html">IUserRepository</a></dt>
+    <dd></dd>
+    <dt><code>remoteRepository</code> <a class="xref" href="RepositorioRemoto.Repositories.IUserRemoteRepository.html">IUserRemoteRepository</a></dt>
+    <dd></dd>
+    <dt><code>cache</code> <a class="xref" href="RepositorioRemoto.Cache.ICacheService.html">ICacheService</a></dt>
+    <dd></dd>
+    <dt><code>validator</code> <a class="xref" href="RepositorioRemoto.Validators.IUserValidator.html">IUserValidator</a></dt>
+    <dd></dd>
+    <dt><code>notificationService</code> <a class="xref" href="RepositorioRemoto.Notifications.INotificationService.html">INotificationService</a></dt>
+    <dd></dd>
+    <dt><code>exportOptions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1">IOptions</a>&lt;<a class="xref" href="RepositorioRemoto.Config.ExportConfig.html">ExportConfig</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="RepositorioRemoto.Services.UserService.html">UserService</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="RepositorioRemoto_Services_UserService_CreateAsync_" data-uid="RepositorioRemoto.Services.UserService.CreateAsync*"></a>
+
+  <h3 id="RepositorioRemoto_Services_UserService_CreateAsync_RepositorioRemoto_Dto_CreateUserRequest_" data-uid="RepositorioRemoto.Services.UserService.CreateAsync(RepositorioRemoto.Dto.CreateUserRequest)">
+  CreateAsync(CreateUserRequest)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Services/UserService.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Crea un usuario: lo valida, lo envía a la API remota y guarda
+el resultado en la base de datos local y en la caché.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Result&lt;UserResponseDto, DomainError&gt;&gt; CreateAsync(CreateUserRequest request)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="RepositorioRemoto.Dto.CreateUserRequest.html">CreateUserRequest</a></dt>
+    <dd><p>Datos del usuario a crear.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">Result</span>&lt;<a class="xref" href="RepositorioRemoto.Dto.UserResponseDto.html">UserResponseDto</a>, <a class="xref" href="RepositorioRemoto.Errors.DomainError.html">DomainError</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Services_UserService_DeleteAsync_" data-uid="RepositorioRemoto.Services.UserService.DeleteAsync*"></a>
+
+  <h3 id="RepositorioRemoto_Services_UserService_DeleteAsync_System_Int32_" data-uid="RepositorioRemoto.Services.UserService.DeleteAsync(System.Int32)">
+  DeleteAsync(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Services/UserService.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Elimina un usuario de la API remota, de la base de datos local y de la caché.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Result&lt;bool, DomainError&gt;&gt; DeleteAsync(int id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Identificador del usuario a eliminar.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">Result</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>, <a class="xref" href="RepositorioRemoto.Errors.DomainError.html">DomainError</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Services_UserService_ExportToJsonAsync_" data-uid="RepositorioRemoto.Services.UserService.ExportToJsonAsync*"></a>
+
+  <h3 id="RepositorioRemoto_Services_UserService_ExportToJsonAsync" data-uid="RepositorioRemoto.Services.UserService.ExportToJsonAsync">
+  ExportToJsonAsync()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Services/UserService.cs/#L169"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Exporta todos los usuarios a un fichero JSON.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Result&lt;string, DomainError&gt;&gt; ExportToJsonAsync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">Result</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="RepositorioRemoto.Errors.DomainError.html">DomainError</a>&gt;&gt;</dt>
+    <dd><p>La ruta del fichero generado.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Services_UserService_GetAllAsync_" data-uid="RepositorioRemoto.Services.UserService.GetAllAsync*"></a>
+
+  <h3 id="RepositorioRemoto_Services_UserService_GetAllAsync" data-uid="RepositorioRemoto.Services.UserService.GetAllAsync">
+  GetAllAsync()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Services/UserService.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Obtiene todos los usuarios de la base de datos local.
+Si está vacía, los trae de la API remota y los guarda antes de devolverlos.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Result&lt;List&lt;UserResponseDto&gt;, DomainError&gt;&gt; GetAllAsync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">Result</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RepositorioRemoto.Dto.UserResponseDto.html">UserResponseDto</a>&gt;, <a class="xref" href="RepositorioRemoto.Errors.DomainError.html">DomainError</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Services_UserService_GetByIdAsync_" data-uid="RepositorioRemoto.Services.UserService.GetByIdAsync*"></a>
+
+  <h3 id="RepositorioRemoto_Services_UserService_GetByIdAsync_System_Int32_" data-uid="RepositorioRemoto.Services.UserService.GetByIdAsync(System.Int32)">
+  GetByIdAsync(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Services/UserService.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Obtiene un usuario buscando en caché, luego en la base de datos local
+y por último en la API remota. NotFound si no está en ninguno.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Result&lt;UserResponseDto, DomainError&gt;&gt; GetByIdAsync(int id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Identificador del usuario.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">Result</span>&lt;<a class="xref" href="RepositorioRemoto.Dto.UserResponseDto.html">UserResponseDto</a>, <a class="xref" href="RepositorioRemoto.Errors.DomainError.html">DomainError</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Services_UserService_UpdateAsync_" data-uid="RepositorioRemoto.Services.UserService.UpdateAsync*"></a>
+
+  <h3 id="RepositorioRemoto_Services_UserService_UpdateAsync_System_Int32_RepositorioRemoto_Dto_UpdateUserRequest_" data-uid="RepositorioRemoto.Services.UserService.UpdateAsync(System.Int32,RepositorioRemoto.Dto.UpdateUserRequest)">
+  UpdateAsync(int, UpdateUserRequest)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Services/UserService.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actualiza un usuario: lo valida, lo envía a la API remota y refresca
+la base de datos local y la caché.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Result&lt;UserResponseDto, DomainError&gt;&gt; UpdateAsync(int id, UpdateUserRequest request)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Identificador del usuario a actualizar.</p>
+</dd>
+    <dt><code>request</code> <a class="xref" href="RepositorioRemoto.Dto.UpdateUserRequest.html">UpdateUserRequest</a></dt>
+    <dd><p>Datos nuevos.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">Result</span>&lt;<a class="xref" href="RepositorioRemoto.Dto.UserResponseDto.html">UserResponseDto</a>, <a class="xref" href="RepositorioRemoto.Errors.DomainError.html">DomainError</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Services/UserService.cs/#L21" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

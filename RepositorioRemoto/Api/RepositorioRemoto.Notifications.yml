@@ -1,0 +1,63 @@
+### YamlMime:ManagedReference
+items:
+- uid: RepositorioRemoto.Notifications
+  commentId: N:RepositorioRemoto.Notifications
+  id: RepositorioRemoto.Notifications
+  children:
+  - RepositorioRemoto.Notifications.ConsoleNotificationService
+  - RepositorioRemoto.Notifications.INotificationService
+  - RepositorioRemoto.Notifications.Notification
+  - RepositorioRemoto.Notifications.NotificationType
+  langs:
+  - csharp
+  - vb
+  name: RepositorioRemoto.Notifications
+  nameWithType: RepositorioRemoto.Notifications
+  fullName: RepositorioRemoto.Notifications
+  type: Namespace
+  assemblies:
+  - RepositorioRemoto
+references:
+- uid: RepositorioRemoto.Notifications.ConsoleNotificationService
+  commentId: T:RepositorioRemoto.Notifications.ConsoleNotificationService
+  href: RepositorioRemoto.Notifications.ConsoleNotificationService.html
+  name: ConsoleNotificationService
+  nameWithType: ConsoleNotificationService
+  fullName: RepositorioRemoto.Notifications.ConsoleNotificationService
+- uid: RepositorioRemoto.Notifications.NotificationType
+  commentId: T:RepositorioRemoto.Notifications.NotificationType
+  parent: RepositorioRemoto.Notifications
+  href: RepositorioRemoto.Notifications.NotificationType.html
+  name: NotificationType
+  nameWithType: NotificationType
+  fullName: RepositorioRemoto.Notifications.NotificationType
+- uid: RepositorioRemoto.Notifications.Notification
+  commentId: T:RepositorioRemoto.Notifications.Notification
+  href: RepositorioRemoto.Notifications.Notification.html
+  name: Notification
+  nameWithType: Notification
+  fullName: RepositorioRemoto.Notifications.Notification
+- uid: RepositorioRemoto.Notifications.INotificationService
+  commentId: T:RepositorioRemoto.Notifications.INotificationService
+  parent: RepositorioRemoto.Notifications
+  href: RepositorioRemoto.Notifications.INotificationService.html
+  name: INotificationService
+  nameWithType: INotificationService
+  fullName: RepositorioRemoto.Notifications.INotificationService
+- uid: RepositorioRemoto.Notifications
+  commentId: N:RepositorioRemoto.Notifications
+  name: RepositorioRemoto.Notifications
+  nameWithType: RepositorioRemoto.Notifications
+  fullName: RepositorioRemoto.Notifications
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Notifications
+    name: Notifications
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Notifications
+    name: Notifications

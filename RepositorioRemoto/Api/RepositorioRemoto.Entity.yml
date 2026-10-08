@@ -1,0 +1,49 @@
+### YamlMime:ManagedReference
+items:
+- uid: RepositorioRemoto.Entity
+  commentId: N:RepositorioRemoto.Entity
+  id: RepositorioRemoto.Entity
+  children:
+  - RepositorioRemoto.Entity.AppDbContext
+  - RepositorioRemoto.Entity.UserEntity
+  langs:
+  - csharp
+  - vb
+  name: RepositorioRemoto.Entity
+  nameWithType: RepositorioRemoto.Entity
+  fullName: RepositorioRemoto.Entity
+  type: Namespace
+  assemblies:
+  - RepositorioRemoto
+references:
+- uid: RepositorioRemoto.Entity.AppDbContext
+  commentId: T:RepositorioRemoto.Entity.AppDbContext
+  parent: RepositorioRemoto.Entity
+  href: RepositorioRemoto.Entity.AppDbContext.html
+  name: AppDbContext
+  nameWithType: AppDbContext
+  fullName: RepositorioRemoto.Entity.AppDbContext
+- uid: RepositorioRemoto.Entity.UserEntity
+  commentId: T:RepositorioRemoto.Entity.UserEntity
+  parent: RepositorioRemoto.Entity
+  href: RepositorioRemoto.Entity.UserEntity.html
+  name: UserEntity
+  nameWithType: UserEntity
+  fullName: RepositorioRemoto.Entity.UserEntity
+- uid: RepositorioRemoto.Entity
+  commentId: N:RepositorioRemoto.Entity
+  name: RepositorioRemoto.Entity
+  nameWithType: RepositorioRemoto.Entity
+  fullName: RepositorioRemoto.Entity
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Entity
+    name: Entity
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Entity
+    name: Entity

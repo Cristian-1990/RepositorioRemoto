@@ -1,0 +1,542 @@
+### YamlMime:ManagedReference
+items:
+- uid: RepositorioRemoto.Api.IJsonPlaceholderApi
+  commentId: T:RepositorioRemoto.Api.IJsonPlaceholderApi
+  id: IJsonPlaceholderApi
+  parent: RepositorioRemoto.Api
+  children:
+  - RepositorioRemoto.Api.IJsonPlaceholderApi.CreateUserAsync(RepositorioRemoto.Dto.CreateUserRequest)
+  - RepositorioRemoto.Api.IJsonPlaceholderApi.DeleteUserAsync(System.Int32)
+  - RepositorioRemoto.Api.IJsonPlaceholderApi.GetUserByIdAsync(System.Int32)
+  - RepositorioRemoto.Api.IJsonPlaceholderApi.GetUsersAsync
+  - RepositorioRemoto.Api.IJsonPlaceholderApi.UpdateUserAsync(System.Int32,RepositorioRemoto.Dto.UpdateUserRequest)
+  langs:
+  - csharp
+  - vb
+  name: IJsonPlaceholderApi
+  nameWithType: IJsonPlaceholderApi
+  fullName: RepositorioRemoto.Api.IJsonPlaceholderApi
+  type: Interface
+  source:
+    remote:
+      path: RepositorioRemoto/Api/IJsonPlaceholderApi.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: IJsonPlaceholderApi
+    path: Api/IJsonPlaceholderApi.cs
+    startLine: 10
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Api
+  summary: >-
+    Cliente tipado de la API REST de JSONPlaceholder.
+
+    Refit genera la implementación en tiempo de ejecución a partir de los atributos
+
+    [Get], [Post], [Put] y [Delete]: no hay que escribir ni una línea de HttpClient.
+  example: []
+  syntax:
+    content: >-
+      [Headers(new string[] { "Content-Type: application/json" })]
+
+      public interface IJsonPlaceholderApi
+    content.vb: >-
+      <Headers(New String() { "Content-Type: application/json" })>
+
+      Public Interface IJsonPlaceholderApi
+- uid: RepositorioRemoto.Api.IJsonPlaceholderApi.GetUsersAsync
+  commentId: M:RepositorioRemoto.Api.IJsonPlaceholderApi.GetUsersAsync
+  id: GetUsersAsync
+  parent: RepositorioRemoto.Api.IJsonPlaceholderApi
+  langs:
+  - csharp
+  - vb
+  name: GetUsersAsync()
+  nameWithType: IJsonPlaceholderApi.GetUsersAsync()
+  fullName: RepositorioRemoto.Api.IJsonPlaceholderApi.GetUsersAsync()
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Api/IJsonPlaceholderApi.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: GetUsersAsync
+    path: Api/IJsonPlaceholderApi.cs
+    startLine: 14
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Api
+  summary: Obtiene todos los usuarios.
+  example: []
+  syntax:
+    content: >-
+      [Get("/users")]
+
+      Task<List<JsonPlaceholderUserDto>> GetUsersAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{RepositorioRemoto.Dto.JsonPlaceholderUserDto}}
+    content.vb: >-
+      <Get("/users")>
+
+      Function GetUsersAsync() As Task(Of List(Of JsonPlaceholderUserDto))
+  overload: RepositorioRemoto.Api.IJsonPlaceholderApi.GetUsersAsync*
+  attributes:
+  - type: Refit.GetAttribute
+    ctor: Refit.GetAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /users
+- uid: RepositorioRemoto.Api.IJsonPlaceholderApi.GetUserByIdAsync(System.Int32)
+  commentId: M:RepositorioRemoto.Api.IJsonPlaceholderApi.GetUserByIdAsync(System.Int32)
+  id: GetUserByIdAsync(System.Int32)
+  parent: RepositorioRemoto.Api.IJsonPlaceholderApi
+  langs:
+  - csharp
+  - vb
+  name: GetUserByIdAsync(int)
+  nameWithType: IJsonPlaceholderApi.GetUserByIdAsync(int)
+  fullName: RepositorioRemoto.Api.IJsonPlaceholderApi.GetUserByIdAsync(int)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Api/IJsonPlaceholderApi.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: GetUserByIdAsync
+    path: Api/IJsonPlaceholderApi.cs
+    startLine: 19
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Api
+  summary: Obtiene un usuario por su identificador.
+  example: []
+  syntax:
+    content: >-
+      [Get("/users/{id}")]
+
+      Task<JsonPlaceholderUserDto?> GetUserByIdAsync(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: Identificador del usuario.
+    return:
+      type: System.Threading.Tasks.Task{RepositorioRemoto.Dto.JsonPlaceholderUserDto}
+    content.vb: >-
+      <Get("/users/{id}")>
+
+      Function GetUserByIdAsync(id As Integer) As Task(Of JsonPlaceholderUserDto)
+  overload: RepositorioRemoto.Api.IJsonPlaceholderApi.GetUserByIdAsync*
+  attributes:
+  - type: Refit.GetAttribute
+    ctor: Refit.GetAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /users/{id}
+  nameWithType.vb: IJsonPlaceholderApi.GetUserByIdAsync(Integer)
+  fullName.vb: RepositorioRemoto.Api.IJsonPlaceholderApi.GetUserByIdAsync(Integer)
+  name.vb: GetUserByIdAsync(Integer)
+- uid: RepositorioRemoto.Api.IJsonPlaceholderApi.CreateUserAsync(RepositorioRemoto.Dto.CreateUserRequest)
+  commentId: M:RepositorioRemoto.Api.IJsonPlaceholderApi.CreateUserAsync(RepositorioRemoto.Dto.CreateUserRequest)
+  id: CreateUserAsync(RepositorioRemoto.Dto.CreateUserRequest)
+  parent: RepositorioRemoto.Api.IJsonPlaceholderApi
+  langs:
+  - csharp
+  - vb
+  name: CreateUserAsync(CreateUserRequest)
+  nameWithType: IJsonPlaceholderApi.CreateUserAsync(CreateUserRequest)
+  fullName: RepositorioRemoto.Api.IJsonPlaceholderApi.CreateUserAsync(RepositorioRemoto.Dto.CreateUserRequest)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Api/IJsonPlaceholderApi.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: CreateUserAsync
+    path: Api/IJsonPlaceholderApi.cs
+    startLine: 24
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Api
+  summary: Crea un usuario. La API devuelve el usuario con el id que le asigna.
+  example: []
+  syntax:
+    content: >-
+      [Post("/users")]
+
+      Task<JsonPlaceholderUserDto> CreateUserAsync(CreateUserRequest request)
+    parameters:
+    - id: request
+      type: RepositorioRemoto.Dto.CreateUserRequest
+      description: Datos del usuario a crear.
+      attributes:
+      - type: Refit.BodyAttribute
+        ctor: Refit.BodyAttribute.#ctor
+        arguments: []
+    return:
+      type: System.Threading.Tasks.Task{RepositorioRemoto.Dto.JsonPlaceholderUserDto}
+    content.vb: >-
+      <Post("/users")>
+
+      Function CreateUserAsync(request As CreateUserRequest) As Task(Of JsonPlaceholderUserDto)
+  overload: RepositorioRemoto.Api.IJsonPlaceholderApi.CreateUserAsync*
+  attributes:
+  - type: Refit.PostAttribute
+    ctor: Refit.PostAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /users
+- uid: RepositorioRemoto.Api.IJsonPlaceholderApi.UpdateUserAsync(System.Int32,RepositorioRemoto.Dto.UpdateUserRequest)
+  commentId: M:RepositorioRemoto.Api.IJsonPlaceholderApi.UpdateUserAsync(System.Int32,RepositorioRemoto.Dto.UpdateUserRequest)
+  id: UpdateUserAsync(System.Int32,RepositorioRemoto.Dto.UpdateUserRequest)
+  parent: RepositorioRemoto.Api.IJsonPlaceholderApi
+  langs:
+  - csharp
+  - vb
+  name: UpdateUserAsync(int, UpdateUserRequest)
+  nameWithType: IJsonPlaceholderApi.UpdateUserAsync(int, UpdateUserRequest)
+  fullName: RepositorioRemoto.Api.IJsonPlaceholderApi.UpdateUserAsync(int, RepositorioRemoto.Dto.UpdateUserRequest)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Api/IJsonPlaceholderApi.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: UpdateUserAsync
+    path: Api/IJsonPlaceholderApi.cs
+    startLine: 30
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Api
+  summary: Actualiza un usuario existente.
+  example: []
+  syntax:
+    content: >-
+      [Put("/users/{id}")]
+
+      Task<JsonPlaceholderUserDto> UpdateUserAsync(int id, UpdateUserRequest request)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: Identificador del usuario.
+    - id: request
+      type: RepositorioRemoto.Dto.UpdateUserRequest
+      description: Datos nuevos.
+      attributes:
+      - type: Refit.BodyAttribute
+        ctor: Refit.BodyAttribute.#ctor
+        arguments: []
+    return:
+      type: System.Threading.Tasks.Task{RepositorioRemoto.Dto.JsonPlaceholderUserDto}
+    content.vb: >-
+      <Put("/users/{id}")>
+
+      Function UpdateUserAsync(id As Integer, request As UpdateUserRequest) As Task(Of JsonPlaceholderUserDto)
+  overload: RepositorioRemoto.Api.IJsonPlaceholderApi.UpdateUserAsync*
+  attributes:
+  - type: Refit.PutAttribute
+    ctor: Refit.PutAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /users/{id}
+  nameWithType.vb: IJsonPlaceholderApi.UpdateUserAsync(Integer, UpdateUserRequest)
+  fullName.vb: RepositorioRemoto.Api.IJsonPlaceholderApi.UpdateUserAsync(Integer, RepositorioRemoto.Dto.UpdateUserRequest)
+  name.vb: UpdateUserAsync(Integer, UpdateUserRequest)
+- uid: RepositorioRemoto.Api.IJsonPlaceholderApi.DeleteUserAsync(System.Int32)
+  commentId: M:RepositorioRemoto.Api.IJsonPlaceholderApi.DeleteUserAsync(System.Int32)
+  id: DeleteUserAsync(System.Int32)
+  parent: RepositorioRemoto.Api.IJsonPlaceholderApi
+  langs:
+  - csharp
+  - vb
+  name: DeleteUserAsync(int)
+  nameWithType: IJsonPlaceholderApi.DeleteUserAsync(int)
+  fullName: RepositorioRemoto.Api.IJsonPlaceholderApi.DeleteUserAsync(int)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Api/IJsonPlaceholderApi.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: DeleteUserAsync
+    path: Api/IJsonPlaceholderApi.cs
+    startLine: 35
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Api
+  summary: Elimina un usuario.
+  example: []
+  syntax:
+    content: >-
+      [Delete("/users/{id}")]
+
+      Task DeleteUserAsync(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: Identificador del usuario.
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Delete("/users/{id}")>
+
+      Function DeleteUserAsync(id As Integer) As Task
+  overload: RepositorioRemoto.Api.IJsonPlaceholderApi.DeleteUserAsync*
+  attributes:
+  - type: Refit.DeleteAttribute
+    ctor: Refit.DeleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: /users/{id}
+  nameWithType.vb: IJsonPlaceholderApi.DeleteUserAsync(Integer)
+  fullName.vb: RepositorioRemoto.Api.IJsonPlaceholderApi.DeleteUserAsync(Integer)
+  name.vb: DeleteUserAsync(Integer)
+references:
+- uid: RepositorioRemoto.Api
+  commentId: N:RepositorioRemoto.Api
+  name: RepositorioRemoto.Api
+  nameWithType: RepositorioRemoto.Api
+  fullName: RepositorioRemoto.Api
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Api
+    name: Api
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Api
+    name: Api
+- uid: RepositorioRemoto.Api.IJsonPlaceholderApi.GetUsersAsync*
+  commentId: Overload:RepositorioRemoto.Api.IJsonPlaceholderApi.GetUsersAsync
+  href: RepositorioRemoto.Api.IJsonPlaceholderApi.html#RepositorioRemoto_Api_IJsonPlaceholderApi_GetUsersAsync
+  name: GetUsersAsync
+  nameWithType: IJsonPlaceholderApi.GetUsersAsync
+  fullName: RepositorioRemoto.Api.IJsonPlaceholderApi.GetUsersAsync
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{RepositorioRemoto.Dto.JsonPlaceholderUserDto}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{RepositorioRemoto.Dto.JsonPlaceholderUserDto}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<List<JsonPlaceholderUserDto>>
+  nameWithType: Task<List<JsonPlaceholderUserDto>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<RepositorioRemoto.Dto.JsonPlaceholderUserDto>>
+  nameWithType.vb: Task(Of List(Of JsonPlaceholderUserDto))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of RepositorioRemoto.Dto.JsonPlaceholderUserDto))
+  name.vb: Task(Of List(Of JsonPlaceholderUserDto))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: RepositorioRemoto.Dto.JsonPlaceholderUserDto
+    name: JsonPlaceholderUserDto
+    href: RepositorioRemoto.Dto.JsonPlaceholderUserDto.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: RepositorioRemoto.Dto.JsonPlaceholderUserDto
+    name: JsonPlaceholderUserDto
+    href: RepositorioRemoto.Dto.JsonPlaceholderUserDto.html
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: RepositorioRemoto.Api.IJsonPlaceholderApi.GetUserByIdAsync*
+  commentId: Overload:RepositorioRemoto.Api.IJsonPlaceholderApi.GetUserByIdAsync
+  href: RepositorioRemoto.Api.IJsonPlaceholderApi.html#RepositorioRemoto_Api_IJsonPlaceholderApi_GetUserByIdAsync_System_Int32_
+  name: GetUserByIdAsync
+  nameWithType: IJsonPlaceholderApi.GetUserByIdAsync
+  fullName: RepositorioRemoto.Api.IJsonPlaceholderApi.GetUserByIdAsync
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Threading.Tasks.Task{RepositorioRemoto.Dto.JsonPlaceholderUserDto}
+  commentId: T:System.Threading.Tasks.Task{RepositorioRemoto.Dto.JsonPlaceholderUserDto}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<JsonPlaceholderUserDto>
+  nameWithType: Task<JsonPlaceholderUserDto>
+  fullName: System.Threading.Tasks.Task<RepositorioRemoto.Dto.JsonPlaceholderUserDto>
+  nameWithType.vb: Task(Of JsonPlaceholderUserDto)
+  fullName.vb: System.Threading.Tasks.Task(Of RepositorioRemoto.Dto.JsonPlaceholderUserDto)
+  name.vb: Task(Of JsonPlaceholderUserDto)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: RepositorioRemoto.Dto.JsonPlaceholderUserDto
+    name: JsonPlaceholderUserDto
+    href: RepositorioRemoto.Dto.JsonPlaceholderUserDto.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: RepositorioRemoto.Dto.JsonPlaceholderUserDto
+    name: JsonPlaceholderUserDto
+    href: RepositorioRemoto.Dto.JsonPlaceholderUserDto.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: RepositorioRemoto.Api.IJsonPlaceholderApi.CreateUserAsync*
+  commentId: Overload:RepositorioRemoto.Api.IJsonPlaceholderApi.CreateUserAsync
+  href: RepositorioRemoto.Api.IJsonPlaceholderApi.html#RepositorioRemoto_Api_IJsonPlaceholderApi_CreateUserAsync_RepositorioRemoto_Dto_CreateUserRequest_
+  name: CreateUserAsync
+  nameWithType: IJsonPlaceholderApi.CreateUserAsync
+  fullName: RepositorioRemoto.Api.IJsonPlaceholderApi.CreateUserAsync
+- uid: RepositorioRemoto.Dto.CreateUserRequest
+  commentId: T:RepositorioRemoto.Dto.CreateUserRequest
+  parent: RepositorioRemoto.Dto
+  href: RepositorioRemoto.Dto.CreateUserRequest.html
+  name: CreateUserRequest
+  nameWithType: CreateUserRequest
+  fullName: RepositorioRemoto.Dto.CreateUserRequest
+- uid: RepositorioRemoto.Dto
+  commentId: N:RepositorioRemoto.Dto
+  name: RepositorioRemoto.Dto
+  nameWithType: RepositorioRemoto.Dto
+  fullName: RepositorioRemoto.Dto
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Dto
+    name: Dto
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Dto
+    name: Dto
+- uid: RepositorioRemoto.Api.IJsonPlaceholderApi.UpdateUserAsync*
+  commentId: Overload:RepositorioRemoto.Api.IJsonPlaceholderApi.UpdateUserAsync
+  href: RepositorioRemoto.Api.IJsonPlaceholderApi.html#RepositorioRemoto_Api_IJsonPlaceholderApi_UpdateUserAsync_System_Int32_RepositorioRemoto_Dto_UpdateUserRequest_
+  name: UpdateUserAsync
+  nameWithType: IJsonPlaceholderApi.UpdateUserAsync
+  fullName: RepositorioRemoto.Api.IJsonPlaceholderApi.UpdateUserAsync
+- uid: RepositorioRemoto.Dto.UpdateUserRequest
+  commentId: T:RepositorioRemoto.Dto.UpdateUserRequest
+  parent: RepositorioRemoto.Dto
+  href: RepositorioRemoto.Dto.UpdateUserRequest.html
+  name: UpdateUserRequest
+  nameWithType: UpdateUserRequest
+  fullName: RepositorioRemoto.Dto.UpdateUserRequest
+- uid: RepositorioRemoto.Api.IJsonPlaceholderApi.DeleteUserAsync*
+  commentId: Overload:RepositorioRemoto.Api.IJsonPlaceholderApi.DeleteUserAsync
+  href: RepositorioRemoto.Api.IJsonPlaceholderApi.html#RepositorioRemoto_Api_IJsonPlaceholderApi_DeleteUserAsync_System_Int32_
+  name: DeleteUserAsync
+  nameWithType: IJsonPlaceholderApi.DeleteUserAsync
+  fullName: RepositorioRemoto.Api.IJsonPlaceholderApi.DeleteUserAsync
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task

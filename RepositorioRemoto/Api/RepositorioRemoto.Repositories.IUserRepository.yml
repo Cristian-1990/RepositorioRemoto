@@ -1,0 +1,666 @@
+### YamlMime:ManagedReference
+items:
+- uid: RepositorioRemoto.Repositories.IUserRepository
+  commentId: T:RepositorioRemoto.Repositories.IUserRepository
+  id: IUserRepository
+  parent: RepositorioRemoto.Repositories
+  children:
+  - RepositorioRemoto.Repositories.IUserRepository.CreateAllAsync(System.Collections.Generic.IEnumerable{RepositorioRemoto.Models.User})
+  - RepositorioRemoto.Repositories.IUserRepository.CreateAsync(RepositorioRemoto.Models.User)
+  - RepositorioRemoto.Repositories.IUserRepository.DeleteAllAsync
+  - RepositorioRemoto.Repositories.IUserRepository.DeleteAsync(System.Int32)
+  - RepositorioRemoto.Repositories.IUserRepository.GetAllAsync
+  - RepositorioRemoto.Repositories.IUserRepository.GetByIdAsync(System.Int32)
+  - RepositorioRemoto.Repositories.IUserRepository.UpdateAsync(RepositorioRemoto.Models.User)
+  langs:
+  - csharp
+  - vb
+  name: IUserRepository
+  nameWithType: IUserRepository
+  fullName: RepositorioRemoto.Repositories.IUserRepository
+  type: Interface
+  source:
+    remote:
+      path: RepositorioRemoto/Repositories/IUserRepository.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: IUserRepository
+    path: Repositories/IUserRepository.cs
+    startLine: 9
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Repositories
+  summary: >-
+    Contrato del repositorio local de usuarios.
+
+    Devuelve valores planos: null o false cuando no se encuentra algo.
+
+    Es el servicio quien los convierte en Result.
+  example: []
+  syntax:
+    content: public interface IUserRepository
+    content.vb: Public Interface IUserRepository
+  derivedClasses:
+  - RepositorioRemoto.Repositories.UserRepository
+- uid: RepositorioRemoto.Repositories.IUserRepository.GetAllAsync
+  commentId: M:RepositorioRemoto.Repositories.IUserRepository.GetAllAsync
+  id: GetAllAsync
+  parent: RepositorioRemoto.Repositories.IUserRepository
+  langs:
+  - csharp
+  - vb
+  name: GetAllAsync()
+  nameWithType: IUserRepository.GetAllAsync()
+  fullName: RepositorioRemoto.Repositories.IUserRepository.GetAllAsync()
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Repositories/IUserRepository.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: GetAllAsync
+    path: Repositories/IUserRepository.cs
+    startLine: 12
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Repositories
+  summary: Obtiene todos los usuarios guardados.
+  example: []
+  syntax:
+    content: Task<IEnumerable<User>> GetAllAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{RepositorioRemoto.Models.User}}
+    content.vb: Function GetAllAsync() As Task(Of IEnumerable(Of User))
+  overload: RepositorioRemoto.Repositories.IUserRepository.GetAllAsync*
+- uid: RepositorioRemoto.Repositories.IUserRepository.GetByIdAsync(System.Int32)
+  commentId: M:RepositorioRemoto.Repositories.IUserRepository.GetByIdAsync(System.Int32)
+  id: GetByIdAsync(System.Int32)
+  parent: RepositorioRemoto.Repositories.IUserRepository
+  langs:
+  - csharp
+  - vb
+  name: GetByIdAsync(int)
+  nameWithType: IUserRepository.GetByIdAsync(int)
+  fullName: RepositorioRemoto.Repositories.IUserRepository.GetByIdAsync(int)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Repositories/IUserRepository.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: GetByIdAsync
+    path: Repositories/IUserRepository.cs
+    startLine: 15
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Repositories
+  summary: Obtiene un usuario por su identificador, o null si no existe.
+  example: []
+  syntax:
+    content: Task<User?> GetByIdAsync(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: System.Threading.Tasks.Task{RepositorioRemoto.Models.User}
+    content.vb: Function GetByIdAsync(id As Integer) As Task(Of User)
+  overload: RepositorioRemoto.Repositories.IUserRepository.GetByIdAsync*
+  nameWithType.vb: IUserRepository.GetByIdAsync(Integer)
+  fullName.vb: RepositorioRemoto.Repositories.IUserRepository.GetByIdAsync(Integer)
+  name.vb: GetByIdAsync(Integer)
+- uid: RepositorioRemoto.Repositories.IUserRepository.CreateAsync(RepositorioRemoto.Models.User)
+  commentId: M:RepositorioRemoto.Repositories.IUserRepository.CreateAsync(RepositorioRemoto.Models.User)
+  id: CreateAsync(RepositorioRemoto.Models.User)
+  parent: RepositorioRemoto.Repositories.IUserRepository
+  langs:
+  - csharp
+  - vb
+  name: CreateAsync(User)
+  nameWithType: IUserRepository.CreateAsync(User)
+  fullName: RepositorioRemoto.Repositories.IUserRepository.CreateAsync(RepositorioRemoto.Models.User)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Repositories/IUserRepository.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: CreateAsync
+    path: Repositories/IUserRepository.cs
+    startLine: 18
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Repositories
+  summary: Guarda un usuario nuevo.
+  example: []
+  syntax:
+    content: Task<User> CreateAsync(User user)
+    parameters:
+    - id: user
+      type: RepositorioRemoto.Models.User
+    return:
+      type: System.Threading.Tasks.Task{RepositorioRemoto.Models.User}
+    content.vb: Function CreateAsync(user As User) As Task(Of User)
+  overload: RepositorioRemoto.Repositories.IUserRepository.CreateAsync*
+- uid: RepositorioRemoto.Repositories.IUserRepository.CreateAllAsync(System.Collections.Generic.IEnumerable{RepositorioRemoto.Models.User})
+  commentId: M:RepositorioRemoto.Repositories.IUserRepository.CreateAllAsync(System.Collections.Generic.IEnumerable{RepositorioRemoto.Models.User})
+  id: CreateAllAsync(System.Collections.Generic.IEnumerable{RepositorioRemoto.Models.User})
+  parent: RepositorioRemoto.Repositories.IUserRepository
+  langs:
+  - csharp
+  - vb
+  name: CreateAllAsync(IEnumerable<User>)
+  nameWithType: IUserRepository.CreateAllAsync(IEnumerable<User>)
+  fullName: RepositorioRemoto.Repositories.IUserRepository.CreateAllAsync(System.Collections.Generic.IEnumerable<RepositorioRemoto.Models.User>)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Repositories/IUserRepository.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: CreateAllAsync
+    path: Repositories/IUserRepository.cs
+    startLine: 21
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Repositories
+  summary: Guarda varios usuarios de una vez. Lo usa la sincronización.
+  example: []
+  syntax:
+    content: Task CreateAllAsync(IEnumerable<User> users)
+    parameters:
+    - id: users
+      type: System.Collections.Generic.IEnumerable{RepositorioRemoto.Models.User}
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function CreateAllAsync(users As IEnumerable(Of User)) As Task
+  overload: RepositorioRemoto.Repositories.IUserRepository.CreateAllAsync*
+  nameWithType.vb: IUserRepository.CreateAllAsync(IEnumerable(Of User))
+  fullName.vb: RepositorioRemoto.Repositories.IUserRepository.CreateAllAsync(System.Collections.Generic.IEnumerable(Of RepositorioRemoto.Models.User))
+  name.vb: CreateAllAsync(IEnumerable(Of User))
+- uid: RepositorioRemoto.Repositories.IUserRepository.UpdateAsync(RepositorioRemoto.Models.User)
+  commentId: M:RepositorioRemoto.Repositories.IUserRepository.UpdateAsync(RepositorioRemoto.Models.User)
+  id: UpdateAsync(RepositorioRemoto.Models.User)
+  parent: RepositorioRemoto.Repositories.IUserRepository
+  langs:
+  - csharp
+  - vb
+  name: UpdateAsync(User)
+  nameWithType: IUserRepository.UpdateAsync(User)
+  fullName: RepositorioRemoto.Repositories.IUserRepository.UpdateAsync(RepositorioRemoto.Models.User)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Repositories/IUserRepository.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: UpdateAsync
+    path: Repositories/IUserRepository.cs
+    startLine: 24
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Repositories
+  summary: Actualiza un usuario existente, o devuelve null si no existe.
+  example: []
+  syntax:
+    content: Task<User?> UpdateAsync(User user)
+    parameters:
+    - id: user
+      type: RepositorioRemoto.Models.User
+    return:
+      type: System.Threading.Tasks.Task{RepositorioRemoto.Models.User}
+    content.vb: Function UpdateAsync(user As User) As Task(Of User)
+  overload: RepositorioRemoto.Repositories.IUserRepository.UpdateAsync*
+- uid: RepositorioRemoto.Repositories.IUserRepository.DeleteAsync(System.Int32)
+  commentId: M:RepositorioRemoto.Repositories.IUserRepository.DeleteAsync(System.Int32)
+  id: DeleteAsync(System.Int32)
+  parent: RepositorioRemoto.Repositories.IUserRepository
+  langs:
+  - csharp
+  - vb
+  name: DeleteAsync(int)
+  nameWithType: IUserRepository.DeleteAsync(int)
+  fullName: RepositorioRemoto.Repositories.IUserRepository.DeleteAsync(int)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Repositories/IUserRepository.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: DeleteAsync
+    path: Repositories/IUserRepository.cs
+    startLine: 27
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Repositories
+  summary: Elimina un usuario. Devuelve false si no existía.
+  example: []
+  syntax:
+    content: Task<bool> DeleteAsync(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Function DeleteAsync(id As Integer) As Task(Of Boolean)
+  overload: RepositorioRemoto.Repositories.IUserRepository.DeleteAsync*
+  nameWithType.vb: IUserRepository.DeleteAsync(Integer)
+  fullName.vb: RepositorioRemoto.Repositories.IUserRepository.DeleteAsync(Integer)
+  name.vb: DeleteAsync(Integer)
+- uid: RepositorioRemoto.Repositories.IUserRepository.DeleteAllAsync
+  commentId: M:RepositorioRemoto.Repositories.IUserRepository.DeleteAllAsync
+  id: DeleteAllAsync
+  parent: RepositorioRemoto.Repositories.IUserRepository
+  langs:
+  - csharp
+  - vb
+  name: DeleteAllAsync()
+  nameWithType: IUserRepository.DeleteAllAsync()
+  fullName: RepositorioRemoto.Repositories.IUserRepository.DeleteAllAsync()
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Repositories/IUserRepository.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: DeleteAllAsync
+    path: Repositories/IUserRepository.cs
+    startLine: 30
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Repositories
+  summary: Vacía la tabla. Lo usan el arranque y la sincronización.
+  example: []
+  syntax:
+    content: Task DeleteAllAsync()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function DeleteAllAsync() As Task
+  overload: RepositorioRemoto.Repositories.IUserRepository.DeleteAllAsync*
+references:
+- uid: RepositorioRemoto.Repositories
+  commentId: N:RepositorioRemoto.Repositories
+  name: RepositorioRemoto.Repositories
+  nameWithType: RepositorioRemoto.Repositories
+  fullName: RepositorioRemoto.Repositories
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Repositories
+    name: Repositories
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Repositories
+    name: Repositories
+- uid: RepositorioRemoto.Repositories.IUserRepository.GetAllAsync*
+  commentId: Overload:RepositorioRemoto.Repositories.IUserRepository.GetAllAsync
+  href: RepositorioRemoto.Repositories.IUserRepository.html#RepositorioRemoto_Repositories_IUserRepository_GetAllAsync
+  name: GetAllAsync
+  nameWithType: IUserRepository.GetAllAsync
+  fullName: RepositorioRemoto.Repositories.IUserRepository.GetAllAsync
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{RepositorioRemoto.Models.User}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{RepositorioRemoto.Models.User}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IEnumerable<User>>
+  nameWithType: Task<IEnumerable<User>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<RepositorioRemoto.Models.User>>
+  nameWithType.vb: Task(Of IEnumerable(Of User))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IEnumerable(Of RepositorioRemoto.Models.User))
+  name.vb: Task(Of IEnumerable(Of User))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: RepositorioRemoto.Models.User
+    name: User
+    href: RepositorioRemoto.Models.User.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: RepositorioRemoto.Models.User
+    name: User
+    href: RepositorioRemoto.Models.User.html
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: RepositorioRemoto.Repositories.IUserRepository.GetByIdAsync*
+  commentId: Overload:RepositorioRemoto.Repositories.IUserRepository.GetByIdAsync
+  href: RepositorioRemoto.Repositories.IUserRepository.html#RepositorioRemoto_Repositories_IUserRepository_GetByIdAsync_System_Int32_
+  name: GetByIdAsync
+  nameWithType: IUserRepository.GetByIdAsync
+  fullName: RepositorioRemoto.Repositories.IUserRepository.GetByIdAsync
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Threading.Tasks.Task{RepositorioRemoto.Models.User}
+  commentId: T:System.Threading.Tasks.Task{RepositorioRemoto.Models.User}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<User>
+  nameWithType: Task<User>
+  fullName: System.Threading.Tasks.Task<RepositorioRemoto.Models.User>
+  nameWithType.vb: Task(Of User)
+  fullName.vb: System.Threading.Tasks.Task(Of RepositorioRemoto.Models.User)
+  name.vb: Task(Of User)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: RepositorioRemoto.Models.User
+    name: User
+    href: RepositorioRemoto.Models.User.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: RepositorioRemoto.Models.User
+    name: User
+    href: RepositorioRemoto.Models.User.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: RepositorioRemoto.Repositories.IUserRepository.CreateAsync*
+  commentId: Overload:RepositorioRemoto.Repositories.IUserRepository.CreateAsync
+  href: RepositorioRemoto.Repositories.IUserRepository.html#RepositorioRemoto_Repositories_IUserRepository_CreateAsync_RepositorioRemoto_Models_User_
+  name: CreateAsync
+  nameWithType: IUserRepository.CreateAsync
+  fullName: RepositorioRemoto.Repositories.IUserRepository.CreateAsync
+- uid: RepositorioRemoto.Models.User
+  commentId: T:RepositorioRemoto.Models.User
+  parent: RepositorioRemoto.Models
+  href: RepositorioRemoto.Models.User.html
+  name: User
+  nameWithType: User
+  fullName: RepositorioRemoto.Models.User
+- uid: RepositorioRemoto.Models
+  commentId: N:RepositorioRemoto.Models
+  name: RepositorioRemoto.Models
+  nameWithType: RepositorioRemoto.Models
+  fullName: RepositorioRemoto.Models
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Models
+    name: Models
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Models
+    name: Models
+- uid: RepositorioRemoto.Repositories.IUserRepository.CreateAllAsync*
+  commentId: Overload:RepositorioRemoto.Repositories.IUserRepository.CreateAllAsync
+  href: RepositorioRemoto.Repositories.IUserRepository.html#RepositorioRemoto_Repositories_IUserRepository_CreateAllAsync_System_Collections_Generic_IEnumerable_RepositorioRemoto_Models_User__
+  name: CreateAllAsync
+  nameWithType: IUserRepository.CreateAllAsync
+  fullName: RepositorioRemoto.Repositories.IUserRepository.CreateAllAsync
+- uid: System.Collections.Generic.IEnumerable{RepositorioRemoto.Models.User}
+  commentId: T:System.Collections.Generic.IEnumerable{RepositorioRemoto.Models.User}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<User>
+  nameWithType: IEnumerable<User>
+  fullName: System.Collections.Generic.IEnumerable<RepositorioRemoto.Models.User>
+  nameWithType.vb: IEnumerable(Of User)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of RepositorioRemoto.Models.User)
+  name.vb: IEnumerable(Of User)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: RepositorioRemoto.Models.User
+    name: User
+    href: RepositorioRemoto.Models.User.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: RepositorioRemoto.Models.User
+    name: User
+    href: RepositorioRemoto.Models.User.html
+  - name: )
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: RepositorioRemoto.Repositories.IUserRepository.UpdateAsync*
+  commentId: Overload:RepositorioRemoto.Repositories.IUserRepository.UpdateAsync
+  href: RepositorioRemoto.Repositories.IUserRepository.html#RepositorioRemoto_Repositories_IUserRepository_UpdateAsync_RepositorioRemoto_Models_User_
+  name: UpdateAsync
+  nameWithType: IUserRepository.UpdateAsync
+  fullName: RepositorioRemoto.Repositories.IUserRepository.UpdateAsync
+- uid: RepositorioRemoto.Repositories.IUserRepository.DeleteAsync*
+  commentId: Overload:RepositorioRemoto.Repositories.IUserRepository.DeleteAsync
+  href: RepositorioRemoto.Repositories.IUserRepository.html#RepositorioRemoto_Repositories_IUserRepository_DeleteAsync_System_Int32_
+  name: DeleteAsync
+  nameWithType: IUserRepository.DeleteAsync
+  fullName: RepositorioRemoto.Repositories.IUserRepository.DeleteAsync
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: RepositorioRemoto.Repositories.IUserRepository.DeleteAllAsync*
+  commentId: Overload:RepositorioRemoto.Repositories.IUserRepository.DeleteAllAsync
+  href: RepositorioRemoto.Repositories.IUserRepository.html#RepositorioRemoto_Repositories_IUserRepository_DeleteAllAsync
+  name: DeleteAllAsync
+  nameWithType: IUserRepository.DeleteAllAsync
+  fullName: RepositorioRemoto.Repositories.IUserRepository.DeleteAllAsync

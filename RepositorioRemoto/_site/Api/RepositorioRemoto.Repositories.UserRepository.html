@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class UserRepository | RepositorioRemoto </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class UserRepository | RepositorioRemoto ">
+      
+      <meta name="description" content="Repositorio local de usuarios con Entity Framework Core. Funciona igual con SQLite (perfil Dev) y con PostgreSQL (perfil Prod): el proveedor se elige al registrar el AppDbContext.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Cristian-1990/RepositorioRemoto/new/dev/apiSpec/new?filename=RepositorioRemoto_Repositories_UserRepository.md&amp;value=---%0Auid%3A%20RepositorioRemoto.Repositories.UserRepository%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="RepositorioRemoto">
+            RepositorioRemoto
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="RepositorioRemoto.Repositories.UserRepository">
+
+
+
+  <h1 id="RepositorioRemoto_Repositories_UserRepository" data-uid="RepositorioRemoto.Repositories.UserRepository" class="text-break">
+Class UserRepository  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Repositories/UserRepository.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">RepositorioRemoto</span>.<a class="xref" href="RepositorioRemoto.Repositories.html">Repositories</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>RepositorioRemoto.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Repositorio local de usuarios con Entity Framework Core.
+Funciona igual con SQLite (perfil Dev) y con PostgreSQL (perfil Prod):
+el proveedor se elige al registrar el AppDbContext.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class UserRepository : IUserRepository</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">UserRepository</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="RepositorioRemoto.Repositories.IUserRepository.html">IUserRepository</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="RepositorioRemoto_Repositories_UserRepository__ctor_" data-uid="RepositorioRemoto.Repositories.UserRepository.#ctor*"></a>
+
+  <h3 id="RepositorioRemoto_Repositories_UserRepository__ctor_RepositorioRemoto_Entity_AppDbContext_" data-uid="RepositorioRemoto.Repositories.UserRepository.#ctor(RepositorioRemoto.Entity.AppDbContext)">
+  UserRepository(AppDbContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Repositories/UserRepository.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Repositorio local de usuarios con Entity Framework Core.
+Funciona igual con SQLite (perfil Dev) y con PostgreSQL (perfil Prod):
+el proveedor se elige al registrar el AppDbContext.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UserRepository(AppDbContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="RepositorioRemoto.Entity.AppDbContext.html">AppDbContext</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="RepositorioRemoto_Repositories_UserRepository_CreateAllAsync_" data-uid="RepositorioRemoto.Repositories.UserRepository.CreateAllAsync*"></a>
+
+  <h3 id="RepositorioRemoto_Repositories_UserRepository_CreateAllAsync_System_Collections_Generic_IEnumerable_RepositorioRemoto_Models_User__" data-uid="RepositorioRemoto.Repositories.UserRepository.CreateAllAsync(System.Collections.Generic.IEnumerable{RepositorioRemoto.Models.User})">
+  CreateAllAsync(IEnumerable&lt;User&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Repositories/UserRepository.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Guarda varios usuarios de una vez. Lo usa la sincronización.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task CreateAllAsync(IEnumerable&lt;User&gt; users)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>users</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="RepositorioRemoto.Models.User.html">User</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Repositories_UserRepository_CreateAsync_" data-uid="RepositorioRemoto.Repositories.UserRepository.CreateAsync*"></a>
+
+  <h3 id="RepositorioRemoto_Repositories_UserRepository_CreateAsync_RepositorioRemoto_Models_User_" data-uid="RepositorioRemoto.Repositories.UserRepository.CreateAsync(RepositorioRemoto.Models.User)">
+  CreateAsync(User)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Repositories/UserRepository.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Crea un nuevo usuario.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;User&gt; CreateAsync(User user)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>user</code> <a class="xref" href="RepositorioRemoto.Models.User.html">User</a></dt>
+    <dd><p>Usuario que se va a crear.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="RepositorioRemoto.Models.User.html">User</a>&gt;</dt>
+    <dd><p>El usuario creado.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Repositories_UserRepository_DeleteAllAsync_" data-uid="RepositorioRemoto.Repositories.UserRepository.DeleteAllAsync*"></a>
+
+  <h3 id="RepositorioRemoto_Repositories_UserRepository_DeleteAllAsync" data-uid="RepositorioRemoto.Repositories.UserRepository.DeleteAllAsync">
+  DeleteAllAsync()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Repositories/UserRepository.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Elimina todos los usuarios almacenados.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task DeleteAllAsync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Repositories_UserRepository_DeleteAsync_" data-uid="RepositorioRemoto.Repositories.UserRepository.DeleteAsync*"></a>
+
+  <h3 id="RepositorioRemoto_Repositories_UserRepository_DeleteAsync_System_Int32_" data-uid="RepositorioRemoto.Repositories.UserRepository.DeleteAsync(System.Int32)">
+  DeleteAsync(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Repositories/UserRepository.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Elimina un usuario por su identificador.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; DeleteAsync(int id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Identificador del usuario que se quiere eliminar.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>True si se elimina correctamente; false si el usuario no existe.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Repositories_UserRepository_GetAllAsync_" data-uid="RepositorioRemoto.Repositories.UserRepository.GetAllAsync*"></a>
+
+  <h3 id="RepositorioRemoto_Repositories_UserRepository_GetAllAsync" data-uid="RepositorioRemoto.Repositories.UserRepository.GetAllAsync">
+  GetAllAsync()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Repositories/UserRepository.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Obtiene todos los usuarios.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IEnumerable&lt;User&gt;&gt; GetAllAsync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="RepositorioRemoto.Models.User.html">User</a>&gt;&gt;</dt>
+    <dd><p>Una colección con todos los usuarios.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Repositories_UserRepository_GetByIdAsync_" data-uid="RepositorioRemoto.Repositories.UserRepository.GetByIdAsync*"></a>
+
+  <h3 id="RepositorioRemoto_Repositories_UserRepository_GetByIdAsync_System_Int32_" data-uid="RepositorioRemoto.Repositories.UserRepository.GetByIdAsync(System.Int32)">
+  GetByIdAsync(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Repositories/UserRepository.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Obtiene un usuario por su identificador.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;User?&gt; GetByIdAsync(int id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Identificador del usuario.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="RepositorioRemoto.Models.User.html">User</a>&gt;</dt>
+    <dd><p>El usuario encontrado o null si no existe.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Repositories_UserRepository_UpdateAsync_" data-uid="RepositorioRemoto.Repositories.UserRepository.UpdateAsync*"></a>
+
+  <h3 id="RepositorioRemoto_Repositories_UserRepository_UpdateAsync_RepositorioRemoto_Models_User_" data-uid="RepositorioRemoto.Repositories.UserRepository.UpdateAsync(RepositorioRemoto.Models.User)">
+  UpdateAsync(User)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Repositories/UserRepository.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actualiza los datos de un usuario existente.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;User?&gt; UpdateAsync(User user)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>user</code> <a class="xref" href="RepositorioRemoto.Models.User.html">User</a></dt>
+    <dd><p>Usuario con los datos actualizados.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="RepositorioRemoto.Models.User.html">User</a>&gt;</dt>
+    <dd><p>El usuario actualizado o null si no existe.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Repositories/UserRepository.cs/#L13" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

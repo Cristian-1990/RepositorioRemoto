@@ -1,0 +1,464 @@
+### YamlMime:ManagedReference
+items:
+- uid: RepositorioRemoto.Errors.DomainError
+  commentId: T:RepositorioRemoto.Errors.DomainError
+  id: DomainError
+  parent: RepositorioRemoto.Errors
+  children:
+  - RepositorioRemoto.Errors.DomainError.#ctor(System.String)
+  - RepositorioRemoto.Errors.DomainError.Message
+  langs:
+  - csharp
+  - vb
+  name: DomainError
+  nameWithType: DomainError
+  fullName: RepositorioRemoto.Errors.DomainError
+  type: Class
+  source:
+    remote:
+      path: RepositorioRemoto/Errors/DomainError.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: DomainError
+    path: Errors/DomainError.cs
+    startLine: 7
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Errors
+  summary: >-
+    Errores de dominio.
+
+    Cada tipo de error construye su propio mensaje.
+  example: []
+  syntax:
+    content: 'public abstract record DomainError : IEquatable<DomainError>'
+    content.vb: Public MustInherit Class DomainError Implements IEquatable(Of DomainError)
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - RepositorioRemoto.Errors.DomainError.AlreadyExists
+  - RepositorioRemoto.Errors.DomainError.ApiError
+  - RepositorioRemoto.Errors.DomainError.NotFound
+  - RepositorioRemoto.Errors.DomainError.Storage
+  - RepositorioRemoto.Errors.DomainError.Validation
+  implements:
+  - System.IEquatable{RepositorioRemoto.Errors.DomainError}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: RepositorioRemoto.Errors.DomainError.#ctor(System.String)
+  commentId: M:RepositorioRemoto.Errors.DomainError.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: RepositorioRemoto.Errors.DomainError
+  langs:
+  - csharp
+  - vb
+  name: DomainError(string)
+  nameWithType: DomainError.DomainError(string)
+  fullName: RepositorioRemoto.Errors.DomainError.DomainError(string)
+  type: Constructor
+  source:
+    remote:
+      path: RepositorioRemoto/Errors/DomainError.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: .ctor
+    path: Errors/DomainError.cs
+    startLine: 7
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Errors
+  summary: >-
+    Errores de dominio.
+
+    Cada tipo de error construye su propio mensaje.
+  example: []
+  syntax:
+    content: protected DomainError(string Message)
+    parameters:
+    - id: Message
+      type: System.String
+      description: Mensaje.
+    content.vb: Protected Sub New(Message As String)
+  overload: RepositorioRemoto.Errors.DomainError.#ctor*
+  nameWithType.vb: DomainError.New(String)
+  fullName.vb: RepositorioRemoto.Errors.DomainError.New(String)
+  name.vb: New(String)
+- uid: RepositorioRemoto.Errors.DomainError.Message
+  commentId: P:RepositorioRemoto.Errors.DomainError.Message
+  id: Message
+  parent: RepositorioRemoto.Errors.DomainError
+  langs:
+  - csharp
+  - vb
+  name: Message
+  nameWithType: DomainError.Message
+  fullName: RepositorioRemoto.Errors.DomainError.Message
+  type: Property
+  source:
+    remote:
+      path: RepositorioRemoto/Errors/DomainError.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: Message
+    path: Errors/DomainError.cs
+    startLine: 7
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Errors
+  summary: Mensaje.
+  example: []
+  syntax:
+    content: public string Message { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Message As String
+  overload: RepositorioRemoto.Errors.DomainError.Message*
+references:
+- uid: RepositorioRemoto.Errors
+  commentId: N:RepositorioRemoto.Errors
+  name: RepositorioRemoto.Errors
+  nameWithType: RepositorioRemoto.Errors
+  fullName: RepositorioRemoto.Errors
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Errors
+    name: Errors
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Errors
+    name: Errors
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{RepositorioRemoto.Errors.DomainError}
+  commentId: T:System.IEquatable{RepositorioRemoto.Errors.DomainError}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<DomainError>
+  nameWithType: IEquatable<DomainError>
+  fullName: System.IEquatable<RepositorioRemoto.Errors.DomainError>
+  nameWithType.vb: IEquatable(Of DomainError)
+  fullName.vb: System.IEquatable(Of RepositorioRemoto.Errors.DomainError)
+  name.vb: IEquatable(Of DomainError)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: RepositorioRemoto.Errors.DomainError
+    name: DomainError
+    href: RepositorioRemoto.Errors.DomainError.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: RepositorioRemoto.Errors.DomainError
+    name: DomainError
+    href: RepositorioRemoto.Errors.DomainError.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: RepositorioRemoto.Errors.DomainError.#ctor*
+  commentId: Overload:RepositorioRemoto.Errors.DomainError.#ctor
+  href: RepositorioRemoto.Errors.DomainError.html#RepositorioRemoto_Errors_DomainError__ctor_System_String_
+  name: DomainError
+  nameWithType: DomainError.DomainError
+  fullName: RepositorioRemoto.Errors.DomainError.DomainError
+  nameWithType.vb: DomainError.New
+  fullName.vb: RepositorioRemoto.Errors.DomainError.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: RepositorioRemoto.Errors.DomainError.Message*
+  commentId: Overload:RepositorioRemoto.Errors.DomainError.Message
+  href: RepositorioRemoto.Errors.DomainError.html#RepositorioRemoto_Errors_DomainError_Message
+  name: Message
+  nameWithType: DomainError.Message
+  fullName: RepositorioRemoto.Errors.DomainError.Message

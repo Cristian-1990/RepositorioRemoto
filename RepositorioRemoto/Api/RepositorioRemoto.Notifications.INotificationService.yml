@@ -1,0 +1,316 @@
+### YamlMime:ManagedReference
+items:
+- uid: RepositorioRemoto.Notifications.INotificationService
+  commentId: T:RepositorioRemoto.Notifications.INotificationService
+  id: INotificationService
+  parent: RepositorioRemoto.Notifications
+  children:
+  - RepositorioRemoto.Notifications.INotificationService.Notifications
+  - RepositorioRemoto.Notifications.INotificationService.NotifyCreated(RepositorioRemoto.Models.User)
+  - RepositorioRemoto.Notifications.INotificationService.NotifyDeleted(System.Int32)
+  - RepositorioRemoto.Notifications.INotificationService.NotifyUpdated(RepositorioRemoto.Models.User)
+  langs:
+  - csharp
+  - vb
+  name: INotificationService
+  nameWithType: INotificationService
+  fullName: RepositorioRemoto.Notifications.INotificationService
+  type: Interface
+  source:
+    remote:
+      path: RepositorioRemoto/Notifications/INotificationService.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: INotificationService
+    path: Notifications/INotificationService.cs
+    startLine: 32
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Notifications
+  summary: >-
+    Contrato del servicio de notificaciones.
+
+    Emite un flujo de eventos al que Program.cs se suscribe al arrancar.
+
+    Va inyectado en el UserService, que lo llama al crear, actualizar y eliminar.
+  example: []
+  syntax:
+    content: public interface INotificationService
+    content.vb: Public Interface INotificationService
+  derivedClasses:
+  - RepositorioRemoto.Notifications.ConsoleNotificationService
+- uid: RepositorioRemoto.Notifications.INotificationService.Notifications
+  commentId: P:RepositorioRemoto.Notifications.INotificationService.Notifications
+  id: Notifications
+  parent: RepositorioRemoto.Notifications.INotificationService
+  langs:
+  - csharp
+  - vb
+  name: Notifications
+  nameWithType: INotificationService.Notifications
+  fullName: RepositorioRemoto.Notifications.INotificationService.Notifications
+  type: Property
+  source:
+    remote:
+      path: RepositorioRemoto/Notifications/INotificationService.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: Notifications
+    path: Notifications/INotificationService.cs
+    startLine: 35
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Notifications
+  summary: Flujo de notificaciones al que suscribirse.
+  example: []
+  syntax:
+    content: IObservable<Notification> Notifications { get; }
+    parameters: []
+    return:
+      type: System.IObservable{RepositorioRemoto.Notifications.Notification}
+    content.vb: ReadOnly Property Notifications As IObservable(Of Notification)
+  overload: RepositorioRemoto.Notifications.INotificationService.Notifications*
+- uid: RepositorioRemoto.Notifications.INotificationService.NotifyCreated(RepositorioRemoto.Models.User)
+  commentId: M:RepositorioRemoto.Notifications.INotificationService.NotifyCreated(RepositorioRemoto.Models.User)
+  id: NotifyCreated(RepositorioRemoto.Models.User)
+  parent: RepositorioRemoto.Notifications.INotificationService
+  langs:
+  - csharp
+  - vb
+  name: NotifyCreated(User)
+  nameWithType: INotificationService.NotifyCreated(User)
+  fullName: RepositorioRemoto.Notifications.INotificationService.NotifyCreated(RepositorioRemoto.Models.User)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Notifications/INotificationService.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: NotifyCreated
+    path: Notifications/INotificationService.cs
+    startLine: 39
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Notifications
+  summary: Notifica que se ha creado un usuario.
+  example: []
+  syntax:
+    content: void NotifyCreated(User user)
+    parameters:
+    - id: user
+      type: RepositorioRemoto.Models.User
+      description: Usuario creado.
+    content.vb: Sub NotifyCreated(user As User)
+  overload: RepositorioRemoto.Notifications.INotificationService.NotifyCreated*
+- uid: RepositorioRemoto.Notifications.INotificationService.NotifyUpdated(RepositorioRemoto.Models.User)
+  commentId: M:RepositorioRemoto.Notifications.INotificationService.NotifyUpdated(RepositorioRemoto.Models.User)
+  id: NotifyUpdated(RepositorioRemoto.Models.User)
+  parent: RepositorioRemoto.Notifications.INotificationService
+  langs:
+  - csharp
+  - vb
+  name: NotifyUpdated(User)
+  nameWithType: INotificationService.NotifyUpdated(User)
+  fullName: RepositorioRemoto.Notifications.INotificationService.NotifyUpdated(RepositorioRemoto.Models.User)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Notifications/INotificationService.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: NotifyUpdated
+    path: Notifications/INotificationService.cs
+    startLine: 43
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Notifications
+  summary: Notifica que se ha actualizado un usuario.
+  example: []
+  syntax:
+    content: void NotifyUpdated(User user)
+    parameters:
+    - id: user
+      type: RepositorioRemoto.Models.User
+      description: Usuario actualizado.
+    content.vb: Sub NotifyUpdated(user As User)
+  overload: RepositorioRemoto.Notifications.INotificationService.NotifyUpdated*
+- uid: RepositorioRemoto.Notifications.INotificationService.NotifyDeleted(System.Int32)
+  commentId: M:RepositorioRemoto.Notifications.INotificationService.NotifyDeleted(System.Int32)
+  id: NotifyDeleted(System.Int32)
+  parent: RepositorioRemoto.Notifications.INotificationService
+  langs:
+  - csharp
+  - vb
+  name: NotifyDeleted(int)
+  nameWithType: INotificationService.NotifyDeleted(int)
+  fullName: RepositorioRemoto.Notifications.INotificationService.NotifyDeleted(int)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Notifications/INotificationService.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: NotifyDeleted
+    path: Notifications/INotificationService.cs
+    startLine: 47
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Notifications
+  summary: Notifica que se ha eliminado un usuario.
+  example: []
+  syntax:
+    content: void NotifyDeleted(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: Identificador del usuario eliminado.
+    content.vb: Sub NotifyDeleted(id As Integer)
+  overload: RepositorioRemoto.Notifications.INotificationService.NotifyDeleted*
+  nameWithType.vb: INotificationService.NotifyDeleted(Integer)
+  fullName.vb: RepositorioRemoto.Notifications.INotificationService.NotifyDeleted(Integer)
+  name.vb: NotifyDeleted(Integer)
+references:
+- uid: RepositorioRemoto.Notifications
+  commentId: N:RepositorioRemoto.Notifications
+  name: RepositorioRemoto.Notifications
+  nameWithType: RepositorioRemoto.Notifications
+  fullName: RepositorioRemoto.Notifications
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Notifications
+    name: Notifications
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Notifications
+    name: Notifications
+- uid: RepositorioRemoto.Notifications.INotificationService.Notifications*
+  commentId: Overload:RepositorioRemoto.Notifications.INotificationService.Notifications
+  href: RepositorioRemoto.Notifications.INotificationService.html#RepositorioRemoto_Notifications_INotificationService_Notifications
+  name: Notifications
+  nameWithType: INotificationService.Notifications
+  fullName: RepositorioRemoto.Notifications.INotificationService.Notifications
+- uid: System.IObservable{RepositorioRemoto.Notifications.Notification}
+  commentId: T:System.IObservable{RepositorioRemoto.Notifications.Notification}
+  parent: System
+  definition: System.IObservable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: IObservable<Notification>
+  nameWithType: IObservable<Notification>
+  fullName: System.IObservable<RepositorioRemoto.Notifications.Notification>
+  nameWithType.vb: IObservable(Of Notification)
+  fullName.vb: System.IObservable(Of RepositorioRemoto.Notifications.Notification)
+  name.vb: IObservable(Of Notification)
+  spec.csharp:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - uid: RepositorioRemoto.Notifications.Notification
+    name: Notification
+    href: RepositorioRemoto.Notifications.Notification.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: RepositorioRemoto.Notifications.Notification
+    name: Notification
+    href: RepositorioRemoto.Notifications.Notification.html
+  - name: )
+- uid: System.IObservable`1
+  commentId: T:System.IObservable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  name: IObservable<T>
+  nameWithType: IObservable<T>
+  fullName: System.IObservable<T>
+  nameWithType.vb: IObservable(Of T)
+  fullName.vb: System.IObservable(Of T)
+  name.vb: IObservable(Of T)
+  spec.csharp:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IObservable`1
+    name: IObservable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iobservable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: RepositorioRemoto.Notifications.INotificationService.NotifyCreated*
+  commentId: Overload:RepositorioRemoto.Notifications.INotificationService.NotifyCreated
+  href: RepositorioRemoto.Notifications.INotificationService.html#RepositorioRemoto_Notifications_INotificationService_NotifyCreated_RepositorioRemoto_Models_User_
+  name: NotifyCreated
+  nameWithType: INotificationService.NotifyCreated
+  fullName: RepositorioRemoto.Notifications.INotificationService.NotifyCreated
+- uid: RepositorioRemoto.Models.User
+  commentId: T:RepositorioRemoto.Models.User
+  parent: RepositorioRemoto.Models
+  href: RepositorioRemoto.Models.User.html
+  name: User
+  nameWithType: User
+  fullName: RepositorioRemoto.Models.User
+- uid: RepositorioRemoto.Models
+  commentId: N:RepositorioRemoto.Models
+  name: RepositorioRemoto.Models
+  nameWithType: RepositorioRemoto.Models
+  fullName: RepositorioRemoto.Models
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Models
+    name: Models
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Models
+    name: Models
+- uid: RepositorioRemoto.Notifications.INotificationService.NotifyUpdated*
+  commentId: Overload:RepositorioRemoto.Notifications.INotificationService.NotifyUpdated
+  href: RepositorioRemoto.Notifications.INotificationService.html#RepositorioRemoto_Notifications_INotificationService_NotifyUpdated_RepositorioRemoto_Models_User_
+  name: NotifyUpdated
+  nameWithType: INotificationService.NotifyUpdated
+  fullName: RepositorioRemoto.Notifications.INotificationService.NotifyUpdated
+- uid: RepositorioRemoto.Notifications.INotificationService.NotifyDeleted*
+  commentId: Overload:RepositorioRemoto.Notifications.INotificationService.NotifyDeleted
+  href: RepositorioRemoto.Notifications.INotificationService.html#RepositorioRemoto_Notifications_INotificationService_NotifyDeleted_System_Int32_
+  name: NotifyDeleted
+  nameWithType: INotificationService.NotifyDeleted
+  fullName: RepositorioRemoto.Notifications.INotificationService.NotifyDeleted
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

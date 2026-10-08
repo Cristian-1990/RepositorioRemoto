@@ -1,0 +1,191 @@
+### YamlMime:ManagedReference
+items:
+- uid: RepositorioRemoto.Sync.IUserSyncService
+  commentId: T:RepositorioRemoto.Sync.IUserSyncService
+  id: IUserSyncService
+  parent: RepositorioRemoto.Sync
+  children:
+  - RepositorioRemoto.Sync.IUserSyncService.SyncAsync
+  langs:
+  - csharp
+  - vb
+  name: IUserSyncService
+  nameWithType: IUserSyncService
+  fullName: RepositorioRemoto.Sync.IUserSyncService
+  type: Interface
+  source:
+    remote:
+      path: RepositorioRemoto/Sync/IUserSyncService.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: IUserSyncService
+    path: Sync/IUserSyncService.cs
+    startLine: 6
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Sync
+  summary: >-
+    Contrato de la sincronización entre la API remota y el almacenamiento local.
+
+    Se separa del BackgroundService para poder testear la lógica con mocks (buenas prácticas 22.9).
+  example: []
+  syntax:
+    content: public interface IUserSyncService
+    content.vb: Public Interface IUserSyncService
+  derivedClasses:
+  - RepositorioRemoto.Sync.UserSyncService
+- uid: RepositorioRemoto.Sync.IUserSyncService.SyncAsync
+  commentId: M:RepositorioRemoto.Sync.IUserSyncService.SyncAsync
+  id: SyncAsync
+  parent: RepositorioRemoto.Sync.IUserSyncService
+  langs:
+  - csharp
+  - vb
+  name: SyncAsync()
+  nameWithType: IUserSyncService.SyncAsync()
+  fullName: RepositorioRemoto.Sync.IUserSyncService.SyncAsync()
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Sync/IUserSyncService.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: SyncAsync
+    path: Sync/IUserSyncService.cs
+    startLine: 12
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Sync
+  summary: Vacía la caché y la base de datos local y las recarga con lo que haya en la API.
+  example: []
+  syntax:
+    content: Task<bool> SyncAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: true si la sincronización se completó; false si falló la API.
+    content.vb: Function SyncAsync() As Task(Of Boolean)
+  overload: RepositorioRemoto.Sync.IUserSyncService.SyncAsync*
+references:
+- uid: RepositorioRemoto.Sync
+  commentId: N:RepositorioRemoto.Sync
+  name: RepositorioRemoto.Sync
+  nameWithType: RepositorioRemoto.Sync
+  fullName: RepositorioRemoto.Sync
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Sync
+    name: Sync
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Sync
+    name: Sync
+- uid: RepositorioRemoto.Sync.IUserSyncService.SyncAsync*
+  commentId: Overload:RepositorioRemoto.Sync.IUserSyncService.SyncAsync
+  href: RepositorioRemoto.Sync.IUserSyncService.html#RepositorioRemoto_Sync_IUserSyncService_SyncAsync
+  name: SyncAsync
+  nameWithType: IUserSyncService.SyncAsync
+  fullName: RepositorioRemoto.Sync.IUserSyncService.SyncAsync
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

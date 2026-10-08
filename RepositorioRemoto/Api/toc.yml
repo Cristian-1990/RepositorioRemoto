@@ -1,0 +1,200 @@
+### YamlMime:TableOfContent
+items:
+- uid: RepositorioRemoto.Api
+  name: RepositorioRemoto.Api
+  type: Namespace
+  items:
+  - uid: RepositorioRemoto.Api.IJsonPlaceholderApi
+    name: IJsonPlaceholderApi
+    type: Interface
+- uid: RepositorioRemoto.Cache
+  name: RepositorioRemoto.Cache
+  type: Namespace
+  items:
+  - uid: RepositorioRemoto.Cache.ICacheService
+    name: ICacheService
+    type: Interface
+  - uid: RepositorioRemoto.Cache.MemoryCacheService
+    name: MemoryCacheService
+    type: Class
+  - uid: RepositorioRemoto.Cache.RedisCacheService
+    name: RedisCacheService
+    type: Class
+- uid: RepositorioRemoto.Config
+  name: RepositorioRemoto.Config
+  type: Namespace
+  items:
+  - uid: RepositorioRemoto.Config.ApiConfig
+    name: ApiConfig
+    type: Class
+  - uid: RepositorioRemoto.Config.CacheConfig
+    name: CacheConfig
+    type: Class
+  - uid: RepositorioRemoto.Config.DatabaseConfig
+    name: DatabaseConfig
+    type: Class
+  - uid: RepositorioRemoto.Config.ExportConfig
+    name: ExportConfig
+    type: Class
+  - uid: RepositorioRemoto.Config.SyncConfig
+    name: SyncConfig
+    type: Class
+- uid: RepositorioRemoto.Dto
+  name: RepositorioRemoto.Dto
+  type: Namespace
+  items:
+  - uid: RepositorioRemoto.Dto.AddressDto
+    name: AddressDto
+    type: Class
+  - uid: RepositorioRemoto.Dto.CompanyDto
+    name: CompanyDto
+    type: Class
+  - uid: RepositorioRemoto.Dto.CreateUserRequest
+    name: CreateUserRequest
+    type: Class
+  - uid: RepositorioRemoto.Dto.GeoDto
+    name: GeoDto
+    type: Class
+  - uid: RepositorioRemoto.Dto.JsonPlaceholderUserDto
+    name: JsonPlaceholderUserDto
+    type: Class
+  - uid: RepositorioRemoto.Dto.UpdateUserRequest
+    name: UpdateUserRequest
+    type: Class
+  - uid: RepositorioRemoto.Dto.UserResponseDto
+    name: UserResponseDto
+    type: Class
+- uid: RepositorioRemoto.Entity
+  name: RepositorioRemoto.Entity
+  type: Namespace
+  items:
+  - uid: RepositorioRemoto.Entity.AppDbContext
+    name: AppDbContext
+    type: Class
+  - uid: RepositorioRemoto.Entity.UserEntity
+    name: UserEntity
+    type: Class
+- uid: RepositorioRemoto.Errors
+  name: RepositorioRemoto.Errors
+  type: Namespace
+  items:
+  - uid: RepositorioRemoto.Errors.DomainError
+    name: DomainError
+    type: Class
+  - uid: RepositorioRemoto.Errors.DomainError.AlreadyExists
+    name: DomainError.AlreadyExists
+    type: Class
+  - uid: RepositorioRemoto.Errors.DomainError.ApiError
+    name: DomainError.ApiError
+    type: Class
+  - uid: RepositorioRemoto.Errors.DomainError.NotFound
+    name: DomainError.NotFound
+    type: Class
+  - uid: RepositorioRemoto.Errors.DomainError.Storage
+    name: DomainError.Storage
+    type: Class
+  - uid: RepositorioRemoto.Errors.DomainError.Validation
+    name: DomainError.Validation
+    type: Class
+  - uid: RepositorioRemoto.Errors.DomainErrors
+    name: DomainErrors
+    type: Class
+- uid: RepositorioRemoto.Infrastructure
+  name: RepositorioRemoto.Infrastructure
+  type: Namespace
+  items:
+  - uid: RepositorioRemoto.Infrastructure.DependenciesProvider
+    name: DependenciesProvider
+    type: Class
+- uid: RepositorioRemoto.Mappers
+  name: RepositorioRemoto.Mappers
+  type: Namespace
+  items:
+  - uid: RepositorioRemoto.Mappers.UserEntityMapper
+    name: UserEntityMapper
+    type: Class
+  - uid: RepositorioRemoto.Mappers.UserMapper
+    name: UserMapper
+    type: Class
+- uid: RepositorioRemoto.Models
+  name: RepositorioRemoto.Models
+  type: Namespace
+  items:
+  - uid: RepositorioRemoto.Models.Address
+    name: Address
+    type: Class
+  - uid: RepositorioRemoto.Models.Company
+    name: Company
+    type: Class
+  - uid: RepositorioRemoto.Models.Geo
+    name: Geo
+    type: Class
+  - uid: RepositorioRemoto.Models.User
+    name: User
+    type: Class
+- uid: RepositorioRemoto.Notifications
+  name: RepositorioRemoto.Notifications
+  type: Namespace
+  items:
+  - uid: RepositorioRemoto.Notifications.ConsoleNotificationService
+    name: ConsoleNotificationService
+    type: Class
+  - uid: RepositorioRemoto.Notifications.INotificationService
+    name: INotificationService
+    type: Interface
+  - uid: RepositorioRemoto.Notifications.Notification
+    name: Notification
+    type: Class
+  - uid: RepositorioRemoto.Notifications.NotificationType
+    name: NotificationType
+    type: Enum
+- uid: RepositorioRemoto.Repositories
+  name: RepositorioRemoto.Repositories
+  type: Namespace
+  items:
+  - uid: RepositorioRemoto.Repositories.IUserRemoteRepository
+    name: IUserRemoteRepository
+    type: Interface
+  - uid: RepositorioRemoto.Repositories.IUserRepository
+    name: IUserRepository
+    type: Interface
+  - uid: RepositorioRemoto.Repositories.UserRemoteRepository
+    name: UserRemoteRepository
+    type: Class
+  - uid: RepositorioRemoto.Repositories.UserRepository
+    name: UserRepository
+    type: Class
+- uid: RepositorioRemoto.Services
+  name: RepositorioRemoto.Services
+  type: Namespace
+  items:
+  - uid: RepositorioRemoto.Services.IUserService
+    name: IUserService
+    type: Interface
+  - uid: RepositorioRemoto.Services.UserService
+    name: UserService
+    type: Class
+- uid: RepositorioRemoto.Sync
+  name: RepositorioRemoto.Sync
+  type: Namespace
+  items:
+  - uid: RepositorioRemoto.Sync.IUserSyncService
+    name: IUserSyncService
+    type: Interface
+  - uid: RepositorioRemoto.Sync.UserSyncBackgroundService
+    name: UserSyncBackgroundService
+    type: Class
+  - uid: RepositorioRemoto.Sync.UserSyncService
+    name: UserSyncService
+    type: Class
+- uid: RepositorioRemoto.Validators
+  name: RepositorioRemoto.Validators
+  type: Namespace
+  items:
+  - uid: RepositorioRemoto.Validators.IUserValidator
+    name: IUserValidator
+    type: Interface
+  - uid: RepositorioRemoto.Validators.UserValidator
+    name: UserValidator
+    type: Class
+memberLayout: SamePage

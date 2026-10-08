@@ -6,7 +6,6 @@ namespace RepositorioRemoto.Cache;
 
 /// <summary>
 /// Implementación de ICacheService con la caché en memoria del proceso.
-/// Es la del perfil Dev: no necesita infraestructura externa (teoría 21.4.2).
 /// </summary>
 public class MemoryCacheService(IMemoryCache cache, IOptions<CacheConfig> options) : ICacheService
 {

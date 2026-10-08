@@ -1,0 +1,968 @@
+### YamlMime:ManagedReference
+items:
+- uid: RepositorioRemoto.Entity.UserEntity
+  commentId: T:RepositorioRemoto.Entity.UserEntity
+  id: UserEntity
+  parent: RepositorioRemoto.Entity
+  children:
+  - RepositorioRemoto.Entity.UserEntity.City
+  - RepositorioRemoto.Entity.UserEntity.CompanyBs
+  - RepositorioRemoto.Entity.UserEntity.CompanyCatchPhrase
+  - RepositorioRemoto.Entity.UserEntity.CompanyName
+  - RepositorioRemoto.Entity.UserEntity.Email
+  - RepositorioRemoto.Entity.UserEntity.Id
+  - RepositorioRemoto.Entity.UserEntity.Lat
+  - RepositorioRemoto.Entity.UserEntity.Lng
+  - RepositorioRemoto.Entity.UserEntity.Name
+  - RepositorioRemoto.Entity.UserEntity.Phone
+  - RepositorioRemoto.Entity.UserEntity.Street
+  - RepositorioRemoto.Entity.UserEntity.Suite
+  - RepositorioRemoto.Entity.UserEntity.Username
+  - RepositorioRemoto.Entity.UserEntity.Website
+  - RepositorioRemoto.Entity.UserEntity.Zipcode
+  langs:
+  - csharp
+  - vb
+  name: UserEntity
+  nameWithType: UserEntity
+  fullName: RepositorioRemoto.Entity.UserEntity
+  type: Class
+  source:
+    remote:
+      path: RepositorioRemoto/Entity/UserEntity.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: UserEntity
+    path: Entity/UserEntity.cs
+    startLine: 7
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Entity
+  summary: >-
+    Entidad de persistencia para usuarios.
+
+    La dirección y la empresa se guardan desmontadas en columnas de la misma tabla.
+
+    La configuración (tabla, columnas y longitudes) está en AppDbContext con Fluent API.
+  example: []
+  syntax:
+    content: public class UserEntity
+    content.vb: Public Class UserEntity
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - RepositorioRemoto.Entity.UserEntity.RepositorioRemoto.Mappers.UserEntityMapper.ToUser
+- uid: RepositorioRemoto.Entity.UserEntity.Id
+  commentId: P:RepositorioRemoto.Entity.UserEntity.Id
+  id: Id
+  parent: RepositorioRemoto.Entity.UserEntity
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: UserEntity.Id
+  fullName: RepositorioRemoto.Entity.UserEntity.Id
+  type: Property
+  source:
+    remote:
+      path: RepositorioRemoto/Entity/UserEntity.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: Id
+    path: Entity/UserEntity.cs
+    startLine: 10
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Entity
+  summary: Identificador del usuario. Lo asigna la API remota, no la base de datos.
+  example: []
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: RepositorioRemoto.Entity.UserEntity.Id*
+- uid: RepositorioRemoto.Entity.UserEntity.Name
+  commentId: P:RepositorioRemoto.Entity.UserEntity.Name
+  id: Name
+  parent: RepositorioRemoto.Entity.UserEntity
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: UserEntity.Name
+  fullName: RepositorioRemoto.Entity.UserEntity.Name
+  type: Property
+  source:
+    remote:
+      path: RepositorioRemoto/Entity/UserEntity.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: Name
+    path: Entity/UserEntity.cs
+    startLine: 13
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Entity
+  summary: Nombre completo.
+  example: []
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: RepositorioRemoto.Entity.UserEntity.Name*
+- uid: RepositorioRemoto.Entity.UserEntity.Username
+  commentId: P:RepositorioRemoto.Entity.UserEntity.Username
+  id: Username
+  parent: RepositorioRemoto.Entity.UserEntity
+  langs:
+  - csharp
+  - vb
+  name: Username
+  nameWithType: UserEntity.Username
+  fullName: RepositorioRemoto.Entity.UserEntity.Username
+  type: Property
+  source:
+    remote:
+      path: RepositorioRemoto/Entity/UserEntity.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: Username
+    path: Entity/UserEntity.cs
+    startLine: 16
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Entity
+  summary: Nombre de usuario.
+  example: []
+  syntax:
+    content: public string Username { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Username As String
+  overload: RepositorioRemoto.Entity.UserEntity.Username*
+- uid: RepositorioRemoto.Entity.UserEntity.Email
+  commentId: P:RepositorioRemoto.Entity.UserEntity.Email
+  id: Email
+  parent: RepositorioRemoto.Entity.UserEntity
+  langs:
+  - csharp
+  - vb
+  name: Email
+  nameWithType: UserEntity.Email
+  fullName: RepositorioRemoto.Entity.UserEntity.Email
+  type: Property
+  source:
+    remote:
+      path: RepositorioRemoto/Entity/UserEntity.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: Email
+    path: Entity/UserEntity.cs
+    startLine: 19
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Entity
+  summary: Correo electrónico.
+  example: []
+  syntax:
+    content: public string Email { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Email As String
+  overload: RepositorioRemoto.Entity.UserEntity.Email*
+- uid: RepositorioRemoto.Entity.UserEntity.Street
+  commentId: P:RepositorioRemoto.Entity.UserEntity.Street
+  id: Street
+  parent: RepositorioRemoto.Entity.UserEntity
+  langs:
+  - csharp
+  - vb
+  name: Street
+  nameWithType: UserEntity.Street
+  fullName: RepositorioRemoto.Entity.UserEntity.Street
+  type: Property
+  source:
+    remote:
+      path: RepositorioRemoto/Entity/UserEntity.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: Street
+    path: Entity/UserEntity.cs
+    startLine: 22
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Entity
+  summary: Calle de la dirección.
+  example: []
+  syntax:
+    content: public string Street { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Street As String
+  overload: RepositorioRemoto.Entity.UserEntity.Street*
+- uid: RepositorioRemoto.Entity.UserEntity.Suite
+  commentId: P:RepositorioRemoto.Entity.UserEntity.Suite
+  id: Suite
+  parent: RepositorioRemoto.Entity.UserEntity
+  langs:
+  - csharp
+  - vb
+  name: Suite
+  nameWithType: UserEntity.Suite
+  fullName: RepositorioRemoto.Entity.UserEntity.Suite
+  type: Property
+  source:
+    remote:
+      path: RepositorioRemoto/Entity/UserEntity.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: Suite
+    path: Entity/UserEntity.cs
+    startLine: 25
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Entity
+  summary: Piso o apartamento.
+  example: []
+  syntax:
+    content: public string Suite { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Suite As String
+  overload: RepositorioRemoto.Entity.UserEntity.Suite*
+- uid: RepositorioRemoto.Entity.UserEntity.City
+  commentId: P:RepositorioRemoto.Entity.UserEntity.City
+  id: City
+  parent: RepositorioRemoto.Entity.UserEntity
+  langs:
+  - csharp
+  - vb
+  name: City
+  nameWithType: UserEntity.City
+  fullName: RepositorioRemoto.Entity.UserEntity.City
+  type: Property
+  source:
+    remote:
+      path: RepositorioRemoto/Entity/UserEntity.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: City
+    path: Entity/UserEntity.cs
+    startLine: 28
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Entity
+  summary: Ciudad.
+  example: []
+  syntax:
+    content: public string City { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property City As String
+  overload: RepositorioRemoto.Entity.UserEntity.City*
+- uid: RepositorioRemoto.Entity.UserEntity.Zipcode
+  commentId: P:RepositorioRemoto.Entity.UserEntity.Zipcode
+  id: Zipcode
+  parent: RepositorioRemoto.Entity.UserEntity
+  langs:
+  - csharp
+  - vb
+  name: Zipcode
+  nameWithType: UserEntity.Zipcode
+  fullName: RepositorioRemoto.Entity.UserEntity.Zipcode
+  type: Property
+  source:
+    remote:
+      path: RepositorioRemoto/Entity/UserEntity.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: Zipcode
+    path: Entity/UserEntity.cs
+    startLine: 31
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Entity
+  summary: Código postal.
+  example: []
+  syntax:
+    content: public string Zipcode { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Zipcode As String
+  overload: RepositorioRemoto.Entity.UserEntity.Zipcode*
+- uid: RepositorioRemoto.Entity.UserEntity.Lat
+  commentId: P:RepositorioRemoto.Entity.UserEntity.Lat
+  id: Lat
+  parent: RepositorioRemoto.Entity.UserEntity
+  langs:
+  - csharp
+  - vb
+  name: Lat
+  nameWithType: UserEntity.Lat
+  fullName: RepositorioRemoto.Entity.UserEntity.Lat
+  type: Property
+  source:
+    remote:
+      path: RepositorioRemoto/Entity/UserEntity.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: Lat
+    path: Entity/UserEntity.cs
+    startLine: 34
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Entity
+  summary: Latitud de la dirección.
+  example: []
+  syntax:
+    content: public string Lat { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Lat As String
+  overload: RepositorioRemoto.Entity.UserEntity.Lat*
+- uid: RepositorioRemoto.Entity.UserEntity.Lng
+  commentId: P:RepositorioRemoto.Entity.UserEntity.Lng
+  id: Lng
+  parent: RepositorioRemoto.Entity.UserEntity
+  langs:
+  - csharp
+  - vb
+  name: Lng
+  nameWithType: UserEntity.Lng
+  fullName: RepositorioRemoto.Entity.UserEntity.Lng
+  type: Property
+  source:
+    remote:
+      path: RepositorioRemoto/Entity/UserEntity.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: Lng
+    path: Entity/UserEntity.cs
+    startLine: 37
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Entity
+  summary: Longitud de la dirección.
+  example: []
+  syntax:
+    content: public string Lng { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Lng As String
+  overload: RepositorioRemoto.Entity.UserEntity.Lng*
+- uid: RepositorioRemoto.Entity.UserEntity.Phone
+  commentId: P:RepositorioRemoto.Entity.UserEntity.Phone
+  id: Phone
+  parent: RepositorioRemoto.Entity.UserEntity
+  langs:
+  - csharp
+  - vb
+  name: Phone
+  nameWithType: UserEntity.Phone
+  fullName: RepositorioRemoto.Entity.UserEntity.Phone
+  type: Property
+  source:
+    remote:
+      path: RepositorioRemoto/Entity/UserEntity.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: Phone
+    path: Entity/UserEntity.cs
+    startLine: 40
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Entity
+  summary: Teléfono.
+  example: []
+  syntax:
+    content: public string Phone { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Phone As String
+  overload: RepositorioRemoto.Entity.UserEntity.Phone*
+- uid: RepositorioRemoto.Entity.UserEntity.Website
+  commentId: P:RepositorioRemoto.Entity.UserEntity.Website
+  id: Website
+  parent: RepositorioRemoto.Entity.UserEntity
+  langs:
+  - csharp
+  - vb
+  name: Website
+  nameWithType: UserEntity.Website
+  fullName: RepositorioRemoto.Entity.UserEntity.Website
+  type: Property
+  source:
+    remote:
+      path: RepositorioRemoto/Entity/UserEntity.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: Website
+    path: Entity/UserEntity.cs
+    startLine: 43
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Entity
+  summary: Página web.
+  example: []
+  syntax:
+    content: public string Website { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Website As String
+  overload: RepositorioRemoto.Entity.UserEntity.Website*
+- uid: RepositorioRemoto.Entity.UserEntity.CompanyName
+  commentId: P:RepositorioRemoto.Entity.UserEntity.CompanyName
+  id: CompanyName
+  parent: RepositorioRemoto.Entity.UserEntity
+  langs:
+  - csharp
+  - vb
+  name: CompanyName
+  nameWithType: UserEntity.CompanyName
+  fullName: RepositorioRemoto.Entity.UserEntity.CompanyName
+  type: Property
+  source:
+    remote:
+      path: RepositorioRemoto/Entity/UserEntity.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: CompanyName
+    path: Entity/UserEntity.cs
+    startLine: 46
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Entity
+  summary: Nombre de la empresa.
+  example: []
+  syntax:
+    content: public string CompanyName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CompanyName As String
+  overload: RepositorioRemoto.Entity.UserEntity.CompanyName*
+- uid: RepositorioRemoto.Entity.UserEntity.CompanyCatchPhrase
+  commentId: P:RepositorioRemoto.Entity.UserEntity.CompanyCatchPhrase
+  id: CompanyCatchPhrase
+  parent: RepositorioRemoto.Entity.UserEntity
+  langs:
+  - csharp
+  - vb
+  name: CompanyCatchPhrase
+  nameWithType: UserEntity.CompanyCatchPhrase
+  fullName: RepositorioRemoto.Entity.UserEntity.CompanyCatchPhrase
+  type: Property
+  source:
+    remote:
+      path: RepositorioRemoto/Entity/UserEntity.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: CompanyCatchPhrase
+    path: Entity/UserEntity.cs
+    startLine: 49
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Entity
+  summary: Eslogan de la empresa.
+  example: []
+  syntax:
+    content: public string CompanyCatchPhrase { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CompanyCatchPhrase As String
+  overload: RepositorioRemoto.Entity.UserEntity.CompanyCatchPhrase*
+- uid: RepositorioRemoto.Entity.UserEntity.CompanyBs
+  commentId: P:RepositorioRemoto.Entity.UserEntity.CompanyBs
+  id: CompanyBs
+  parent: RepositorioRemoto.Entity.UserEntity
+  langs:
+  - csharp
+  - vb
+  name: CompanyBs
+  nameWithType: UserEntity.CompanyBs
+  fullName: RepositorioRemoto.Entity.UserEntity.CompanyBs
+  type: Property
+  source:
+    remote:
+      path: RepositorioRemoto/Entity/UserEntity.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: CompanyBs
+    path: Entity/UserEntity.cs
+    startLine: 52
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Entity
+  summary: Lema de negocio de la empresa.
+  example: []
+  syntax:
+    content: public string CompanyBs { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CompanyBs As String
+  overload: RepositorioRemoto.Entity.UserEntity.CompanyBs*
+references:
+- uid: RepositorioRemoto.Entity
+  commentId: N:RepositorioRemoto.Entity
+  name: RepositorioRemoto.Entity
+  nameWithType: RepositorioRemoto.Entity
+  fullName: RepositorioRemoto.Entity
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Entity
+    name: Entity
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Entity
+    name: Entity
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: RepositorioRemoto.Entity.UserEntity.RepositorioRemoto.Mappers.UserEntityMapper.ToUser
+  commentId: M:RepositorioRemoto.Mappers.UserEntityMapper.ToUser(RepositorioRemoto.Entity.UserEntity)
+  parent: RepositorioRemoto.Mappers.UserEntityMapper
+  definition: RepositorioRemoto.Mappers.UserEntityMapper.ToUser(RepositorioRemoto.Entity.UserEntity)
+  href: RepositorioRemoto.Mappers.UserEntityMapper.html#RepositorioRemoto_Mappers_UserEntityMapper_ToUser_RepositorioRemoto_Entity_UserEntity_
+  name: ToUser(UserEntity)
+  nameWithType: UserEntityMapper.ToUser(UserEntity)
+  fullName: RepositorioRemoto.Mappers.UserEntityMapper.ToUser(RepositorioRemoto.Entity.UserEntity)
+  spec.csharp:
+  - uid: RepositorioRemoto.Mappers.UserEntityMapper.ToUser(RepositorioRemoto.Entity.UserEntity)
+    name: ToUser
+    href: RepositorioRemoto.Mappers.UserEntityMapper.html#RepositorioRemoto_Mappers_UserEntityMapper_ToUser_RepositorioRemoto_Entity_UserEntity_
+  - name: (
+  - uid: RepositorioRemoto.Entity.UserEntity
+    name: UserEntity
+    href: RepositorioRemoto.Entity.UserEntity.html
+  - name: )
+  spec.vb:
+  - uid: RepositorioRemoto.Mappers.UserEntityMapper.ToUser(RepositorioRemoto.Entity.UserEntity)
+    name: ToUser
+    href: RepositorioRemoto.Mappers.UserEntityMapper.html#RepositorioRemoto_Mappers_UserEntityMapper_ToUser_RepositorioRemoto_Entity_UserEntity_
+  - name: (
+  - uid: RepositorioRemoto.Entity.UserEntity
+    name: UserEntity
+    href: RepositorioRemoto.Entity.UserEntity.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: RepositorioRemoto.Mappers.UserEntityMapper.ToUser(RepositorioRemoto.Entity.UserEntity)
+  commentId: M:RepositorioRemoto.Mappers.UserEntityMapper.ToUser(RepositorioRemoto.Entity.UserEntity)
+  href: RepositorioRemoto.Mappers.UserEntityMapper.html#RepositorioRemoto_Mappers_UserEntityMapper_ToUser_RepositorioRemoto_Entity_UserEntity_
+  name: ToUser(UserEntity)
+  nameWithType: UserEntityMapper.ToUser(UserEntity)
+  fullName: RepositorioRemoto.Mappers.UserEntityMapper.ToUser(RepositorioRemoto.Entity.UserEntity)
+  spec.csharp:
+  - uid: RepositorioRemoto.Mappers.UserEntityMapper.ToUser(RepositorioRemoto.Entity.UserEntity)
+    name: ToUser
+    href: RepositorioRemoto.Mappers.UserEntityMapper.html#RepositorioRemoto_Mappers_UserEntityMapper_ToUser_RepositorioRemoto_Entity_UserEntity_
+  - name: (
+  - uid: RepositorioRemoto.Entity.UserEntity
+    name: UserEntity
+    href: RepositorioRemoto.Entity.UserEntity.html
+  - name: )
+  spec.vb:
+  - uid: RepositorioRemoto.Mappers.UserEntityMapper.ToUser(RepositorioRemoto.Entity.UserEntity)
+    name: ToUser
+    href: RepositorioRemoto.Mappers.UserEntityMapper.html#RepositorioRemoto_Mappers_UserEntityMapper_ToUser_RepositorioRemoto_Entity_UserEntity_
+  - name: (
+  - uid: RepositorioRemoto.Entity.UserEntity
+    name: UserEntity
+    href: RepositorioRemoto.Entity.UserEntity.html
+  - name: )
+- uid: RepositorioRemoto.Mappers.UserEntityMapper
+  commentId: T:RepositorioRemoto.Mappers.UserEntityMapper
+  parent: RepositorioRemoto.Mappers
+  href: RepositorioRemoto.Mappers.UserEntityMapper.html
+  name: UserEntityMapper
+  nameWithType: UserEntityMapper
+  fullName: RepositorioRemoto.Mappers.UserEntityMapper
+- uid: RepositorioRemoto.Mappers
+  commentId: N:RepositorioRemoto.Mappers
+  name: RepositorioRemoto.Mappers
+  nameWithType: RepositorioRemoto.Mappers
+  fullName: RepositorioRemoto.Mappers
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Mappers
+    name: Mappers
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Mappers
+    name: Mappers
+- uid: RepositorioRemoto.Entity.UserEntity.Id*
+  commentId: Overload:RepositorioRemoto.Entity.UserEntity.Id
+  href: RepositorioRemoto.Entity.UserEntity.html#RepositorioRemoto_Entity_UserEntity_Id
+  name: Id
+  nameWithType: UserEntity.Id
+  fullName: RepositorioRemoto.Entity.UserEntity.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: RepositorioRemoto.Entity.UserEntity.Name*
+  commentId: Overload:RepositorioRemoto.Entity.UserEntity.Name
+  href: RepositorioRemoto.Entity.UserEntity.html#RepositorioRemoto_Entity_UserEntity_Name
+  name: Name
+  nameWithType: UserEntity.Name
+  fullName: RepositorioRemoto.Entity.UserEntity.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: RepositorioRemoto.Entity.UserEntity.Username*
+  commentId: Overload:RepositorioRemoto.Entity.UserEntity.Username
+  href: RepositorioRemoto.Entity.UserEntity.html#RepositorioRemoto_Entity_UserEntity_Username
+  name: Username
+  nameWithType: UserEntity.Username
+  fullName: RepositorioRemoto.Entity.UserEntity.Username
+- uid: RepositorioRemoto.Entity.UserEntity.Email*
+  commentId: Overload:RepositorioRemoto.Entity.UserEntity.Email
+  href: RepositorioRemoto.Entity.UserEntity.html#RepositorioRemoto_Entity_UserEntity_Email
+  name: Email
+  nameWithType: UserEntity.Email
+  fullName: RepositorioRemoto.Entity.UserEntity.Email
+- uid: RepositorioRemoto.Entity.UserEntity.Street*
+  commentId: Overload:RepositorioRemoto.Entity.UserEntity.Street
+  href: RepositorioRemoto.Entity.UserEntity.html#RepositorioRemoto_Entity_UserEntity_Street
+  name: Street
+  nameWithType: UserEntity.Street
+  fullName: RepositorioRemoto.Entity.UserEntity.Street
+- uid: RepositorioRemoto.Entity.UserEntity.Suite*
+  commentId: Overload:RepositorioRemoto.Entity.UserEntity.Suite
+  href: RepositorioRemoto.Entity.UserEntity.html#RepositorioRemoto_Entity_UserEntity_Suite
+  name: Suite
+  nameWithType: UserEntity.Suite
+  fullName: RepositorioRemoto.Entity.UserEntity.Suite
+- uid: RepositorioRemoto.Entity.UserEntity.City*
+  commentId: Overload:RepositorioRemoto.Entity.UserEntity.City
+  href: RepositorioRemoto.Entity.UserEntity.html#RepositorioRemoto_Entity_UserEntity_City
+  name: City
+  nameWithType: UserEntity.City
+  fullName: RepositorioRemoto.Entity.UserEntity.City
+- uid: RepositorioRemoto.Entity.UserEntity.Zipcode*
+  commentId: Overload:RepositorioRemoto.Entity.UserEntity.Zipcode
+  href: RepositorioRemoto.Entity.UserEntity.html#RepositorioRemoto_Entity_UserEntity_Zipcode
+  name: Zipcode
+  nameWithType: UserEntity.Zipcode
+  fullName: RepositorioRemoto.Entity.UserEntity.Zipcode
+- uid: RepositorioRemoto.Entity.UserEntity.Lat*
+  commentId: Overload:RepositorioRemoto.Entity.UserEntity.Lat
+  href: RepositorioRemoto.Entity.UserEntity.html#RepositorioRemoto_Entity_UserEntity_Lat
+  name: Lat
+  nameWithType: UserEntity.Lat
+  fullName: RepositorioRemoto.Entity.UserEntity.Lat
+- uid: RepositorioRemoto.Entity.UserEntity.Lng*
+  commentId: Overload:RepositorioRemoto.Entity.UserEntity.Lng
+  href: RepositorioRemoto.Entity.UserEntity.html#RepositorioRemoto_Entity_UserEntity_Lng
+  name: Lng
+  nameWithType: UserEntity.Lng
+  fullName: RepositorioRemoto.Entity.UserEntity.Lng
+- uid: RepositorioRemoto.Entity.UserEntity.Phone*
+  commentId: Overload:RepositorioRemoto.Entity.UserEntity.Phone
+  href: RepositorioRemoto.Entity.UserEntity.html#RepositorioRemoto_Entity_UserEntity_Phone
+  name: Phone
+  nameWithType: UserEntity.Phone
+  fullName: RepositorioRemoto.Entity.UserEntity.Phone
+- uid: RepositorioRemoto.Entity.UserEntity.Website*
+  commentId: Overload:RepositorioRemoto.Entity.UserEntity.Website
+  href: RepositorioRemoto.Entity.UserEntity.html#RepositorioRemoto_Entity_UserEntity_Website
+  name: Website
+  nameWithType: UserEntity.Website
+  fullName: RepositorioRemoto.Entity.UserEntity.Website
+- uid: RepositorioRemoto.Entity.UserEntity.CompanyName*
+  commentId: Overload:RepositorioRemoto.Entity.UserEntity.CompanyName
+  href: RepositorioRemoto.Entity.UserEntity.html#RepositorioRemoto_Entity_UserEntity_CompanyName
+  name: CompanyName
+  nameWithType: UserEntity.CompanyName
+  fullName: RepositorioRemoto.Entity.UserEntity.CompanyName
+- uid: RepositorioRemoto.Entity.UserEntity.CompanyCatchPhrase*
+  commentId: Overload:RepositorioRemoto.Entity.UserEntity.CompanyCatchPhrase
+  href: RepositorioRemoto.Entity.UserEntity.html#RepositorioRemoto_Entity_UserEntity_CompanyCatchPhrase
+  name: CompanyCatchPhrase
+  nameWithType: UserEntity.CompanyCatchPhrase
+  fullName: RepositorioRemoto.Entity.UserEntity.CompanyCatchPhrase
+- uid: RepositorioRemoto.Entity.UserEntity.CompanyBs*
+  commentId: Overload:RepositorioRemoto.Entity.UserEntity.CompanyBs
+  href: RepositorioRemoto.Entity.UserEntity.html#RepositorioRemoto_Entity_UserEntity_CompanyBs
+  name: CompanyBs
+  nameWithType: UserEntity.CompanyBs
+  fullName: RepositorioRemoto.Entity.UserEntity.CompanyBs

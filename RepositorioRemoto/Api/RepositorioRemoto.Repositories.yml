@@ -1,0 +1,63 @@
+### YamlMime:ManagedReference
+items:
+- uid: RepositorioRemoto.Repositories
+  commentId: N:RepositorioRemoto.Repositories
+  id: RepositorioRemoto.Repositories
+  children:
+  - RepositorioRemoto.Repositories.IUserRemoteRepository
+  - RepositorioRemoto.Repositories.IUserRepository
+  - RepositorioRemoto.Repositories.UserRemoteRepository
+  - RepositorioRemoto.Repositories.UserRepository
+  langs:
+  - csharp
+  - vb
+  name: RepositorioRemoto.Repositories
+  nameWithType: RepositorioRemoto.Repositories
+  fullName: RepositorioRemoto.Repositories
+  type: Namespace
+  assemblies:
+  - RepositorioRemoto
+references:
+- uid: RepositorioRemoto.Repositories.IUserRemoteRepository
+  commentId: T:RepositorioRemoto.Repositories.IUserRemoteRepository
+  parent: RepositorioRemoto.Repositories
+  href: RepositorioRemoto.Repositories.IUserRemoteRepository.html
+  name: IUserRemoteRepository
+  nameWithType: IUserRemoteRepository
+  fullName: RepositorioRemoto.Repositories.IUserRemoteRepository
+- uid: RepositorioRemoto.Repositories.IUserRepository
+  commentId: T:RepositorioRemoto.Repositories.IUserRepository
+  parent: RepositorioRemoto.Repositories
+  href: RepositorioRemoto.Repositories.IUserRepository.html
+  name: IUserRepository
+  nameWithType: IUserRepository
+  fullName: RepositorioRemoto.Repositories.IUserRepository
+- uid: RepositorioRemoto.Repositories.UserRemoteRepository
+  commentId: T:RepositorioRemoto.Repositories.UserRemoteRepository
+  href: RepositorioRemoto.Repositories.UserRemoteRepository.html
+  name: UserRemoteRepository
+  nameWithType: UserRemoteRepository
+  fullName: RepositorioRemoto.Repositories.UserRemoteRepository
+- uid: RepositorioRemoto.Repositories.UserRepository
+  commentId: T:RepositorioRemoto.Repositories.UserRepository
+  href: RepositorioRemoto.Repositories.UserRepository.html
+  name: UserRepository
+  nameWithType: UserRepository
+  fullName: RepositorioRemoto.Repositories.UserRepository
+- uid: RepositorioRemoto.Repositories
+  commentId: N:RepositorioRemoto.Repositories
+  name: RepositorioRemoto.Repositories
+  nameWithType: RepositorioRemoto.Repositories
+  fullName: RepositorioRemoto.Repositories
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Repositories
+    name: Repositories
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Repositories
+    name: Repositories
