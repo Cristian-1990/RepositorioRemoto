@@ -1,0 +1,287 @@
+### YamlMime:ManagedReference
+items:
+- uid: RepositorioRemoto.Validators.IUserValidator
+  commentId: T:RepositorioRemoto.Validators.IUserValidator
+  id: IUserValidator
+  parent: RepositorioRemoto.Validators
+  children:
+  - RepositorioRemoto.Validators.IUserValidator.ValidateCreate(RepositorioRemoto.Dto.CreateUserRequest)
+  - RepositorioRemoto.Validators.IUserValidator.ValidateUpdate(RepositorioRemoto.Dto.UpdateUserRequest)
+  langs:
+  - csharp
+  - vb
+  name: IUserValidator
+  nameWithType: IUserValidator
+  fullName: RepositorioRemoto.Validators.IUserValidator
+  type: Interface
+  source:
+    remote:
+      path: RepositorioRemoto/Validators/IUserValidator.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: IUserValidator
+    path: Validators/IUserValidator.cs
+    startLine: 10
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Validators
+  summary: >-
+    Interfaz del  validador de peticiones de usuario.
+
+    Aunque el repo aconseja no crear interfaces por crear, la creamos para poder testear despues
+  example: []
+  syntax:
+    content: public interface IUserValidator
+    content.vb: Public Interface IUserValidator
+  derivedClasses:
+  - RepositorioRemoto.Validators.UserValidator
+- uid: RepositorioRemoto.Validators.IUserValidator.ValidateCreate(RepositorioRemoto.Dto.CreateUserRequest)
+  commentId: M:RepositorioRemoto.Validators.IUserValidator.ValidateCreate(RepositorioRemoto.Dto.CreateUserRequest)
+  id: ValidateCreate(RepositorioRemoto.Dto.CreateUserRequest)
+  parent: RepositorioRemoto.Validators.IUserValidator
+  langs:
+  - csharp
+  - vb
+  name: ValidateCreate(CreateUserRequest)
+  nameWithType: IUserValidator.ValidateCreate(CreateUserRequest)
+  fullName: RepositorioRemoto.Validators.IUserValidator.ValidateCreate(RepositorioRemoto.Dto.CreateUserRequest)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Validators/IUserValidator.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: ValidateCreate
+    path: Validators/IUserValidator.cs
+    startLine: 17
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Validators
+  summary: Comprueba que los datos de creación son correctos.
+  example: []
+  syntax:
+    content: Result<CreateUserRequest, DomainError> ValidateCreate(CreateUserRequest request)
+    parameters:
+    - id: request
+      type: RepositorioRemoto.Dto.CreateUserRequest
+      description: Datos recibidos para crear el usuario.
+    return:
+      type: CSharpFunctionalExtensions.Result{RepositorioRemoto.Dto.CreateUserRequest,RepositorioRemoto.Errors.DomainError}
+      description: petición válida o error de dominio
+    content.vb: Function ValidateCreate(request As CreateUserRequest) As Result(Of CreateUserRequest, DomainError)
+  overload: RepositorioRemoto.Validators.IUserValidator.ValidateCreate*
+- uid: RepositorioRemoto.Validators.IUserValidator.ValidateUpdate(RepositorioRemoto.Dto.UpdateUserRequest)
+  commentId: M:RepositorioRemoto.Validators.IUserValidator.ValidateUpdate(RepositorioRemoto.Dto.UpdateUserRequest)
+  id: ValidateUpdate(RepositorioRemoto.Dto.UpdateUserRequest)
+  parent: RepositorioRemoto.Validators.IUserValidator
+  langs:
+  - csharp
+  - vb
+  name: ValidateUpdate(UpdateUserRequest)
+  nameWithType: IUserValidator.ValidateUpdate(UpdateUserRequest)
+  fullName: RepositorioRemoto.Validators.IUserValidator.ValidateUpdate(RepositorioRemoto.Dto.UpdateUserRequest)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Validators/IUserValidator.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: ValidateUpdate
+    path: Validators/IUserValidator.cs
+    startLine: 24
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Validators
+  summary: Comprueba que los datos de actualización son correctos.
+  example: []
+  syntax:
+    content: Result<UpdateUserRequest, DomainError> ValidateUpdate(UpdateUserRequest request)
+    parameters:
+    - id: request
+      type: RepositorioRemoto.Dto.UpdateUserRequest
+      description: Datos para actualizar el usuario.
+    return:
+      type: CSharpFunctionalExtensions.Result{RepositorioRemoto.Dto.UpdateUserRequest,RepositorioRemoto.Errors.DomainError}
+      description: Peticion o un error de dominio.
+    content.vb: Function ValidateUpdate(request As UpdateUserRequest) As Result(Of UpdateUserRequest, DomainError)
+  overload: RepositorioRemoto.Validators.IUserValidator.ValidateUpdate*
+references:
+- uid: RepositorioRemoto.Validators
+  commentId: N:RepositorioRemoto.Validators
+  name: RepositorioRemoto.Validators
+  nameWithType: RepositorioRemoto.Validators
+  fullName: RepositorioRemoto.Validators
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Validators
+    name: Validators
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Validators
+    name: Validators
+- uid: RepositorioRemoto.Validators.IUserValidator.ValidateCreate*
+  commentId: Overload:RepositorioRemoto.Validators.IUserValidator.ValidateCreate
+  href: RepositorioRemoto.Validators.IUserValidator.html#RepositorioRemoto_Validators_IUserValidator_ValidateCreate_RepositorioRemoto_Dto_CreateUserRequest_
+  name: ValidateCreate
+  nameWithType: IUserValidator.ValidateCreate
+  fullName: RepositorioRemoto.Validators.IUserValidator.ValidateCreate
+- uid: RepositorioRemoto.Dto.CreateUserRequest
+  commentId: T:RepositorioRemoto.Dto.CreateUserRequest
+  parent: RepositorioRemoto.Dto
+  href: RepositorioRemoto.Dto.CreateUserRequest.html
+  name: CreateUserRequest
+  nameWithType: CreateUserRequest
+  fullName: RepositorioRemoto.Dto.CreateUserRequest
+- uid: CSharpFunctionalExtensions.Result{RepositorioRemoto.Dto.CreateUserRequest,RepositorioRemoto.Errors.DomainError}
+  commentId: T:CSharpFunctionalExtensions.Result{RepositorioRemoto.Dto.CreateUserRequest,RepositorioRemoto.Errors.DomainError}
+  parent: CSharpFunctionalExtensions
+  definition: CSharpFunctionalExtensions.Result`2
+  href: RepositorioRemoto.Dto.CreateUserRequest.html
+  name: Result<CreateUserRequest, DomainError>
+  nameWithType: Result<CreateUserRequest, DomainError>
+  fullName: CSharpFunctionalExtensions.Result<RepositorioRemoto.Dto.CreateUserRequest, RepositorioRemoto.Errors.DomainError>
+  nameWithType.vb: Result(Of CreateUserRequest, DomainError)
+  fullName.vb: CSharpFunctionalExtensions.Result(Of RepositorioRemoto.Dto.CreateUserRequest, RepositorioRemoto.Errors.DomainError)
+  name.vb: Result(Of CreateUserRequest, DomainError)
+  spec.csharp:
+  - uid: CSharpFunctionalExtensions.Result`2
+    name: Result
+    isExternal: true
+  - name: <
+  - uid: RepositorioRemoto.Dto.CreateUserRequest
+    name: CreateUserRequest
+    href: RepositorioRemoto.Dto.CreateUserRequest.html
+  - name: ','
+  - name: " "
+  - uid: RepositorioRemoto.Errors.DomainError
+    name: DomainError
+    href: RepositorioRemoto.Errors.DomainError.html
+  - name: '>'
+  spec.vb:
+  - uid: CSharpFunctionalExtensions.Result`2
+    name: Result
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: RepositorioRemoto.Dto.CreateUserRequest
+    name: CreateUserRequest
+    href: RepositorioRemoto.Dto.CreateUserRequest.html
+  - name: ','
+  - name: " "
+  - uid: RepositorioRemoto.Errors.DomainError
+    name: DomainError
+    href: RepositorioRemoto.Errors.DomainError.html
+  - name: )
+- uid: RepositorioRemoto.Dto
+  commentId: N:RepositorioRemoto.Dto
+  name: RepositorioRemoto.Dto
+  nameWithType: RepositorioRemoto.Dto
+  fullName: RepositorioRemoto.Dto
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Dto
+    name: Dto
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Dto
+    name: Dto
+- uid: CSharpFunctionalExtensions.Result`2
+  commentId: T:CSharpFunctionalExtensions.Result`2
+  isExternal: true
+  name: Result<T, E>
+  nameWithType: Result<T, E>
+  fullName: CSharpFunctionalExtensions.Result<T, E>
+  nameWithType.vb: Result(Of T, E)
+  fullName.vb: CSharpFunctionalExtensions.Result(Of T, E)
+  name.vb: Result(Of T, E)
+  spec.csharp:
+  - uid: CSharpFunctionalExtensions.Result`2
+    name: Result
+    isExternal: true
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: E
+  - name: '>'
+  spec.vb:
+  - uid: CSharpFunctionalExtensions.Result`2
+    name: Result
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: E
+  - name: )
+- uid: CSharpFunctionalExtensions
+  commentId: N:CSharpFunctionalExtensions
+  isExternal: true
+  name: CSharpFunctionalExtensions
+  nameWithType: CSharpFunctionalExtensions
+  fullName: CSharpFunctionalExtensions
+- uid: RepositorioRemoto.Validators.IUserValidator.ValidateUpdate*
+  commentId: Overload:RepositorioRemoto.Validators.IUserValidator.ValidateUpdate
+  href: RepositorioRemoto.Validators.IUserValidator.html#RepositorioRemoto_Validators_IUserValidator_ValidateUpdate_RepositorioRemoto_Dto_UpdateUserRequest_
+  name: ValidateUpdate
+  nameWithType: IUserValidator.ValidateUpdate
+  fullName: RepositorioRemoto.Validators.IUserValidator.ValidateUpdate
+- uid: RepositorioRemoto.Dto.UpdateUserRequest
+  commentId: T:RepositorioRemoto.Dto.UpdateUserRequest
+  parent: RepositorioRemoto.Dto
+  href: RepositorioRemoto.Dto.UpdateUserRequest.html
+  name: UpdateUserRequest
+  nameWithType: UpdateUserRequest
+  fullName: RepositorioRemoto.Dto.UpdateUserRequest
+- uid: CSharpFunctionalExtensions.Result{RepositorioRemoto.Dto.UpdateUserRequest,RepositorioRemoto.Errors.DomainError}
+  commentId: T:CSharpFunctionalExtensions.Result{RepositorioRemoto.Dto.UpdateUserRequest,RepositorioRemoto.Errors.DomainError}
+  parent: CSharpFunctionalExtensions
+  definition: CSharpFunctionalExtensions.Result`2
+  href: RepositorioRemoto.Dto.UpdateUserRequest.html
+  name: Result<UpdateUserRequest, DomainError>
+  nameWithType: Result<UpdateUserRequest, DomainError>
+  fullName: CSharpFunctionalExtensions.Result<RepositorioRemoto.Dto.UpdateUserRequest, RepositorioRemoto.Errors.DomainError>
+  nameWithType.vb: Result(Of UpdateUserRequest, DomainError)
+  fullName.vb: CSharpFunctionalExtensions.Result(Of RepositorioRemoto.Dto.UpdateUserRequest, RepositorioRemoto.Errors.DomainError)
+  name.vb: Result(Of UpdateUserRequest, DomainError)
+  spec.csharp:
+  - uid: CSharpFunctionalExtensions.Result`2
+    name: Result
+    isExternal: true
+  - name: <
+  - uid: RepositorioRemoto.Dto.UpdateUserRequest
+    name: UpdateUserRequest
+    href: RepositorioRemoto.Dto.UpdateUserRequest.html
+  - name: ','
+  - name: " "
+  - uid: RepositorioRemoto.Errors.DomainError
+    name: DomainError
+    href: RepositorioRemoto.Errors.DomainError.html
+  - name: '>'
+  spec.vb:
+  - uid: CSharpFunctionalExtensions.Result`2
+    name: Result
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: RepositorioRemoto.Dto.UpdateUserRequest
+    name: UpdateUserRequest
+    href: RepositorioRemoto.Dto.UpdateUserRequest.html
+  - name: ','
+  - name: " "
+  - uid: RepositorioRemoto.Errors.DomainError
+    name: DomainError
+    href: RepositorioRemoto.Errors.DomainError.html
+  - name: )

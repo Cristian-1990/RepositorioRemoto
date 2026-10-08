@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class User | RepositorioRemoto </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class User | RepositorioRemoto ">
+      
+      <meta name="description" content="Modelo de dominio que representa un usuario.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Cristian-1990/RepositorioRemoto/new/dev/apiSpec/new?filename=RepositorioRemoto_Models_User.md&amp;value=---%0Auid%3A%20RepositorioRemoto.Models.User%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="RepositorioRemoto">
+            RepositorioRemoto
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="RepositorioRemoto.Models.User">
+
+
+
+  <h1 id="RepositorioRemoto_Models_User" data-uid="RepositorioRemoto.Models.User" class="text-break">
+Class User  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Models/User.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">RepositorioRemoto</span>.<a class="xref" href="RepositorioRemoto.Models.html">Models</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>RepositorioRemoto.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Modelo de dominio que representa un usuario.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public record User : IEquatable&lt;User&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">User</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="RepositorioRemoto.Models.User.html">User</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="RepositorioRemoto.Mappers.UserEntityMapper.html#RepositorioRemoto_Mappers_UserEntityMapper_ToEntity_RepositorioRemoto_Models_User_">UserEntityMapper.ToEntity(User)</a>
+  </div>
+  <div>
+      <a class="xref" href="RepositorioRemoto.Mappers.UserMapper.html#RepositorioRemoto_Mappers_UserMapper_ToCreateRequest_RepositorioRemoto_Models_User_">UserMapper.ToCreateRequest(User)</a>
+  </div>
+  <div>
+      <a class="xref" href="RepositorioRemoto.Mappers.UserMapper.html#RepositorioRemoto_Mappers_UserMapper_ToResponse_RepositorioRemoto_Models_User_">UserMapper.ToResponse(User)</a>
+  </div>
+  <div>
+      <a class="xref" href="RepositorioRemoto.Mappers.UserMapper.html#RepositorioRemoto_Mappers_UserMapper_ToUpdateRequest_RepositorioRemoto_Models_User_">UserMapper.ToUpdateRequest(User)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="RepositorioRemoto_Models_User__ctor_" data-uid="RepositorioRemoto.Models.User.#ctor*"></a>
+
+  <h3 id="RepositorioRemoto_Models_User__ctor_System_Int32_System_String_System_String_System_String_RepositorioRemoto_Models_Address_System_String_System_String_RepositorioRemoto_Models_Company_" data-uid="RepositorioRemoto.Models.User.#ctor(System.Int32,System.String,System.String,System.String,RepositorioRemoto.Models.Address,System.String,System.String,RepositorioRemoto.Models.Company)">
+  User(int, string, string, string, Address, string, string, Company)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Models/User.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Modelo de dominio que representa un usuario.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public User(int Id, string Name, string Username, string Email, Address Address, string Phone, string Website, Company Company)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Id</p>
+</dd>
+    <dt><code>Name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Nombre</p>
+</dd>
+    <dt><code>Username</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Nombre de ususario</p>
+</dd>
+    <dt><code>Email</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Direccion email</p>
+</dd>
+    <dt><code>Address</code> <a class="xref" href="RepositorioRemoto.Models.Address.html">Address</a></dt>
+    <dd><p>Residencia</p>
+</dd>
+    <dt><code>Phone</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Numero de telefono</p>
+</dd>
+    <dt><code>Website</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>pagina web</p>
+</dd>
+    <dt><code>Company</code> <a class="xref" href="RepositorioRemoto.Models.Company.html">Company</a></dt>
+    <dd><p>Empresa para la quie trabaja</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="RepositorioRemoto_Models_User_Address_" data-uid="RepositorioRemoto.Models.User.Address*"></a>
+
+  <h3 id="RepositorioRemoto_Models_User_Address" data-uid="RepositorioRemoto.Models.User.Address">
+  Address
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Models/User.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Residencia</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Address Address { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RepositorioRemoto.Models.Address.html">Address</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Models_User_Company_" data-uid="RepositorioRemoto.Models.User.Company*"></a>
+
+  <h3 id="RepositorioRemoto_Models_User_Company" data-uid="RepositorioRemoto.Models.User.Company">
+  Company
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Models/User.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Empresa para la quie trabaja</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Company Company { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RepositorioRemoto.Models.Company.html">Company</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Models_User_Email_" data-uid="RepositorioRemoto.Models.User.Email*"></a>
+
+  <h3 id="RepositorioRemoto_Models_User_Email" data-uid="RepositorioRemoto.Models.User.Email">
+  Email
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Models/User.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Direccion email</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Email { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Models_User_Id_" data-uid="RepositorioRemoto.Models.User.Id*"></a>
+
+  <h3 id="RepositorioRemoto_Models_User_Id" data-uid="RepositorioRemoto.Models.User.Id">
+  Id
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Models/User.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Id</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Id { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Models_User_Name_" data-uid="RepositorioRemoto.Models.User.Name*"></a>
+
+  <h3 id="RepositorioRemoto_Models_User_Name" data-uid="RepositorioRemoto.Models.User.Name">
+  Name
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Models/User.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Nombre</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Models_User_Phone_" data-uid="RepositorioRemoto.Models.User.Phone*"></a>
+
+  <h3 id="RepositorioRemoto_Models_User_Phone" data-uid="RepositorioRemoto.Models.User.Phone">
+  Phone
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Models/User.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Numero de telefono</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Phone { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Models_User_Username_" data-uid="RepositorioRemoto.Models.User.Username*"></a>
+
+  <h3 id="RepositorioRemoto_Models_User_Username" data-uid="RepositorioRemoto.Models.User.Username">
+  Username
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Models/User.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Nombre de ususario</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Username { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Models_User_Website_" data-uid="RepositorioRemoto.Models.User.Website*"></a>
+
+  <h3 id="RepositorioRemoto_Models_User_Website" data-uid="RepositorioRemoto.Models.User.Website">
+  Website
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Models/User.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>pagina web</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Website { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Models/User.cs/#L14" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

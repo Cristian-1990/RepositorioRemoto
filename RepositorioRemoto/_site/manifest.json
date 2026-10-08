@@ -1,0 +1,943 @@
+{
+  "docfx_version": "2.81.0+ba844df625370a6bd7c1ecab0d0ec4d1d9128ac4",
+  "source_base_path": "C:/Users/xexu_/Escritorio/RepositorioRemoto/RepositorioRemoto",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Api.IJsonPlaceholderApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Api.IJsonPlaceholderApi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Api.IJsonPlaceholderApi",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Api.IJsonPlaceholderApi.yml\" sourcestartlinenumber=\"1\">Cliente tipado de la API REST de JSONPlaceholder.\nRefit genera la implementación en tiempo de ejecución a partir de los atributos\n[Get], [Post], [Put] y [Delete]: no hay que escribir ni una línea de HttpClient.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Api.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Api.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Api",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Cache.ICacheService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Cache.ICacheService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Cache.ICacheService",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Cache.ICacheService.yml\" sourcestartlinenumber=\"1\">Contrato de la caché. Lo implementan MemoryCacheService (perfil Dev)\ny RedisCacheService (perfil Prod).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Cache.MemoryCacheService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Cache.MemoryCacheService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Cache.MemoryCacheService",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Cache.MemoryCacheService.yml\" sourcestartlinenumber=\"1\">Implementación de ICacheService con la caché en memoria del proceso.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Cache.RedisCacheService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Cache.RedisCacheService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Cache.RedisCacheService",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Cache.RedisCacheService.yml\" sourcestartlinenumber=\"1\">Implementación de ICacheService con Redis.\nEs la del perfil Prod: la caché vive fuera del proceso y se puede compartir entre varias instancias.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Cache.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Cache.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Cache",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Config.ApiConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Config.ApiConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Config.ApiConfig",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Config.ApiConfig.yml\" sourcestartlinenumber=\"1\">Configuración de la API REST remota (JSONPlaceholder).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Config.CacheConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Config.CacheConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Config.CacheConfig",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Config.CacheConfig.yml\" sourcestartlinenumber=\"1\">Configuración de la caché.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Config.DatabaseConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Config.DatabaseConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Config.DatabaseConfig",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Config.DatabaseConfig.yml\" sourcestartlinenumber=\"1\">Configuración de la base de datos local.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Config.ExportConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Config.ExportConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Config.ExportConfig",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Config.ExportConfig.yml\" sourcestartlinenumber=\"1\">Configuración de la exportación de usuarios a JSON.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Config.SyncConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Config.SyncConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Config.SyncConfig",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Config.SyncConfig.yml\" sourcestartlinenumber=\"1\">Configuración de la sincronización periódica con la API remota.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Config.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Config.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Config",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Dto.AddressDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Dto.AddressDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Dto.AddressDto",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Dto.AddressDto.yml\" sourcestartlinenumber=\"1\">DTO de dirección.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Dto.CompanyDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Dto.CompanyDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Dto.CompanyDto",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Dto.CompanyDto.yml\" sourcestartlinenumber=\"1\">DTO de empresa.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Dto.CreateUserRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Dto.CreateUserRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Dto.CreateUserRequest",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Dto.CreateUserRequest.yml\" sourcestartlinenumber=\"1\">DTO con los datos para crear un usuario.\nEl Id no se envía: lo asigna la API remota.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Dto.GeoDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Dto.GeoDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Dto.GeoDto",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Dto.GeoDto.yml\" sourcestartlinenumber=\"1\">DTO de coordenadas.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Dto.JsonPlaceholderUserDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Dto.JsonPlaceholderUserDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Dto.JsonPlaceholderUserDto",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Dto.JsonPlaceholderUserDto.yml\" sourcestartlinenumber=\"1\">DTO con la forma en que la API JSONPlaceholder devuelve un usuario.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Dto.UpdateUserRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Dto.UpdateUserRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Dto.UpdateUserRequest",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Dto.UpdateUserRequest.yml\" sourcestartlinenumber=\"1\">DTO con los datos para actualizar un usuario existente.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Dto.UserResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Dto.UserResponseDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Dto.UserResponseDto",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Dto.UserResponseDto.yml\" sourcestartlinenumber=\"1\">DTO con los datos de un usuario que el servicio devuelve hacia fuera.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Dto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Dto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Dto",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Entity.AppDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Entity.AppDbContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Entity.AppDbContext",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Entity.AppDbContext.yml\" sourcestartlinenumber=\"1\">Contexto de Entity Framework Core para la base de datos local de usuarios.\nEl proveedor (SQLite o PostgreSQL) se decide al registrarlo, según el perfil.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Entity.UserEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Entity.UserEntity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Entity.UserEntity",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Entity.UserEntity.yml\" sourcestartlinenumber=\"1\">Entidad de persistencia para usuarios.\nLa dirección y la empresa se guardan desmontadas en columnas de la misma tabla.\nLa configuración (tabla, columnas y longitudes) está en AppDbContext con Fluent API.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Entity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Entity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Entity",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Errors.DomainError.AlreadyExists.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Errors.DomainError.AlreadyExists.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Errors.DomainError.AlreadyExists",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Errors.DomainError.AlreadyExists.yml\" sourcestartlinenumber=\"1\">Ya existe un usuario con ese identificador</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Errors.DomainError.ApiError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Errors.DomainError.ApiError.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Errors.DomainError.ApiError",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Errors.DomainError.ApiError.yml\" sourcestartlinenumber=\"1\">Fallo al comunicarse con la API REST</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Errors.DomainError.NotFound.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Errors.DomainError.NotFound.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Errors.DomainError.NotFound",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Errors.DomainError.NotFound.yml\" sourcestartlinenumber=\"1\">cuando no existe ningún usuario con ese identificador.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Errors.DomainError.Storage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Errors.DomainError.Storage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Errors.DomainError.Storage",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Errors.DomainError.Storage.yml\" sourcestartlinenumber=\"1\">Fallo en el almacenamiento local</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Errors.DomainError.Validation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Errors.DomainError.Validation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Errors.DomainError.Validation",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Errors.DomainError.Validation.yml\" sourcestartlinenumber=\"1\">Los datos no cumplen con el validador</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Errors.DomainError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Errors.DomainError.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Errors.DomainError",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Errors.DomainError.yml\" sourcestartlinenumber=\"1\">Errores de dominio.\nCada tipo de error construye su propio mensaje.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Errors.DomainErrors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Errors.DomainErrors.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Errors.DomainErrors",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Errors.DomainErrors.yml\" sourcestartlinenumber=\"1\">Factoría para crear errores\n(ver tema 15.4).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Errors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Errors.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Errors",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Infrastructure.DependenciesProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Infrastructure.DependenciesProvider.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Infrastructure.DependenciesProvider",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Infrastructure.DependenciesProvider.yml\" sourcestartlinenumber=\"1\">Centraliza el registro de dependencias de la aplicación.\nPatrón de la teoría 11.8.1 y de la solución 01-InyeccionDependencias.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Infrastructure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Infrastructure.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Infrastructure",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Mappers.UserEntityMapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Mappers.UserEntityMapper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Mappers.UserEntityMapper",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Mappers.UserEntityMapper.yml\" sourcestartlinenumber=\"1\">Métodos de extensión para convertir entre la entidad de persistencia y el modelo de dominio.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Mappers.UserMapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Mappers.UserMapper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Mappers.UserMapper",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Mappers.UserMapper.yml\" sourcestartlinenumber=\"1\">Métodos de extensión para convertir entre los DTOs y el modelo de dominio.\nCentraliza la conversión entre capas.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Mappers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Mappers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Mappers",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Models.Address.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Models.Address.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Models.Address",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Models.Address.yml\" sourcestartlinenumber=\"1\">Direccion de le usuario</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Models.Company.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Models.Company.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Models.Company",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Models.Company.yml\" sourcestartlinenumber=\"1\">Empresa en la que trabaja cada usuario</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Models.Geo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Models.Geo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Models.Geo",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Models.Geo.yml\" sourcestartlinenumber=\"1\">Coordenadas de la vivienda del usuario</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Models.User.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Models.User.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Models.User",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Models.User.yml\" sourcestartlinenumber=\"1\">Modelo de dominio que representa un usuario.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Models.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Models",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Notifications.ConsoleNotificationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Notifications.ConsoleNotificationService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Notifications.ConsoleNotificationService",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Notifications.ConsoleNotificationService.yml\" sourcestartlinenumber=\"1\">Servicio de notificaciones con Rx.NET.\nObservable CALIENTE: quien se suscribe tarde no ve los eventos anteriores.\nPatrón tomado de la solución 14-ReactividadRxNet (SensorService).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Notifications.INotificationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Notifications.INotificationService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Notifications.INotificationService",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Notifications.INotificationService.yml\" sourcestartlinenumber=\"1\">Contrato del servicio de notificaciones.\nEmite un flujo de eventos al que Program.cs se suscribe al arrancar.\nVa inyectado en el UserService, que lo llama al crear, actualizar y eliminar.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Notifications.Notification.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Notifications.Notification.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Notifications.Notification",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Notifications.Notification.yml\" sourcestartlinenumber=\"1\">Evento que viaja por el flujo de notificaciones.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Notifications.NotificationType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Notifications.NotificationType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Notifications.NotificationType",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Notifications.NotificationType.yml\" sourcestartlinenumber=\"1\">Tipo de evento que se notifica.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Notifications.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Notifications.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Notifications",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Repositories.IUserRemoteRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Repositories.IUserRemoteRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Repositories.IUserRemoteRepository",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Repositories.IUserRemoteRepository.yml\" sourcestartlinenumber=\"1\">Contrato del repositorio remoto: habla con la API REST de JSONPlaceholder.\nEnvuelve al cliente Refit y traduce los fallos HTTP en DomainError.ApiError,\npara que el resto de la aplicación no trabaje con excepciones.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Repositories.IUserRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Repositories.IUserRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Repositories.IUserRepository",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Repositories.IUserRepository.yml\" sourcestartlinenumber=\"1\">Contrato del repositorio local de usuarios.\nDevuelve valores planos: null o false cuando no se encuentra algo.\nEs el servicio quien los convierte en Result.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Repositories.UserRemoteRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Repositories.UserRemoteRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Repositories.UserRemoteRepository",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Repositories.UserRemoteRepository.yml\" sourcestartlinenumber=\"1\">Repositorio remoto sobre el cliente Refit de JSONPlaceholder.\nTraduce los fallos HTTP en DomainError para que el resto de la aplicación\nno trabaje con excepciones (patrón de la solución 07-Refit, tema 15).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Repositories.UserRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Repositories.UserRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Repositories.UserRepository",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Repositories.UserRepository.yml\" sourcestartlinenumber=\"1\">Repositorio local de usuarios con Entity Framework Core.\nFunciona igual con SQLite (perfil Dev) y con PostgreSQL (perfil Prod):\nel proveedor se elige al registrar el AppDbContext.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Repositories.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Repositories.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Repositories",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Services.IUserService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Services.IUserService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Services.IUserService",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Services.IUserService.yml\" sourcestartlinenumber=\"1\">Contrato del servicio de usuarios: orquesta los tres niveles de almacenamiento\n(caché, base de datos local y API REST remota) y notifica las escrituras.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Services.UserService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Services.UserService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Services.UserService",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Services.UserService.yml\" sourcestartlinenumber=\"1\">Servicio de usuarios. Orquesta los tres niveles de almacenamiento\n(caché, base de datos local y API REST) y notifica las escrituras.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Services.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Services",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Sync.IUserSyncService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Sync.IUserSyncService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Sync.IUserSyncService",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Sync.IUserSyncService.yml\" sourcestartlinenumber=\"1\">Contrato de la sincronización entre la API remota y el almacenamiento local.\nSe separa del BackgroundService para poder testear la lógica con mocks (buenas prácticas 22.9).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Sync.UserSyncBackgroundService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Sync.UserSyncBackgroundService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Sync.UserSyncBackgroundService",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Sync.UserSyncBackgroundService.yml\" sourcestartlinenumber=\"1\">Tarea en segundo plano que lanza la sincronización cada X segundos.\nSolo se ocupa del reloj: la lógica está en UserSyncService.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Sync.UserSyncService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Sync.UserSyncService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Sync.UserSyncService",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Sync.UserSyncService.yml\" sourcestartlinenumber=\"1\">Sincroniza el almacenamiento local con la API remota.\nSigue el orden del enunciado: vaciar caché, vaciar BD, pedir todos y guardarlos.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Sync.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Sync.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Sync",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Validators.IUserValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Validators.IUserValidator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Validators.IUserValidator",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Validators.IUserValidator.yml\" sourcestartlinenumber=\"1\">Interfaz del  validador de peticiones de usuario.\nAunque el repo aconseja no crear interfaces por crear, la creamos para poder testear despues</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Validators.UserValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Validators.UserValidator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Validators.UserValidator",
+      "Summary": "<p sourcefile=\"Api/RepositorioRemoto.Validators.UserValidator.yml\" sourcestartlinenumber=\"1\">Valida los datos de usuario antes de enviarlos a la API remota.\nDevuelve todos los fallos encontrados.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Api/RepositorioRemoto.Validators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/RepositorioRemoto.Validators.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RepositorioRemoto.Validators",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "Api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Api/toc.html"
+        },
+        ".json": {
+          "relative_path": "Api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

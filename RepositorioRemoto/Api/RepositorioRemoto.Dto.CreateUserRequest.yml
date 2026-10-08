@@ -1,0 +1,825 @@
+### YamlMime:ManagedReference
+items:
+- uid: RepositorioRemoto.Dto.CreateUserRequest
+  commentId: T:RepositorioRemoto.Dto.CreateUserRequest
+  id: CreateUserRequest
+  parent: RepositorioRemoto.Dto
+  children:
+  - RepositorioRemoto.Dto.CreateUserRequest.#ctor(System.String,System.String,System.String,RepositorioRemoto.Dto.AddressDto,System.String,System.String,RepositorioRemoto.Dto.CompanyDto)
+  - RepositorioRemoto.Dto.CreateUserRequest.Address
+  - RepositorioRemoto.Dto.CreateUserRequest.Company
+  - RepositorioRemoto.Dto.CreateUserRequest.Email
+  - RepositorioRemoto.Dto.CreateUserRequest.Name
+  - RepositorioRemoto.Dto.CreateUserRequest.Phone
+  - RepositorioRemoto.Dto.CreateUserRequest.Username
+  - RepositorioRemoto.Dto.CreateUserRequest.Website
+  langs:
+  - csharp
+  - vb
+  name: CreateUserRequest
+  nameWithType: CreateUserRequest
+  fullName: RepositorioRemoto.Dto.CreateUserRequest
+  type: Class
+  source:
+    remote:
+      path: RepositorioRemoto/Dto/CreateUserRequest.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: CreateUserRequest
+    path: Dto/CreateUserRequest.cs
+    startLine: 13
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Dto
+  summary: >-
+    DTO con los datos para crear un usuario.
+
+    El Id no se envía: lo asigna la API remota.
+  example: []
+  syntax:
+    content: 'public record CreateUserRequest : IEquatable<CreateUserRequest>'
+    content.vb: Public Class CreateUserRequest Implements IEquatable(Of CreateUserRequest)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{RepositorioRemoto.Dto.CreateUserRequest}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - RepositorioRemoto.Dto.CreateUserRequest.RepositorioRemoto.Mappers.UserMapper.ToUser(System.Int32)
+- uid: RepositorioRemoto.Dto.CreateUserRequest.#ctor(System.String,System.String,System.String,RepositorioRemoto.Dto.AddressDto,System.String,System.String,RepositorioRemoto.Dto.CompanyDto)
+  commentId: M:RepositorioRemoto.Dto.CreateUserRequest.#ctor(System.String,System.String,System.String,RepositorioRemoto.Dto.AddressDto,System.String,System.String,RepositorioRemoto.Dto.CompanyDto)
+  id: '#ctor(System.String,System.String,System.String,RepositorioRemoto.Dto.AddressDto,System.String,System.String,RepositorioRemoto.Dto.CompanyDto)'
+  parent: RepositorioRemoto.Dto.CreateUserRequest
+  langs:
+  - csharp
+  - vb
+  name: CreateUserRequest(string, string, string, AddressDto, string, string, CompanyDto)
+  nameWithType: CreateUserRequest.CreateUserRequest(string, string, string, AddressDto, string, string, CompanyDto)
+  fullName: RepositorioRemoto.Dto.CreateUserRequest.CreateUserRequest(string, string, string, RepositorioRemoto.Dto.AddressDto, string, string, RepositorioRemoto.Dto.CompanyDto)
+  type: Constructor
+  source:
+    remote:
+      path: RepositorioRemoto/Dto/CreateUserRequest.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: .ctor
+    path: Dto/CreateUserRequest.cs
+    startLine: 13
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Dto
+  summary: >-
+    DTO con los datos para crear un usuario.
+
+    El Id no se envía: lo asigna la API remota.
+  example: []
+  syntax:
+    content: public CreateUserRequest(string Name, string Username, string Email, AddressDto Address, string Phone, string Website, CompanyDto Company)
+    parameters:
+    - id: Name
+      type: System.String
+      description: Nombre completo.
+    - id: Username
+      type: System.String
+      description: Nombre de usuario.
+    - id: Email
+      type: System.String
+      description: Correo electrónico.
+    - id: Address
+      type: RepositorioRemoto.Dto.AddressDto
+      description: Dirección.
+    - id: Phone
+      type: System.String
+      description: Teléfono.
+    - id: Website
+      type: System.String
+      description: Página web.
+    - id: Company
+      type: RepositorioRemoto.Dto.CompanyDto
+      description: Empresa.
+    content.vb: Public Sub New(Name As String, Username As String, Email As String, Address As AddressDto, Phone As String, Website As String, Company As CompanyDto)
+  overload: RepositorioRemoto.Dto.CreateUserRequest.#ctor*
+  nameWithType.vb: CreateUserRequest.New(String, String, String, AddressDto, String, String, CompanyDto)
+  fullName.vb: RepositorioRemoto.Dto.CreateUserRequest.New(String, String, String, RepositorioRemoto.Dto.AddressDto, String, String, RepositorioRemoto.Dto.CompanyDto)
+  name.vb: New(String, String, String, AddressDto, String, String, CompanyDto)
+- uid: RepositorioRemoto.Dto.CreateUserRequest.Name
+  commentId: P:RepositorioRemoto.Dto.CreateUserRequest.Name
+  id: Name
+  parent: RepositorioRemoto.Dto.CreateUserRequest
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: CreateUserRequest.Name
+  fullName: RepositorioRemoto.Dto.CreateUserRequest.Name
+  type: Property
+  source:
+    remote:
+      path: RepositorioRemoto/Dto/CreateUserRequest.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: Name
+    path: Dto/CreateUserRequest.cs
+    startLine: 14
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Dto
+  summary: Nombre completo.
+  example: []
+  syntax:
+    content: public string Name { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: RepositorioRemoto.Dto.CreateUserRequest.Name*
+- uid: RepositorioRemoto.Dto.CreateUserRequest.Username
+  commentId: P:RepositorioRemoto.Dto.CreateUserRequest.Username
+  id: Username
+  parent: RepositorioRemoto.Dto.CreateUserRequest
+  langs:
+  - csharp
+  - vb
+  name: Username
+  nameWithType: CreateUserRequest.Username
+  fullName: RepositorioRemoto.Dto.CreateUserRequest.Username
+  type: Property
+  source:
+    remote:
+      path: RepositorioRemoto/Dto/CreateUserRequest.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: Username
+    path: Dto/CreateUserRequest.cs
+    startLine: 15
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Dto
+  summary: Nombre de usuario.
+  example: []
+  syntax:
+    content: public string Username { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Username As String
+  overload: RepositorioRemoto.Dto.CreateUserRequest.Username*
+- uid: RepositorioRemoto.Dto.CreateUserRequest.Email
+  commentId: P:RepositorioRemoto.Dto.CreateUserRequest.Email
+  id: Email
+  parent: RepositorioRemoto.Dto.CreateUserRequest
+  langs:
+  - csharp
+  - vb
+  name: Email
+  nameWithType: CreateUserRequest.Email
+  fullName: RepositorioRemoto.Dto.CreateUserRequest.Email
+  type: Property
+  source:
+    remote:
+      path: RepositorioRemoto/Dto/CreateUserRequest.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: Email
+    path: Dto/CreateUserRequest.cs
+    startLine: 16
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Dto
+  summary: Correo electrónico.
+  example: []
+  syntax:
+    content: public string Email { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Email As String
+  overload: RepositorioRemoto.Dto.CreateUserRequest.Email*
+- uid: RepositorioRemoto.Dto.CreateUserRequest.Address
+  commentId: P:RepositorioRemoto.Dto.CreateUserRequest.Address
+  id: Address
+  parent: RepositorioRemoto.Dto.CreateUserRequest
+  langs:
+  - csharp
+  - vb
+  name: Address
+  nameWithType: CreateUserRequest.Address
+  fullName: RepositorioRemoto.Dto.CreateUserRequest.Address
+  type: Property
+  source:
+    remote:
+      path: RepositorioRemoto/Dto/CreateUserRequest.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: Address
+    path: Dto/CreateUserRequest.cs
+    startLine: 17
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Dto
+  summary: Dirección.
+  example: []
+  syntax:
+    content: public AddressDto Address { get; init; }
+    parameters: []
+    return:
+      type: RepositorioRemoto.Dto.AddressDto
+    content.vb: Public Property Address As AddressDto
+  overload: RepositorioRemoto.Dto.CreateUserRequest.Address*
+- uid: RepositorioRemoto.Dto.CreateUserRequest.Phone
+  commentId: P:RepositorioRemoto.Dto.CreateUserRequest.Phone
+  id: Phone
+  parent: RepositorioRemoto.Dto.CreateUserRequest
+  langs:
+  - csharp
+  - vb
+  name: Phone
+  nameWithType: CreateUserRequest.Phone
+  fullName: RepositorioRemoto.Dto.CreateUserRequest.Phone
+  type: Property
+  source:
+    remote:
+      path: RepositorioRemoto/Dto/CreateUserRequest.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: Phone
+    path: Dto/CreateUserRequest.cs
+    startLine: 18
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Dto
+  summary: Teléfono.
+  example: []
+  syntax:
+    content: public string Phone { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Phone As String
+  overload: RepositorioRemoto.Dto.CreateUserRequest.Phone*
+- uid: RepositorioRemoto.Dto.CreateUserRequest.Website
+  commentId: P:RepositorioRemoto.Dto.CreateUserRequest.Website
+  id: Website
+  parent: RepositorioRemoto.Dto.CreateUserRequest
+  langs:
+  - csharp
+  - vb
+  name: Website
+  nameWithType: CreateUserRequest.Website
+  fullName: RepositorioRemoto.Dto.CreateUserRequest.Website
+  type: Property
+  source:
+    remote:
+      path: RepositorioRemoto/Dto/CreateUserRequest.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: Website
+    path: Dto/CreateUserRequest.cs
+    startLine: 19
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Dto
+  summary: Página web.
+  example: []
+  syntax:
+    content: public string Website { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Website As String
+  overload: RepositorioRemoto.Dto.CreateUserRequest.Website*
+- uid: RepositorioRemoto.Dto.CreateUserRequest.Company
+  commentId: P:RepositorioRemoto.Dto.CreateUserRequest.Company
+  id: Company
+  parent: RepositorioRemoto.Dto.CreateUserRequest
+  langs:
+  - csharp
+  - vb
+  name: Company
+  nameWithType: CreateUserRequest.Company
+  fullName: RepositorioRemoto.Dto.CreateUserRequest.Company
+  type: Property
+  source:
+    remote:
+      path: RepositorioRemoto/Dto/CreateUserRequest.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: Company
+    path: Dto/CreateUserRequest.cs
+    startLine: 20
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Dto
+  summary: Empresa.
+  example: []
+  syntax:
+    content: public CompanyDto Company { get; init; }
+    parameters: []
+    return:
+      type: RepositorioRemoto.Dto.CompanyDto
+    content.vb: Public Property Company As CompanyDto
+  overload: RepositorioRemoto.Dto.CreateUserRequest.Company*
+references:
+- uid: RepositorioRemoto.Dto
+  commentId: N:RepositorioRemoto.Dto
+  name: RepositorioRemoto.Dto
+  nameWithType: RepositorioRemoto.Dto
+  fullName: RepositorioRemoto.Dto
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Dto
+    name: Dto
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Dto
+    name: Dto
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{RepositorioRemoto.Dto.CreateUserRequest}
+  commentId: T:System.IEquatable{RepositorioRemoto.Dto.CreateUserRequest}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<CreateUserRequest>
+  nameWithType: IEquatable<CreateUserRequest>
+  fullName: System.IEquatable<RepositorioRemoto.Dto.CreateUserRequest>
+  nameWithType.vb: IEquatable(Of CreateUserRequest)
+  fullName.vb: System.IEquatable(Of RepositorioRemoto.Dto.CreateUserRequest)
+  name.vb: IEquatable(Of CreateUserRequest)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: RepositorioRemoto.Dto.CreateUserRequest
+    name: CreateUserRequest
+    href: RepositorioRemoto.Dto.CreateUserRequest.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: RepositorioRemoto.Dto.CreateUserRequest
+    name: CreateUserRequest
+    href: RepositorioRemoto.Dto.CreateUserRequest.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: RepositorioRemoto.Dto.CreateUserRequest.RepositorioRemoto.Mappers.UserMapper.ToUser(System.Int32)
+  commentId: M:RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.CreateUserRequest,System.Int32)
+  parent: RepositorioRemoto.Mappers.UserMapper
+  definition: RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.CreateUserRequest,System.Int32)
+  href: RepositorioRemoto.Mappers.UserMapper.html#RepositorioRemoto_Mappers_UserMapper_ToUser_RepositorioRemoto_Dto_CreateUserRequest_System_Int32_
+  name: ToUser(CreateUserRequest, int)
+  nameWithType: UserMapper.ToUser(CreateUserRequest, int)
+  fullName: RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.CreateUserRequest, int)
+  nameWithType.vb: UserMapper.ToUser(CreateUserRequest, Integer)
+  fullName.vb: RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.CreateUserRequest, Integer)
+  name.vb: ToUser(CreateUserRequest, Integer)
+  spec.csharp:
+  - uid: RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.CreateUserRequest,System.Int32)
+    name: ToUser
+    href: RepositorioRemoto.Mappers.UserMapper.html#RepositorioRemoto_Mappers_UserMapper_ToUser_RepositorioRemoto_Dto_CreateUserRequest_System_Int32_
+  - name: (
+  - uid: RepositorioRemoto.Dto.CreateUserRequest
+    name: CreateUserRequest
+    href: RepositorioRemoto.Dto.CreateUserRequest.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.CreateUserRequest,System.Int32)
+    name: ToUser
+    href: RepositorioRemoto.Mappers.UserMapper.html#RepositorioRemoto_Mappers_UserMapper_ToUser_RepositorioRemoto_Dto_CreateUserRequest_System_Int32_
+  - name: (
+  - uid: RepositorioRemoto.Dto.CreateUserRequest
+    name: CreateUserRequest
+    href: RepositorioRemoto.Dto.CreateUserRequest.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.CreateUserRequest,System.Int32)
+  commentId: M:RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.CreateUserRequest,System.Int32)
+  isExternal: true
+  href: RepositorioRemoto.Mappers.UserMapper.html#RepositorioRemoto_Mappers_UserMapper_ToUser_RepositorioRemoto_Dto_CreateUserRequest_System_Int32_
+  name: ToUser(CreateUserRequest, int)
+  nameWithType: UserMapper.ToUser(CreateUserRequest, int)
+  fullName: RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.CreateUserRequest, int)
+  nameWithType.vb: UserMapper.ToUser(CreateUserRequest, Integer)
+  fullName.vb: RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.CreateUserRequest, Integer)
+  name.vb: ToUser(CreateUserRequest, Integer)
+  spec.csharp:
+  - uid: RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.CreateUserRequest,System.Int32)
+    name: ToUser
+    href: RepositorioRemoto.Mappers.UserMapper.html#RepositorioRemoto_Mappers_UserMapper_ToUser_RepositorioRemoto_Dto_CreateUserRequest_System_Int32_
+  - name: (
+  - uid: RepositorioRemoto.Dto.CreateUserRequest
+    name: CreateUserRequest
+    href: RepositorioRemoto.Dto.CreateUserRequest.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.CreateUserRequest,System.Int32)
+    name: ToUser
+    href: RepositorioRemoto.Mappers.UserMapper.html#RepositorioRemoto_Mappers_UserMapper_ToUser_RepositorioRemoto_Dto_CreateUserRequest_System_Int32_
+  - name: (
+  - uid: RepositorioRemoto.Dto.CreateUserRequest
+    name: CreateUserRequest
+    href: RepositorioRemoto.Dto.CreateUserRequest.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: RepositorioRemoto.Mappers.UserMapper
+  commentId: T:RepositorioRemoto.Mappers.UserMapper
+  parent: RepositorioRemoto.Mappers
+  href: RepositorioRemoto.Mappers.UserMapper.html
+  name: UserMapper
+  nameWithType: UserMapper
+  fullName: RepositorioRemoto.Mappers.UserMapper
+- uid: RepositorioRemoto.Mappers
+  commentId: N:RepositorioRemoto.Mappers
+  name: RepositorioRemoto.Mappers
+  nameWithType: RepositorioRemoto.Mappers
+  fullName: RepositorioRemoto.Mappers
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Mappers
+    name: Mappers
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Mappers
+    name: Mappers
+- uid: RepositorioRemoto.Dto.CreateUserRequest.#ctor*
+  commentId: Overload:RepositorioRemoto.Dto.CreateUserRequest.#ctor
+  href: RepositorioRemoto.Dto.CreateUserRequest.html#RepositorioRemoto_Dto_CreateUserRequest__ctor_System_String_System_String_System_String_RepositorioRemoto_Dto_AddressDto_System_String_System_String_RepositorioRemoto_Dto_CompanyDto_
+  name: CreateUserRequest
+  nameWithType: CreateUserRequest.CreateUserRequest
+  fullName: RepositorioRemoto.Dto.CreateUserRequest.CreateUserRequest
+  nameWithType.vb: CreateUserRequest.New
+  fullName.vb: RepositorioRemoto.Dto.CreateUserRequest.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: RepositorioRemoto.Dto.AddressDto
+  commentId: T:RepositorioRemoto.Dto.AddressDto
+  parent: RepositorioRemoto.Dto
+  href: RepositorioRemoto.Dto.AddressDto.html
+  name: AddressDto
+  nameWithType: AddressDto
+  fullName: RepositorioRemoto.Dto.AddressDto
+- uid: RepositorioRemoto.Dto.CompanyDto
+  commentId: T:RepositorioRemoto.Dto.CompanyDto
+  parent: RepositorioRemoto.Dto
+  href: RepositorioRemoto.Dto.CompanyDto.html
+  name: CompanyDto
+  nameWithType: CompanyDto
+  fullName: RepositorioRemoto.Dto.CompanyDto
+- uid: RepositorioRemoto.Dto.CreateUserRequest.Name*
+  commentId: Overload:RepositorioRemoto.Dto.CreateUserRequest.Name
+  href: RepositorioRemoto.Dto.CreateUserRequest.html#RepositorioRemoto_Dto_CreateUserRequest_Name
+  name: Name
+  nameWithType: CreateUserRequest.Name
+  fullName: RepositorioRemoto.Dto.CreateUserRequest.Name
+- uid: RepositorioRemoto.Dto.CreateUserRequest.Username*
+  commentId: Overload:RepositorioRemoto.Dto.CreateUserRequest.Username
+  href: RepositorioRemoto.Dto.CreateUserRequest.html#RepositorioRemoto_Dto_CreateUserRequest_Username
+  name: Username
+  nameWithType: CreateUserRequest.Username
+  fullName: RepositorioRemoto.Dto.CreateUserRequest.Username
+- uid: RepositorioRemoto.Dto.CreateUserRequest.Email*
+  commentId: Overload:RepositorioRemoto.Dto.CreateUserRequest.Email
+  href: RepositorioRemoto.Dto.CreateUserRequest.html#RepositorioRemoto_Dto_CreateUserRequest_Email
+  name: Email
+  nameWithType: CreateUserRequest.Email
+  fullName: RepositorioRemoto.Dto.CreateUserRequest.Email
+- uid: RepositorioRemoto.Dto.CreateUserRequest.Address*
+  commentId: Overload:RepositorioRemoto.Dto.CreateUserRequest.Address
+  href: RepositorioRemoto.Dto.CreateUserRequest.html#RepositorioRemoto_Dto_CreateUserRequest_Address
+  name: Address
+  nameWithType: CreateUserRequest.Address
+  fullName: RepositorioRemoto.Dto.CreateUserRequest.Address
+- uid: RepositorioRemoto.Dto.CreateUserRequest.Phone*
+  commentId: Overload:RepositorioRemoto.Dto.CreateUserRequest.Phone
+  href: RepositorioRemoto.Dto.CreateUserRequest.html#RepositorioRemoto_Dto_CreateUserRequest_Phone
+  name: Phone
+  nameWithType: CreateUserRequest.Phone
+  fullName: RepositorioRemoto.Dto.CreateUserRequest.Phone
+- uid: RepositorioRemoto.Dto.CreateUserRequest.Website*
+  commentId: Overload:RepositorioRemoto.Dto.CreateUserRequest.Website
+  href: RepositorioRemoto.Dto.CreateUserRequest.html#RepositorioRemoto_Dto_CreateUserRequest_Website
+  name: Website
+  nameWithType: CreateUserRequest.Website
+  fullName: RepositorioRemoto.Dto.CreateUserRequest.Website
+- uid: RepositorioRemoto.Dto.CreateUserRequest.Company*
+  commentId: Overload:RepositorioRemoto.Dto.CreateUserRequest.Company
+  href: RepositorioRemoto.Dto.CreateUserRequest.html#RepositorioRemoto_Dto_CreateUserRequest_Company
+  name: Company
+  nameWithType: CreateUserRequest.Company
+  fullName: RepositorioRemoto.Dto.CreateUserRequest.Company

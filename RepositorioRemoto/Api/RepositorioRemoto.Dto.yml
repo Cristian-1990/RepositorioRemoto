@@ -1,0 +1,89 @@
+### YamlMime:ManagedReference
+items:
+- uid: RepositorioRemoto.Dto
+  commentId: N:RepositorioRemoto.Dto
+  id: RepositorioRemoto.Dto
+  children:
+  - RepositorioRemoto.Dto.AddressDto
+  - RepositorioRemoto.Dto.CompanyDto
+  - RepositorioRemoto.Dto.CreateUserRequest
+  - RepositorioRemoto.Dto.GeoDto
+  - RepositorioRemoto.Dto.JsonPlaceholderUserDto
+  - RepositorioRemoto.Dto.UpdateUserRequest
+  - RepositorioRemoto.Dto.UserResponseDto
+  langs:
+  - csharp
+  - vb
+  name: RepositorioRemoto.Dto
+  nameWithType: RepositorioRemoto.Dto
+  fullName: RepositorioRemoto.Dto
+  type: Namespace
+  assemblies:
+  - RepositorioRemoto
+references:
+- uid: RepositorioRemoto.Dto.AddressDto
+  commentId: T:RepositorioRemoto.Dto.AddressDto
+  parent: RepositorioRemoto.Dto
+  href: RepositorioRemoto.Dto.AddressDto.html
+  name: AddressDto
+  nameWithType: AddressDto
+  fullName: RepositorioRemoto.Dto.AddressDto
+- uid: RepositorioRemoto.Dto.CompanyDto
+  commentId: T:RepositorioRemoto.Dto.CompanyDto
+  parent: RepositorioRemoto.Dto
+  href: RepositorioRemoto.Dto.CompanyDto.html
+  name: CompanyDto
+  nameWithType: CompanyDto
+  fullName: RepositorioRemoto.Dto.CompanyDto
+- uid: RepositorioRemoto.Dto.CreateUserRequest
+  commentId: T:RepositorioRemoto.Dto.CreateUserRequest
+  parent: RepositorioRemoto.Dto
+  href: RepositorioRemoto.Dto.CreateUserRequest.html
+  name: CreateUserRequest
+  nameWithType: CreateUserRequest
+  fullName: RepositorioRemoto.Dto.CreateUserRequest
+- uid: RepositorioRemoto.Dto.GeoDto
+  commentId: T:RepositorioRemoto.Dto.GeoDto
+  parent: RepositorioRemoto.Dto
+  href: RepositorioRemoto.Dto.GeoDto.html
+  name: GeoDto
+  nameWithType: GeoDto
+  fullName: RepositorioRemoto.Dto.GeoDto
+- uid: RepositorioRemoto.Dto.JsonPlaceholderUserDto
+  commentId: T:RepositorioRemoto.Dto.JsonPlaceholderUserDto
+  parent: RepositorioRemoto.Dto
+  href: RepositorioRemoto.Dto.JsonPlaceholderUserDto.html
+  name: JsonPlaceholderUserDto
+  nameWithType: JsonPlaceholderUserDto
+  fullName: RepositorioRemoto.Dto.JsonPlaceholderUserDto
+- uid: RepositorioRemoto.Dto.UpdateUserRequest
+  commentId: T:RepositorioRemoto.Dto.UpdateUserRequest
+  parent: RepositorioRemoto.Dto
+  href: RepositorioRemoto.Dto.UpdateUserRequest.html
+  name: UpdateUserRequest
+  nameWithType: UpdateUserRequest
+  fullName: RepositorioRemoto.Dto.UpdateUserRequest
+- uid: RepositorioRemoto.Dto.UserResponseDto
+  commentId: T:RepositorioRemoto.Dto.UserResponseDto
+  parent: RepositorioRemoto.Dto
+  href: RepositorioRemoto.Dto.UserResponseDto.html
+  name: UserResponseDto
+  nameWithType: UserResponseDto
+  fullName: RepositorioRemoto.Dto.UserResponseDto
+- uid: RepositorioRemoto.Dto
+  commentId: N:RepositorioRemoto.Dto
+  name: RepositorioRemoto.Dto
+  nameWithType: RepositorioRemoto.Dto
+  fullName: RepositorioRemoto.Dto
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Dto
+    name: Dto
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Dto
+    name: Dto

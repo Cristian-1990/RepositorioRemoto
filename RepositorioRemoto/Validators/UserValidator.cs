@@ -10,6 +10,14 @@ namespace RepositorioRemoto.Validators;
 /// </summary>
 public class UserValidator : IUserValidator
 {
+    /// <summary>
+    /// Valida los datos necesarios para crear un usuario.
+    /// </summary>
+    /// <param name="request">Datos del usuario que se va a crear.</param>
+    /// <returns>
+    /// El resultado de la validación, con el usuario si es correcto
+    /// o un error de dominio si hay fallos.
+    /// </returns>
     public Result<CreateUserRequest, DomainError> ValidateCreate(CreateUserRequest request)
     {
         var errores = ComprobarCamposComunes(request.Name, request.Username, request.Email);
@@ -19,7 +27,15 @@ public class UserValidator : IUserValidator
 
         return Result.Success<CreateUserRequest, DomainError>(request);
     }
-    
+
+    /// <summary>
+    /// Valida los datos necesarios para actualizar un usuario.
+    /// </summary>
+    /// <param name="request">Datos del usuario que se va a actualizar.</param>
+    /// <returns>
+    /// El resultado de la validación, con el usuario si es correcto
+    /// o un error de dominio si hay fallos.
+    /// </returns>
     public Result<UpdateUserRequest, DomainError> ValidateUpdate(UpdateUserRequest request)
     {
         var errores = ComprobarCamposComunes(request.Name, request.Username, request.Email);

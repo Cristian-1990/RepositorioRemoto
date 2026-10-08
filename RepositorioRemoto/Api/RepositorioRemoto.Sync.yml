@@ -1,0 +1,55 @@
+### YamlMime:ManagedReference
+items:
+- uid: RepositorioRemoto.Sync
+  commentId: N:RepositorioRemoto.Sync
+  id: RepositorioRemoto.Sync
+  children:
+  - RepositorioRemoto.Sync.IUserSyncService
+  - RepositorioRemoto.Sync.UserSyncBackgroundService
+  - RepositorioRemoto.Sync.UserSyncService
+  langs:
+  - csharp
+  - vb
+  name: RepositorioRemoto.Sync
+  nameWithType: RepositorioRemoto.Sync
+  fullName: RepositorioRemoto.Sync
+  type: Namespace
+  assemblies:
+  - RepositorioRemoto
+references:
+- uid: RepositorioRemoto.Sync.IUserSyncService
+  commentId: T:RepositorioRemoto.Sync.IUserSyncService
+  parent: RepositorioRemoto.Sync
+  href: RepositorioRemoto.Sync.IUserSyncService.html
+  name: IUserSyncService
+  nameWithType: IUserSyncService
+  fullName: RepositorioRemoto.Sync.IUserSyncService
+- uid: RepositorioRemoto.Sync.UserSyncBackgroundService
+  commentId: T:RepositorioRemoto.Sync.UserSyncBackgroundService
+  href: RepositorioRemoto.Sync.UserSyncBackgroundService.html
+  name: UserSyncBackgroundService
+  nameWithType: UserSyncBackgroundService
+  fullName: RepositorioRemoto.Sync.UserSyncBackgroundService
+- uid: RepositorioRemoto.Sync.UserSyncService
+  commentId: T:RepositorioRemoto.Sync.UserSyncService
+  href: RepositorioRemoto.Sync.UserSyncService.html
+  name: UserSyncService
+  nameWithType: UserSyncService
+  fullName: RepositorioRemoto.Sync.UserSyncService
+- uid: RepositorioRemoto.Sync
+  commentId: N:RepositorioRemoto.Sync
+  name: RepositorioRemoto.Sync
+  nameWithType: RepositorioRemoto.Sync
+  fullName: RepositorioRemoto.Sync
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Sync
+    name: Sync
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Sync
+    name: Sync

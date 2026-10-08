@@ -1,0 +1,881 @@
+### YamlMime:ManagedReference
+items:
+- uid: RepositorioRemoto.Mappers.UserMapper
+  commentId: T:RepositorioRemoto.Mappers.UserMapper
+  id: UserMapper
+  parent: RepositorioRemoto.Mappers
+  children:
+  - RepositorioRemoto.Mappers.UserMapper.ToCreateRequest(RepositorioRemoto.Models.User)
+  - RepositorioRemoto.Mappers.UserMapper.ToDto(RepositorioRemoto.Models.Address)
+  - RepositorioRemoto.Mappers.UserMapper.ToDto(RepositorioRemoto.Models.Company)
+  - RepositorioRemoto.Mappers.UserMapper.ToDto(RepositorioRemoto.Models.Geo)
+  - RepositorioRemoto.Mappers.UserMapper.ToModel(RepositorioRemoto.Dto.AddressDto)
+  - RepositorioRemoto.Mappers.UserMapper.ToModel(RepositorioRemoto.Dto.CompanyDto)
+  - RepositorioRemoto.Mappers.UserMapper.ToModel(RepositorioRemoto.Dto.GeoDto)
+  - RepositorioRemoto.Mappers.UserMapper.ToResponse(RepositorioRemoto.Models.User)
+  - RepositorioRemoto.Mappers.UserMapper.ToUpdateRequest(RepositorioRemoto.Models.User)
+  - RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.CreateUserRequest,System.Int32)
+  - RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.JsonPlaceholderUserDto)
+  - RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.UpdateUserRequest)
+  langs:
+  - csharp
+  - vb
+  name: UserMapper
+  nameWithType: UserMapper
+  fullName: RepositorioRemoto.Mappers.UserMapper
+  type: Class
+  source:
+    remote:
+      path: RepositorioRemoto/Mappers/UserMapper.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: UserMapper
+    path: Mappers/UserMapper.cs
+    startLine: 9
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Mappers
+  summary: >-
+    Métodos de extensión para convertir entre los DTOs y el modelo de dominio.
+
+    Centraliza la conversión entre capas.
+  example: []
+  syntax:
+    content: public static class UserMapper
+    content.vb: Public Module UserMapper
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.JsonPlaceholderUserDto)
+  commentId: M:RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.JsonPlaceholderUserDto)
+  id: ToUser(RepositorioRemoto.Dto.JsonPlaceholderUserDto)
+  isExtensionMethod: true
+  parent: RepositorioRemoto.Mappers.UserMapper
+  langs:
+  - csharp
+  - vb
+  name: ToUser(JsonPlaceholderUserDto)
+  nameWithType: UserMapper.ToUser(JsonPlaceholderUserDto)
+  fullName: RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.JsonPlaceholderUserDto)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Mappers/UserMapper.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: ToUser
+    path: Mappers/UserMapper.cs
+    startLine: 12
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Mappers
+  summary: Convierte el usuario recibido de la API en el modelo de dominio.
+  example: []
+  syntax:
+    content: public static User ToUser(this JsonPlaceholderUserDto dto)
+    parameters:
+    - id: dto
+      type: RepositorioRemoto.Dto.JsonPlaceholderUserDto
+    return:
+      type: RepositorioRemoto.Models.User
+    content.vb: Public Shared Function ToUser(dto As JsonPlaceholderUserDto) As User
+  overload: RepositorioRemoto.Mappers.UserMapper.ToUser*
+- uid: RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.CreateUserRequest,System.Int32)
+  commentId: M:RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.CreateUserRequest,System.Int32)
+  id: ToUser(RepositorioRemoto.Dto.CreateUserRequest,System.Int32)
+  isExtensionMethod: true
+  parent: RepositorioRemoto.Mappers.UserMapper
+  langs:
+  - csharp
+  - vb
+  name: ToUser(CreateUserRequest, int)
+  nameWithType: UserMapper.ToUser(CreateUserRequest, int)
+  fullName: RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.CreateUserRequest, int)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Mappers/UserMapper.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: ToUser
+    path: Mappers/UserMapper.cs
+    startLine: 23
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Mappers
+  summary: Convierte una petición de creación en User. El id lo asigna la API.
+  example: []
+  syntax:
+    content: public static User ToUser(this CreateUserRequest request, int id = 0)
+    parameters:
+    - id: request
+      type: RepositorioRemoto.Dto.CreateUserRequest
+    - id: id
+      type: System.Int32
+    return:
+      type: RepositorioRemoto.Models.User
+    content.vb: Public Shared Function ToUser(request As CreateUserRequest, id As Integer = 0) As User
+  overload: RepositorioRemoto.Mappers.UserMapper.ToUser*
+  nameWithType.vb: UserMapper.ToUser(CreateUserRequest, Integer)
+  fullName.vb: RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.CreateUserRequest, Integer)
+  name.vb: ToUser(CreateUserRequest, Integer)
+- uid: RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.UpdateUserRequest)
+  commentId: M:RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.UpdateUserRequest)
+  id: ToUser(RepositorioRemoto.Dto.UpdateUserRequest)
+  isExtensionMethod: true
+  parent: RepositorioRemoto.Mappers.UserMapper
+  langs:
+  - csharp
+  - vb
+  name: ToUser(UpdateUserRequest)
+  nameWithType: UserMapper.ToUser(UpdateUserRequest)
+  fullName: RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.UpdateUserRequest)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Mappers/UserMapper.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: ToUser
+    path: Mappers/UserMapper.cs
+    startLine: 34
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Mappers
+  summary: Convierte una petición de actualización en User.
+  example: []
+  syntax:
+    content: public static User ToUser(this UpdateUserRequest request)
+    parameters:
+    - id: request
+      type: RepositorioRemoto.Dto.UpdateUserRequest
+    return:
+      type: RepositorioRemoto.Models.User
+    content.vb: Public Shared Function ToUser(request As UpdateUserRequest) As User
+  overload: RepositorioRemoto.Mappers.UserMapper.ToUser*
+- uid: RepositorioRemoto.Mappers.UserMapper.ToResponse(RepositorioRemoto.Models.User)
+  commentId: M:RepositorioRemoto.Mappers.UserMapper.ToResponse(RepositorioRemoto.Models.User)
+  id: ToResponse(RepositorioRemoto.Models.User)
+  isExtensionMethod: true
+  parent: RepositorioRemoto.Mappers.UserMapper
+  langs:
+  - csharp
+  - vb
+  name: ToResponse(User)
+  nameWithType: UserMapper.ToResponse(User)
+  fullName: RepositorioRemoto.Mappers.UserMapper.ToResponse(RepositorioRemoto.Models.User)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Mappers/UserMapper.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: ToResponse
+    path: Mappers/UserMapper.cs
+    startLine: 45
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Mappers
+  summary: Convierte un User en el DTO de respuesta.
+  example: []
+  syntax:
+    content: public static UserResponseDto ToResponse(this User user)
+    parameters:
+    - id: user
+      type: RepositorioRemoto.Models.User
+    return:
+      type: RepositorioRemoto.Dto.UserResponseDto
+    content.vb: Public Shared Function ToResponse(user As User) As UserResponseDto
+  overload: RepositorioRemoto.Mappers.UserMapper.ToResponse*
+- uid: RepositorioRemoto.Mappers.UserMapper.ToCreateRequest(RepositorioRemoto.Models.User)
+  commentId: M:RepositorioRemoto.Mappers.UserMapper.ToCreateRequest(RepositorioRemoto.Models.User)
+  id: ToCreateRequest(RepositorioRemoto.Models.User)
+  isExtensionMethod: true
+  parent: RepositorioRemoto.Mappers.UserMapper
+  langs:
+  - csharp
+  - vb
+  name: ToCreateRequest(User)
+  nameWithType: UserMapper.ToCreateRequest(User)
+  fullName: RepositorioRemoto.Mappers.UserMapper.ToCreateRequest(RepositorioRemoto.Models.User)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Mappers/UserMapper.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: ToCreateRequest
+    path: Mappers/UserMapper.cs
+    startLine: 56
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Mappers
+  summary: Convierte un User en la petición de creación que se envía a la API.
+  example: []
+  syntax:
+    content: public static CreateUserRequest ToCreateRequest(this User user)
+    parameters:
+    - id: user
+      type: RepositorioRemoto.Models.User
+    return:
+      type: RepositorioRemoto.Dto.CreateUserRequest
+    content.vb: Public Shared Function ToCreateRequest(user As User) As CreateUserRequest
+  overload: RepositorioRemoto.Mappers.UserMapper.ToCreateRequest*
+- uid: RepositorioRemoto.Mappers.UserMapper.ToUpdateRequest(RepositorioRemoto.Models.User)
+  commentId: M:RepositorioRemoto.Mappers.UserMapper.ToUpdateRequest(RepositorioRemoto.Models.User)
+  id: ToUpdateRequest(RepositorioRemoto.Models.User)
+  isExtensionMethod: true
+  parent: RepositorioRemoto.Mappers.UserMapper
+  langs:
+  - csharp
+  - vb
+  name: ToUpdateRequest(User)
+  nameWithType: UserMapper.ToUpdateRequest(User)
+  fullName: RepositorioRemoto.Mappers.UserMapper.ToUpdateRequest(RepositorioRemoto.Models.User)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Mappers/UserMapper.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: ToUpdateRequest
+    path: Mappers/UserMapper.cs
+    startLine: 66
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Mappers
+  summary: Convierte un User en la petición de actualización que se envía a la API.
+  example: []
+  syntax:
+    content: public static UpdateUserRequest ToUpdateRequest(this User user)
+    parameters:
+    - id: user
+      type: RepositorioRemoto.Models.User
+    return:
+      type: RepositorioRemoto.Dto.UpdateUserRequest
+    content.vb: Public Shared Function ToUpdateRequest(user As User) As UpdateUserRequest
+  overload: RepositorioRemoto.Mappers.UserMapper.ToUpdateRequest*
+- uid: RepositorioRemoto.Mappers.UserMapper.ToModel(RepositorioRemoto.Dto.AddressDto)
+  commentId: M:RepositorioRemoto.Mappers.UserMapper.ToModel(RepositorioRemoto.Dto.AddressDto)
+  id: ToModel(RepositorioRemoto.Dto.AddressDto)
+  isExtensionMethod: true
+  parent: RepositorioRemoto.Mappers.UserMapper
+  langs:
+  - csharp
+  - vb
+  name: ToModel(AddressDto)
+  nameWithType: UserMapper.ToModel(AddressDto)
+  fullName: RepositorioRemoto.Mappers.UserMapper.ToModel(RepositorioRemoto.Dto.AddressDto)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Mappers/UserMapper.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: ToModel
+    path: Mappers/UserMapper.cs
+    startLine: 77
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Mappers
+  summary: Convierte el DTO de dirección en el modelo.
+  example: []
+  syntax:
+    content: public static Address ToModel(this AddressDto dto)
+    parameters:
+    - id: dto
+      type: RepositorioRemoto.Dto.AddressDto
+    return:
+      type: RepositorioRemoto.Models.Address
+    content.vb: Public Shared Function ToModel(dto As AddressDto) As Address
+  overload: RepositorioRemoto.Mappers.UserMapper.ToModel*
+- uid: RepositorioRemoto.Mappers.UserMapper.ToModel(RepositorioRemoto.Dto.GeoDto)
+  commentId: M:RepositorioRemoto.Mappers.UserMapper.ToModel(RepositorioRemoto.Dto.GeoDto)
+  id: ToModel(RepositorioRemoto.Dto.GeoDto)
+  isExtensionMethod: true
+  parent: RepositorioRemoto.Mappers.UserMapper
+  langs:
+  - csharp
+  - vb
+  name: ToModel(GeoDto)
+  nameWithType: UserMapper.ToModel(GeoDto)
+  fullName: RepositorioRemoto.Mappers.UserMapper.ToModel(RepositorioRemoto.Dto.GeoDto)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Mappers/UserMapper.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: ToModel
+    path: Mappers/UserMapper.cs
+    startLine: 81
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Mappers
+  summary: Convierte el DTO de coordenadas en el modelo.
+  example: []
+  syntax:
+    content: public static Geo ToModel(this GeoDto dto)
+    parameters:
+    - id: dto
+      type: RepositorioRemoto.Dto.GeoDto
+    return:
+      type: RepositorioRemoto.Models.Geo
+    content.vb: Public Shared Function ToModel(dto As GeoDto) As Geo
+  overload: RepositorioRemoto.Mappers.UserMapper.ToModel*
+- uid: RepositorioRemoto.Mappers.UserMapper.ToModel(RepositorioRemoto.Dto.CompanyDto)
+  commentId: M:RepositorioRemoto.Mappers.UserMapper.ToModel(RepositorioRemoto.Dto.CompanyDto)
+  id: ToModel(RepositorioRemoto.Dto.CompanyDto)
+  isExtensionMethod: true
+  parent: RepositorioRemoto.Mappers.UserMapper
+  langs:
+  - csharp
+  - vb
+  name: ToModel(CompanyDto)
+  nameWithType: UserMapper.ToModel(CompanyDto)
+  fullName: RepositorioRemoto.Mappers.UserMapper.ToModel(RepositorioRemoto.Dto.CompanyDto)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Mappers/UserMapper.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: ToModel
+    path: Mappers/UserMapper.cs
+    startLine: 84
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Mappers
+  summary: Convierte el DTO de empresa en el modelo.
+  example: []
+  syntax:
+    content: public static Company ToModel(this CompanyDto dto)
+    parameters:
+    - id: dto
+      type: RepositorioRemoto.Dto.CompanyDto
+    return:
+      type: RepositorioRemoto.Models.Company
+    content.vb: Public Shared Function ToModel(dto As CompanyDto) As Company
+  overload: RepositorioRemoto.Mappers.UserMapper.ToModel*
+- uid: RepositorioRemoto.Mappers.UserMapper.ToDto(RepositorioRemoto.Models.Address)
+  commentId: M:RepositorioRemoto.Mappers.UserMapper.ToDto(RepositorioRemoto.Models.Address)
+  id: ToDto(RepositorioRemoto.Models.Address)
+  isExtensionMethod: true
+  parent: RepositorioRemoto.Mappers.UserMapper
+  langs:
+  - csharp
+  - vb
+  name: ToDto(Address)
+  nameWithType: UserMapper.ToDto(Address)
+  fullName: RepositorioRemoto.Mappers.UserMapper.ToDto(RepositorioRemoto.Models.Address)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Mappers/UserMapper.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: ToDto
+    path: Mappers/UserMapper.cs
+    startLine: 87
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Mappers
+  summary: Convierte la dirección del modelo en su DTO.
+  example: []
+  syntax:
+    content: public static AddressDto ToDto(this Address address)
+    parameters:
+    - id: address
+      type: RepositorioRemoto.Models.Address
+    return:
+      type: RepositorioRemoto.Dto.AddressDto
+    content.vb: Public Shared Function ToDto(address As Address) As AddressDto
+  overload: RepositorioRemoto.Mappers.UserMapper.ToDto*
+- uid: RepositorioRemoto.Mappers.UserMapper.ToDto(RepositorioRemoto.Models.Geo)
+  commentId: M:RepositorioRemoto.Mappers.UserMapper.ToDto(RepositorioRemoto.Models.Geo)
+  id: ToDto(RepositorioRemoto.Models.Geo)
+  isExtensionMethod: true
+  parent: RepositorioRemoto.Mappers.UserMapper
+  langs:
+  - csharp
+  - vb
+  name: ToDto(Geo)
+  nameWithType: UserMapper.ToDto(Geo)
+  fullName: RepositorioRemoto.Mappers.UserMapper.ToDto(RepositorioRemoto.Models.Geo)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Mappers/UserMapper.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: ToDto
+    path: Mappers/UserMapper.cs
+    startLine: 91
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Mappers
+  summary: Convierte las coordenadas del modelo en su DTO.
+  example: []
+  syntax:
+    content: public static GeoDto ToDto(this Geo geo)
+    parameters:
+    - id: geo
+      type: RepositorioRemoto.Models.Geo
+    return:
+      type: RepositorioRemoto.Dto.GeoDto
+    content.vb: Public Shared Function ToDto(geo As Geo) As GeoDto
+  overload: RepositorioRemoto.Mappers.UserMapper.ToDto*
+- uid: RepositorioRemoto.Mappers.UserMapper.ToDto(RepositorioRemoto.Models.Company)
+  commentId: M:RepositorioRemoto.Mappers.UserMapper.ToDto(RepositorioRemoto.Models.Company)
+  id: ToDto(RepositorioRemoto.Models.Company)
+  isExtensionMethod: true
+  parent: RepositorioRemoto.Mappers.UserMapper
+  langs:
+  - csharp
+  - vb
+  name: ToDto(Company)
+  nameWithType: UserMapper.ToDto(Company)
+  fullName: RepositorioRemoto.Mappers.UserMapper.ToDto(RepositorioRemoto.Models.Company)
+  type: Method
+  source:
+    remote:
+      path: RepositorioRemoto/Mappers/UserMapper.cs
+      branch: dev
+      repo: https://github.com/Cristian-1990/RepositorioRemoto.git
+    id: ToDto
+    path: Mappers/UserMapper.cs
+    startLine: 94
+  assemblies:
+  - RepositorioRemoto
+  namespace: RepositorioRemoto.Mappers
+  summary: Convierte la empresa del modelo en su DTO.
+  example: []
+  syntax:
+    content: public static CompanyDto ToDto(this Company company)
+    parameters:
+    - id: company
+      type: RepositorioRemoto.Models.Company
+    return:
+      type: RepositorioRemoto.Dto.CompanyDto
+    content.vb: Public Shared Function ToDto(company As Company) As CompanyDto
+  overload: RepositorioRemoto.Mappers.UserMapper.ToDto*
+references:
+- uid: RepositorioRemoto.Mappers
+  commentId: N:RepositorioRemoto.Mappers
+  name: RepositorioRemoto.Mappers
+  nameWithType: RepositorioRemoto.Mappers
+  fullName: RepositorioRemoto.Mappers
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Mappers
+    name: Mappers
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Mappers
+    name: Mappers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: RepositorioRemoto.Mappers.UserMapper.ToUser*
+  commentId: Overload:RepositorioRemoto.Mappers.UserMapper.ToUser
+  href: RepositorioRemoto.Mappers.UserMapper.html#RepositorioRemoto_Mappers_UserMapper_ToUser_RepositorioRemoto_Dto_JsonPlaceholderUserDto_
+  name: ToUser
+  nameWithType: UserMapper.ToUser
+  fullName: RepositorioRemoto.Mappers.UserMapper.ToUser
+- uid: RepositorioRemoto.Dto.JsonPlaceholderUserDto
+  commentId: T:RepositorioRemoto.Dto.JsonPlaceholderUserDto
+  parent: RepositorioRemoto.Dto
+  href: RepositorioRemoto.Dto.JsonPlaceholderUserDto.html
+  name: JsonPlaceholderUserDto
+  nameWithType: JsonPlaceholderUserDto
+  fullName: RepositorioRemoto.Dto.JsonPlaceholderUserDto
+- uid: RepositorioRemoto.Models.User
+  commentId: T:RepositorioRemoto.Models.User
+  parent: RepositorioRemoto.Models
+  href: RepositorioRemoto.Models.User.html
+  name: User
+  nameWithType: User
+  fullName: RepositorioRemoto.Models.User
+- uid: RepositorioRemoto.Dto
+  commentId: N:RepositorioRemoto.Dto
+  name: RepositorioRemoto.Dto
+  nameWithType: RepositorioRemoto.Dto
+  fullName: RepositorioRemoto.Dto
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Dto
+    name: Dto
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Dto
+    name: Dto
+- uid: RepositorioRemoto.Models
+  commentId: N:RepositorioRemoto.Models
+  name: RepositorioRemoto.Models
+  nameWithType: RepositorioRemoto.Models
+  fullName: RepositorioRemoto.Models
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Models
+    name: Models
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Models
+    name: Models
+- uid: RepositorioRemoto.Dto.CreateUserRequest
+  commentId: T:RepositorioRemoto.Dto.CreateUserRequest
+  parent: RepositorioRemoto.Dto
+  href: RepositorioRemoto.Dto.CreateUserRequest.html
+  name: CreateUserRequest
+  nameWithType: CreateUserRequest
+  fullName: RepositorioRemoto.Dto.CreateUserRequest
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: RepositorioRemoto.Dto.UpdateUserRequest
+  commentId: T:RepositorioRemoto.Dto.UpdateUserRequest
+  parent: RepositorioRemoto.Dto
+  href: RepositorioRemoto.Dto.UpdateUserRequest.html
+  name: UpdateUserRequest
+  nameWithType: UpdateUserRequest
+  fullName: RepositorioRemoto.Dto.UpdateUserRequest
+- uid: RepositorioRemoto.Mappers.UserMapper.ToResponse*
+  commentId: Overload:RepositorioRemoto.Mappers.UserMapper.ToResponse
+  href: RepositorioRemoto.Mappers.UserMapper.html#RepositorioRemoto_Mappers_UserMapper_ToResponse_RepositorioRemoto_Models_User_
+  name: ToResponse
+  nameWithType: UserMapper.ToResponse
+  fullName: RepositorioRemoto.Mappers.UserMapper.ToResponse
+- uid: RepositorioRemoto.Dto.UserResponseDto
+  commentId: T:RepositorioRemoto.Dto.UserResponseDto
+  parent: RepositorioRemoto.Dto
+  href: RepositorioRemoto.Dto.UserResponseDto.html
+  name: UserResponseDto
+  nameWithType: UserResponseDto
+  fullName: RepositorioRemoto.Dto.UserResponseDto
+- uid: RepositorioRemoto.Mappers.UserMapper.ToCreateRequest*
+  commentId: Overload:RepositorioRemoto.Mappers.UserMapper.ToCreateRequest
+  href: RepositorioRemoto.Mappers.UserMapper.html#RepositorioRemoto_Mappers_UserMapper_ToCreateRequest_RepositorioRemoto_Models_User_
+  name: ToCreateRequest
+  nameWithType: UserMapper.ToCreateRequest
+  fullName: RepositorioRemoto.Mappers.UserMapper.ToCreateRequest
+- uid: RepositorioRemoto.Mappers.UserMapper.ToUpdateRequest*
+  commentId: Overload:RepositorioRemoto.Mappers.UserMapper.ToUpdateRequest
+  href: RepositorioRemoto.Mappers.UserMapper.html#RepositorioRemoto_Mappers_UserMapper_ToUpdateRequest_RepositorioRemoto_Models_User_
+  name: ToUpdateRequest
+  nameWithType: UserMapper.ToUpdateRequest
+  fullName: RepositorioRemoto.Mappers.UserMapper.ToUpdateRequest
+- uid: RepositorioRemoto.Mappers.UserMapper.ToModel*
+  commentId: Overload:RepositorioRemoto.Mappers.UserMapper.ToModel
+  href: RepositorioRemoto.Mappers.UserMapper.html#RepositorioRemoto_Mappers_UserMapper_ToModel_RepositorioRemoto_Dto_AddressDto_
+  name: ToModel
+  nameWithType: UserMapper.ToModel
+  fullName: RepositorioRemoto.Mappers.UserMapper.ToModel
+- uid: RepositorioRemoto.Dto.AddressDto
+  commentId: T:RepositorioRemoto.Dto.AddressDto
+  parent: RepositorioRemoto.Dto
+  href: RepositorioRemoto.Dto.AddressDto.html
+  name: AddressDto
+  nameWithType: AddressDto
+  fullName: RepositorioRemoto.Dto.AddressDto
+- uid: RepositorioRemoto.Models.Address
+  commentId: T:RepositorioRemoto.Models.Address
+  parent: RepositorioRemoto.Models
+  href: RepositorioRemoto.Models.Address.html
+  name: Address
+  nameWithType: Address
+  fullName: RepositorioRemoto.Models.Address
+- uid: RepositorioRemoto.Dto.GeoDto
+  commentId: T:RepositorioRemoto.Dto.GeoDto
+  parent: RepositorioRemoto.Dto
+  href: RepositorioRemoto.Dto.GeoDto.html
+  name: GeoDto
+  nameWithType: GeoDto
+  fullName: RepositorioRemoto.Dto.GeoDto
+- uid: RepositorioRemoto.Models.Geo
+  commentId: T:RepositorioRemoto.Models.Geo
+  parent: RepositorioRemoto.Models
+  href: RepositorioRemoto.Models.Geo.html
+  name: Geo
+  nameWithType: Geo
+  fullName: RepositorioRemoto.Models.Geo
+- uid: RepositorioRemoto.Dto.CompanyDto
+  commentId: T:RepositorioRemoto.Dto.CompanyDto
+  parent: RepositorioRemoto.Dto
+  href: RepositorioRemoto.Dto.CompanyDto.html
+  name: CompanyDto
+  nameWithType: CompanyDto
+  fullName: RepositorioRemoto.Dto.CompanyDto
+- uid: RepositorioRemoto.Models.Company
+  commentId: T:RepositorioRemoto.Models.Company
+  parent: RepositorioRemoto.Models
+  href: RepositorioRemoto.Models.Company.html
+  name: Company
+  nameWithType: Company
+  fullName: RepositorioRemoto.Models.Company
+- uid: RepositorioRemoto.Mappers.UserMapper.ToDto*
+  commentId: Overload:RepositorioRemoto.Mappers.UserMapper.ToDto
+  href: RepositorioRemoto.Mappers.UserMapper.html#RepositorioRemoto_Mappers_UserMapper_ToDto_RepositorioRemoto_Models_Address_
+  name: ToDto
+  nameWithType: UserMapper.ToDto
+  fullName: RepositorioRemoto.Mappers.UserMapper.ToDto

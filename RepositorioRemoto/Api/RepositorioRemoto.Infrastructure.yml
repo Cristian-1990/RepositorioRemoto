@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: RepositorioRemoto.Infrastructure
+  commentId: N:RepositorioRemoto.Infrastructure
+  id: RepositorioRemoto.Infrastructure
+  children:
+  - RepositorioRemoto.Infrastructure.DependenciesProvider
+  langs:
+  - csharp
+  - vb
+  name: RepositorioRemoto.Infrastructure
+  nameWithType: RepositorioRemoto.Infrastructure
+  fullName: RepositorioRemoto.Infrastructure
+  type: Namespace
+  assemblies:
+  - RepositorioRemoto
+references:
+- uid: RepositorioRemoto.Infrastructure.DependenciesProvider
+  commentId: T:RepositorioRemoto.Infrastructure.DependenciesProvider
+  href: RepositorioRemoto.Infrastructure.DependenciesProvider.html
+  name: DependenciesProvider
+  nameWithType: DependenciesProvider
+  fullName: RepositorioRemoto.Infrastructure.DependenciesProvider

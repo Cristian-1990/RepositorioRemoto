@@ -1,0 +1,48 @@
+### YamlMime:ManagedReference
+items:
+- uid: RepositorioRemoto.Services
+  commentId: N:RepositorioRemoto.Services
+  id: RepositorioRemoto.Services
+  children:
+  - RepositorioRemoto.Services.IUserService
+  - RepositorioRemoto.Services.UserService
+  langs:
+  - csharp
+  - vb
+  name: RepositorioRemoto.Services
+  nameWithType: RepositorioRemoto.Services
+  fullName: RepositorioRemoto.Services
+  type: Namespace
+  assemblies:
+  - RepositorioRemoto
+references:
+- uid: RepositorioRemoto.Services.IUserService
+  commentId: T:RepositorioRemoto.Services.IUserService
+  parent: RepositorioRemoto.Services
+  href: RepositorioRemoto.Services.IUserService.html
+  name: IUserService
+  nameWithType: IUserService
+  fullName: RepositorioRemoto.Services.IUserService
+- uid: RepositorioRemoto.Services.UserService
+  commentId: T:RepositorioRemoto.Services.UserService
+  href: RepositorioRemoto.Services.UserService.html
+  name: UserService
+  nameWithType: UserService
+  fullName: RepositorioRemoto.Services.UserService
+- uid: RepositorioRemoto.Services
+  commentId: N:RepositorioRemoto.Services
+  name: RepositorioRemoto.Services
+  nameWithType: RepositorioRemoto.Services
+  fullName: RepositorioRemoto.Services
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Services
+    name: Services
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Services
+    name: Services

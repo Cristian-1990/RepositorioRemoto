@@ -1,0 +1,48 @@
+### YamlMime:ManagedReference
+items:
+- uid: RepositorioRemoto.Validators
+  commentId: N:RepositorioRemoto.Validators
+  id: RepositorioRemoto.Validators
+  children:
+  - RepositorioRemoto.Validators.IUserValidator
+  - RepositorioRemoto.Validators.UserValidator
+  langs:
+  - csharp
+  - vb
+  name: RepositorioRemoto.Validators
+  nameWithType: RepositorioRemoto.Validators
+  fullName: RepositorioRemoto.Validators
+  type: Namespace
+  assemblies:
+  - RepositorioRemoto
+references:
+- uid: RepositorioRemoto.Validators.IUserValidator
+  commentId: T:RepositorioRemoto.Validators.IUserValidator
+  parent: RepositorioRemoto.Validators
+  href: RepositorioRemoto.Validators.IUserValidator.html
+  name: IUserValidator
+  nameWithType: IUserValidator
+  fullName: RepositorioRemoto.Validators.IUserValidator
+- uid: RepositorioRemoto.Validators.UserValidator
+  commentId: T:RepositorioRemoto.Validators.UserValidator
+  href: RepositorioRemoto.Validators.UserValidator.html
+  name: UserValidator
+  nameWithType: UserValidator
+  fullName: RepositorioRemoto.Validators.UserValidator
+- uid: RepositorioRemoto.Validators
+  commentId: N:RepositorioRemoto.Validators
+  name: RepositorioRemoto.Validators
+  nameWithType: RepositorioRemoto.Validators
+  fullName: RepositorioRemoto.Validators
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Validators
+    name: Validators
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Validators
+    name: Validators

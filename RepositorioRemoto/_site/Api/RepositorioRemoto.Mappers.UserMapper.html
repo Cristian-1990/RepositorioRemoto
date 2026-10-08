@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class UserMapper | RepositorioRemoto </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class UserMapper | RepositorioRemoto ">
+      
+      <meta name="description" content="M&#233;todos de extensi&#243;n para convertir entre los DTOs y el modelo de dominio. Centraliza la conversi&#243;n entre capas.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Cristian-1990/RepositorioRemoto/new/dev/apiSpec/new?filename=RepositorioRemoto_Mappers_UserMapper.md&amp;value=---%0Auid%3A%20RepositorioRemoto.Mappers.UserMapper%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="RepositorioRemoto">
+            RepositorioRemoto
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="RepositorioRemoto.Mappers.UserMapper">
+
+
+
+  <h1 id="RepositorioRemoto_Mappers_UserMapper" data-uid="RepositorioRemoto.Mappers.UserMapper" class="text-break">
+Class UserMapper  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Mappers/UserMapper.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><span class="xref">RepositorioRemoto</span>.<a class="xref" href="RepositorioRemoto.Mappers.html">Mappers</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>RepositorioRemoto.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Métodos de extensión para convertir entre los DTOs y el modelo de dominio.
+Centraliza la conversión entre capas.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class UserMapper</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">UserMapper</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="RepositorioRemoto_Mappers_UserMapper_ToCreateRequest_" data-uid="RepositorioRemoto.Mappers.UserMapper.ToCreateRequest*"></a>
+
+  <h3 id="RepositorioRemoto_Mappers_UserMapper_ToCreateRequest_RepositorioRemoto_Models_User_" data-uid="RepositorioRemoto.Mappers.UserMapper.ToCreateRequest(RepositorioRemoto.Models.User)">
+  ToCreateRequest(User)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Mappers/UserMapper.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convierte un User en la petición de creación que se envía a la API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CreateUserRequest ToCreateRequest(this User user)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>user</code> <a class="xref" href="RepositorioRemoto.Models.User.html">User</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RepositorioRemoto.Dto.CreateUserRequest.html">CreateUserRequest</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Mappers_UserMapper_ToDto_" data-uid="RepositorioRemoto.Mappers.UserMapper.ToDto*"></a>
+
+  <h3 id="RepositorioRemoto_Mappers_UserMapper_ToDto_RepositorioRemoto_Models_Address_" data-uid="RepositorioRemoto.Mappers.UserMapper.ToDto(RepositorioRemoto.Models.Address)">
+  ToDto(Address)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Mappers/UserMapper.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convierte la dirección del modelo en su DTO.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AddressDto ToDto(this Address address)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>address</code> <a class="xref" href="RepositorioRemoto.Models.Address.html">Address</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RepositorioRemoto.Dto.AddressDto.html">AddressDto</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Mappers_UserMapper_ToDto_" data-uid="RepositorioRemoto.Mappers.UserMapper.ToDto*"></a>
+
+  <h3 id="RepositorioRemoto_Mappers_UserMapper_ToDto_RepositorioRemoto_Models_Company_" data-uid="RepositorioRemoto.Mappers.UserMapper.ToDto(RepositorioRemoto.Models.Company)">
+  ToDto(Company)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Mappers/UserMapper.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convierte la empresa del modelo en su DTO.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CompanyDto ToDto(this Company company)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>company</code> <a class="xref" href="RepositorioRemoto.Models.Company.html">Company</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RepositorioRemoto.Dto.CompanyDto.html">CompanyDto</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Mappers_UserMapper_ToDto_" data-uid="RepositorioRemoto.Mappers.UserMapper.ToDto*"></a>
+
+  <h3 id="RepositorioRemoto_Mappers_UserMapper_ToDto_RepositorioRemoto_Models_Geo_" data-uid="RepositorioRemoto.Mappers.UserMapper.ToDto(RepositorioRemoto.Models.Geo)">
+  ToDto(Geo)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Mappers/UserMapper.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convierte las coordenadas del modelo en su DTO.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GeoDto ToDto(this Geo geo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>geo</code> <a class="xref" href="RepositorioRemoto.Models.Geo.html">Geo</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RepositorioRemoto.Dto.GeoDto.html">GeoDto</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Mappers_UserMapper_ToModel_" data-uid="RepositorioRemoto.Mappers.UserMapper.ToModel*"></a>
+
+  <h3 id="RepositorioRemoto_Mappers_UserMapper_ToModel_RepositorioRemoto_Dto_AddressDto_" data-uid="RepositorioRemoto.Mappers.UserMapper.ToModel(RepositorioRemoto.Dto.AddressDto)">
+  ToModel(AddressDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Mappers/UserMapper.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convierte el DTO de dirección en el modelo.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Address ToModel(this AddressDto dto)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dto</code> <a class="xref" href="RepositorioRemoto.Dto.AddressDto.html">AddressDto</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RepositorioRemoto.Models.Address.html">Address</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Mappers_UserMapper_ToModel_" data-uid="RepositorioRemoto.Mappers.UserMapper.ToModel*"></a>
+
+  <h3 id="RepositorioRemoto_Mappers_UserMapper_ToModel_RepositorioRemoto_Dto_CompanyDto_" data-uid="RepositorioRemoto.Mappers.UserMapper.ToModel(RepositorioRemoto.Dto.CompanyDto)">
+  ToModel(CompanyDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Mappers/UserMapper.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convierte el DTO de empresa en el modelo.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Company ToModel(this CompanyDto dto)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dto</code> <a class="xref" href="RepositorioRemoto.Dto.CompanyDto.html">CompanyDto</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RepositorioRemoto.Models.Company.html">Company</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Mappers_UserMapper_ToModel_" data-uid="RepositorioRemoto.Mappers.UserMapper.ToModel*"></a>
+
+  <h3 id="RepositorioRemoto_Mappers_UserMapper_ToModel_RepositorioRemoto_Dto_GeoDto_" data-uid="RepositorioRemoto.Mappers.UserMapper.ToModel(RepositorioRemoto.Dto.GeoDto)">
+  ToModel(GeoDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Mappers/UserMapper.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convierte el DTO de coordenadas en el modelo.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Geo ToModel(this GeoDto dto)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dto</code> <a class="xref" href="RepositorioRemoto.Dto.GeoDto.html">GeoDto</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RepositorioRemoto.Models.Geo.html">Geo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Mappers_UserMapper_ToResponse_" data-uid="RepositorioRemoto.Mappers.UserMapper.ToResponse*"></a>
+
+  <h3 id="RepositorioRemoto_Mappers_UserMapper_ToResponse_RepositorioRemoto_Models_User_" data-uid="RepositorioRemoto.Mappers.UserMapper.ToResponse(RepositorioRemoto.Models.User)">
+  ToResponse(User)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Mappers/UserMapper.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convierte un User en el DTO de respuesta.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UserResponseDto ToResponse(this User user)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>user</code> <a class="xref" href="RepositorioRemoto.Models.User.html">User</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RepositorioRemoto.Dto.UserResponseDto.html">UserResponseDto</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Mappers_UserMapper_ToUpdateRequest_" data-uid="RepositorioRemoto.Mappers.UserMapper.ToUpdateRequest*"></a>
+
+  <h3 id="RepositorioRemoto_Mappers_UserMapper_ToUpdateRequest_RepositorioRemoto_Models_User_" data-uid="RepositorioRemoto.Mappers.UserMapper.ToUpdateRequest(RepositorioRemoto.Models.User)">
+  ToUpdateRequest(User)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Mappers/UserMapper.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convierte un User en la petición de actualización que se envía a la API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static UpdateUserRequest ToUpdateRequest(this User user)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>user</code> <a class="xref" href="RepositorioRemoto.Models.User.html">User</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RepositorioRemoto.Dto.UpdateUserRequest.html">UpdateUserRequest</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Mappers_UserMapper_ToUser_" data-uid="RepositorioRemoto.Mappers.UserMapper.ToUser*"></a>
+
+  <h3 id="RepositorioRemoto_Mappers_UserMapper_ToUser_RepositorioRemoto_Dto_CreateUserRequest_System_Int32_" data-uid="RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.CreateUserRequest,System.Int32)">
+  ToUser(CreateUserRequest, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Mappers/UserMapper.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convierte una petición de creación en User. El id lo asigna la API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static User ToUser(this CreateUserRequest request, int id = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="RepositorioRemoto.Dto.CreateUserRequest.html">CreateUserRequest</a></dt>
+    <dd></dd>
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RepositorioRemoto.Models.User.html">User</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Mappers_UserMapper_ToUser_" data-uid="RepositorioRemoto.Mappers.UserMapper.ToUser*"></a>
+
+  <h3 id="RepositorioRemoto_Mappers_UserMapper_ToUser_RepositorioRemoto_Dto_JsonPlaceholderUserDto_" data-uid="RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.JsonPlaceholderUserDto)">
+  ToUser(JsonPlaceholderUserDto)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Mappers/UserMapper.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convierte el usuario recibido de la API en el modelo de dominio.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static User ToUser(this JsonPlaceholderUserDto dto)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dto</code> <a class="xref" href="RepositorioRemoto.Dto.JsonPlaceholderUserDto.html">JsonPlaceholderUserDto</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RepositorioRemoto.Models.User.html">User</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RepositorioRemoto_Mappers_UserMapper_ToUser_" data-uid="RepositorioRemoto.Mappers.UserMapper.ToUser*"></a>
+
+  <h3 id="RepositorioRemoto_Mappers_UserMapper_ToUser_RepositorioRemoto_Dto_UpdateUserRequest_" data-uid="RepositorioRemoto.Mappers.UserMapper.ToUser(RepositorioRemoto.Dto.UpdateUserRequest)">
+  ToUser(UpdateUserRequest)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Mappers/UserMapper.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convierte una petición de actualización en User.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static User ToUser(this UpdateUserRequest request)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="RepositorioRemoto.Dto.UpdateUserRequest.html">UpdateUserRequest</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RepositorioRemoto.Models.User.html">User</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Cristian-1990/RepositorioRemoto/blob/dev/RepositorioRemoto/Mappers/UserMapper.cs/#L10" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

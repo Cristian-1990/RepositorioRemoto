@@ -1,0 +1,49 @@
+### YamlMime:ManagedReference
+items:
+- uid: RepositorioRemoto.Mappers
+  commentId: N:RepositorioRemoto.Mappers
+  id: RepositorioRemoto.Mappers
+  children:
+  - RepositorioRemoto.Mappers.UserEntityMapper
+  - RepositorioRemoto.Mappers.UserMapper
+  langs:
+  - csharp
+  - vb
+  name: RepositorioRemoto.Mappers
+  nameWithType: RepositorioRemoto.Mappers
+  fullName: RepositorioRemoto.Mappers
+  type: Namespace
+  assemblies:
+  - RepositorioRemoto
+references:
+- uid: RepositorioRemoto.Mappers.UserEntityMapper
+  commentId: T:RepositorioRemoto.Mappers.UserEntityMapper
+  parent: RepositorioRemoto.Mappers
+  href: RepositorioRemoto.Mappers.UserEntityMapper.html
+  name: UserEntityMapper
+  nameWithType: UserEntityMapper
+  fullName: RepositorioRemoto.Mappers.UserEntityMapper
+- uid: RepositorioRemoto.Mappers.UserMapper
+  commentId: T:RepositorioRemoto.Mappers.UserMapper
+  parent: RepositorioRemoto.Mappers
+  href: RepositorioRemoto.Mappers.UserMapper.html
+  name: UserMapper
+  nameWithType: UserMapper
+  fullName: RepositorioRemoto.Mappers.UserMapper
+- uid: RepositorioRemoto.Mappers
+  commentId: N:RepositorioRemoto.Mappers
+  name: RepositorioRemoto.Mappers
+  nameWithType: RepositorioRemoto.Mappers
+  fullName: RepositorioRemoto.Mappers
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Mappers
+    name: Mappers
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Mappers
+    name: Mappers

@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: RepositorioRemoto.Config
+  commentId: N:RepositorioRemoto.Config
+  id: RepositorioRemoto.Config
+  children:
+  - RepositorioRemoto.Config.ApiConfig
+  - RepositorioRemoto.Config.CacheConfig
+  - RepositorioRemoto.Config.DatabaseConfig
+  - RepositorioRemoto.Config.ExportConfig
+  - RepositorioRemoto.Config.SyncConfig
+  langs:
+  - csharp
+  - vb
+  name: RepositorioRemoto.Config
+  nameWithType: RepositorioRemoto.Config
+  fullName: RepositorioRemoto.Config
+  type: Namespace
+  assemblies:
+  - RepositorioRemoto
+references:
+- uid: RepositorioRemoto.Config.ApiConfig
+  commentId: T:RepositorioRemoto.Config.ApiConfig
+  href: RepositorioRemoto.Config.ApiConfig.html
+  name: ApiConfig
+  nameWithType: ApiConfig
+  fullName: RepositorioRemoto.Config.ApiConfig
+- uid: RepositorioRemoto.Config.CacheConfig
+  commentId: T:RepositorioRemoto.Config.CacheConfig
+  href: RepositorioRemoto.Config.CacheConfig.html
+  name: CacheConfig
+  nameWithType: CacheConfig
+  fullName: RepositorioRemoto.Config.CacheConfig
+- uid: RepositorioRemoto.Config.DatabaseConfig
+  commentId: T:RepositorioRemoto.Config.DatabaseConfig
+  href: RepositorioRemoto.Config.DatabaseConfig.html
+  name: DatabaseConfig
+  nameWithType: DatabaseConfig
+  fullName: RepositorioRemoto.Config.DatabaseConfig
+- uid: RepositorioRemoto.Config.ExportConfig
+  commentId: T:RepositorioRemoto.Config.ExportConfig
+  href: RepositorioRemoto.Config.ExportConfig.html
+  name: ExportConfig
+  nameWithType: ExportConfig
+  fullName: RepositorioRemoto.Config.ExportConfig
+- uid: RepositorioRemoto.Config.SyncConfig
+  commentId: T:RepositorioRemoto.Config.SyncConfig
+  href: RepositorioRemoto.Config.SyncConfig.html
+  name: SyncConfig
+  nameWithType: SyncConfig
+  fullName: RepositorioRemoto.Config.SyncConfig

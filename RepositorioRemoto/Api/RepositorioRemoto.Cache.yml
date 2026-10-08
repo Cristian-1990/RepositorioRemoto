@@ -1,0 +1,55 @@
+### YamlMime:ManagedReference
+items:
+- uid: RepositorioRemoto.Cache
+  commentId: N:RepositorioRemoto.Cache
+  id: RepositorioRemoto.Cache
+  children:
+  - RepositorioRemoto.Cache.ICacheService
+  - RepositorioRemoto.Cache.MemoryCacheService
+  - RepositorioRemoto.Cache.RedisCacheService
+  langs:
+  - csharp
+  - vb
+  name: RepositorioRemoto.Cache
+  nameWithType: RepositorioRemoto.Cache
+  fullName: RepositorioRemoto.Cache
+  type: Namespace
+  assemblies:
+  - RepositorioRemoto
+references:
+- uid: RepositorioRemoto.Cache.ICacheService
+  commentId: T:RepositorioRemoto.Cache.ICacheService
+  parent: RepositorioRemoto.Cache
+  href: RepositorioRemoto.Cache.ICacheService.html
+  name: ICacheService
+  nameWithType: ICacheService
+  fullName: RepositorioRemoto.Cache.ICacheService
+- uid: RepositorioRemoto.Cache.MemoryCacheService
+  commentId: T:RepositorioRemoto.Cache.MemoryCacheService
+  href: RepositorioRemoto.Cache.MemoryCacheService.html
+  name: MemoryCacheService
+  nameWithType: MemoryCacheService
+  fullName: RepositorioRemoto.Cache.MemoryCacheService
+- uid: RepositorioRemoto.Cache.RedisCacheService
+  commentId: T:RepositorioRemoto.Cache.RedisCacheService
+  href: RepositorioRemoto.Cache.RedisCacheService.html
+  name: RedisCacheService
+  nameWithType: RedisCacheService
+  fullName: RepositorioRemoto.Cache.RedisCacheService
+- uid: RepositorioRemoto.Cache
+  commentId: N:RepositorioRemoto.Cache
+  name: RepositorioRemoto.Cache
+  nameWithType: RepositorioRemoto.Cache
+  fullName: RepositorioRemoto.Cache
+  spec.csharp:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Cache
+    name: Cache
+  spec.vb:
+  - uid: RepositorioRemoto
+    name: RepositorioRemoto
+  - name: .
+  - uid: RepositorioRemoto.Cache
+    name: Cache
